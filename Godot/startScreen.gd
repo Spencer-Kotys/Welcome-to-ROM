@@ -19,3 +19,8 @@ func _ready():
 func _on_Button3_pressed():
 	get_tree().change_scene("res://credits.tscn")
 	pass # Replace with function body.
+
+
+func _on_Button4_pressed():
+	get_tree().quit()
+	pass # Replace with function body.
