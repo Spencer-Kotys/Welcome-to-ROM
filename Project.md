@@ -6,6 +6,8 @@ The scope is the game files required to make the game functional.
 The external inputs will be the keyboard and mouse.
 The keyboard will be used for movement (WASD/arrows) as well as text input.
 The mouse will be used for selecting options.
+The game will take about 45 minutes to beat with each day simulation taking 
+between 3 to 4 minutes.
 
 ## Context Diagram
 
