@@ -13,13 +13,15 @@ The mouse will be used for selecting options.
 
 ## Stakeholders
 
-Cadets, the people who live in Chase Hall. The Cadets will play the game to
-relive the experience that is ROM.
+1. Cadets, the people who live in Chase Hall. The Cadets will play the game to
+relive the experience that is ROM. 
 
-Developers, those who built the game. The Developers will improve their software
-engineering skills and learn valuable concepts of game design.
+2. Developers, those who built the game. The Developers will improve their software
+engineering skills and learn valuable concepts of game design. The developers will
+also create graphics and audio for the game.
 
-Professors, funding organization. The Professors are hosting this assignment.
+3. Professors, funding organization. The Professors are hosting this assignment. 
+They set requirements for the structure of the project.
 
 ## Description
 
