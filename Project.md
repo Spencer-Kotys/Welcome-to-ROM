@@ -2,7 +2,8 @@
 
 ## Scope
 
-The scope is the game files required to make the game functional.
+The scope includes the game files required to make the game functional through
+the Godot game engine.
 The external inputs will be the keyboard and mouse.
 The keyboard will be used for movement (WASD/arrows) as well as text input.
 The mouse will be used for selecting options.
