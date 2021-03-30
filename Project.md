@@ -7,6 +7,10 @@ The external inputs will be the keyboard and mouse.
 The keyboard will be used for movement (WASD/arrows) as well as text input.
 The mouse will be used for selecting options.
 
+## Context Diagram
+
+![Context Diagrm](https://github.com/macee/final-project-i-m-also-not-in-a-group/blob/main/Context%20Diagram.png)
+
 ## Stakeholders
 
 Cadets, the people who live in Chase Hall. The Cadets will play the game to
