@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://credits.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 362.0
+margin_top = 230.0
+margin_right = 661.0
+margin_bottom = 370.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 299.0
+margin_bottom = 116.0
+text = "USCGA Software Engineering Final Project 2021
+
+Created by
+
+Spencer Kotys	    Senior Engineer
+
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_left = 76.0
+margin_top = 120.0
+margin_right = 222.0
+margin_bottom = 140.0
+size_flags_horizontal = 4
+text = "Return to Main Menu"
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]
