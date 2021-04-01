@@ -25,6 +25,7 @@ func _on_How_To_Play_pressed():
 
 
 func _on_Credits_pressed():
+	get_tree().change_scene("res://credits.tscn")
 	pass # Replace with function body.
 
 
