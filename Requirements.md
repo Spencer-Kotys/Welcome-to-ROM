@@ -39,24 +39,20 @@ Game is available on PC.
 
 # Use Cases
 
-1. Cadets and professors move around map
+1. Users customize character
 
-2. Cadets and professors customize character
+2. User moves around map
 
-3. Cadets and professors interact with NPCs
+3. Users interact with NPCs
 
-4. Cadets and professors complete tasks
+4. Users complete tasks
 
-5. Developers maintain morale meter
+5. Users maintain morale meter
 
-6. Professors grade game
+6. Contract Coronavirus
 
-7. Developer decide end goal
+7. Get Contact Traced
 
-8. Developers determine loss criteria
+8. Users win Game
 
-9. Developers create code for game
-
-10. Developers troubleshoot
-
-11. Professors and Cadets provide feedback
+9. Users Lose Game
