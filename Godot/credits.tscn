@@ -41,11 +41,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="Back" type="Button" parent="CenterContainer/VBoxContainer"]
 margin_left = 76.0
 margin_top = 120.0
 margin_right = 222.0
 margin_bottom = 140.0
 size_flags_horizontal = 4
 text = "Return to Main Menu"
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Back" to="." method="_on_Back_pressed"]
