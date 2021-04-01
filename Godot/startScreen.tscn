@@ -61,3 +61,7 @@ margin_top = 90.0
 margin_right = 131.0
 margin_bottom = 110.0
 text = "Quit"
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Play Game" to="." method="_on_Play_Game_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/How To Play" to="." method="_on_How_To_Play_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Credits" to="." method="_on_Credits_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]

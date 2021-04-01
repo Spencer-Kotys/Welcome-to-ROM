@@ -14,3 +14,19 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Play_Game_pressed():
+	pass # Replace with function body.
+
+
+func _on_How_To_Play_pressed():
+	pass # Replace with function body.
+
+
+func _on_Credits_pressed():
+	pass # Replace with function body.
+
+
+func _on_Quit_pressed():
+	pass # Replace with function body.
