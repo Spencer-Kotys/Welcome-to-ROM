@@ -16,20 +16,6 @@ func _ready():
 #	pass
 
 
-func _on_Play_Game_pressed():
-	pass # Replace with function body.
-
-
-func _on_How_To_Play_pressed():
-	get_tree().change_scene("res://howToPlay.tscn")
-	pass # Replace with function body.
-
-
-func _on_Credits_pressed():
-	get_tree().change_scene("res://credits.tscn")
-	pass # Replace with function body.
-
-
-func _on_Quit_pressed():
-	get_tree().quit()
+func _on_Back_pressed():
+	get_tree().change_scene("res://startScreen.tscn")
 	pass # Replace with function body.
