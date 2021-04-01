@@ -21,6 +21,7 @@ func _on_Play_Game_pressed():
 
 
 func _on_How_To_Play_pressed():
+	get_tree().change_scene("res://howToPlay.tscn")
 	pass # Replace with function body.
 
 
