@@ -1,0 +1,50 @@
+[gd_scene format=2]
+
+[node name="Day" type="MarginContainer"]
+margin_left = 950.091
+margin_top = 19.567
+margin_right = 950.091
+margin_bottom = 110.567
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="NinePatchRect" parent="."]
+margin_bottom = 91.0
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Background"]
+text = "DAY: 0
+"
+align = 3
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD"]
+anchor_right = 1.0
+margin_bottom = 91.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD/MarginContainer"]
+margin_right = 1024.0
+margin_bottom = 91.0
+
+[node name="Bars" type="VBoxContainer" parent="HUD/MarginContainer/HBoxContainer"]
+margin_bottom = 91.0
+
+[node name="Counters" type="HBoxContainer" parent="HUD/MarginContainer/HBoxContainer"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 91.0
