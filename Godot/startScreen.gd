@@ -17,6 +17,7 @@ func _ready():
 
 
 func _on_Play_Game_pressed():
+	get_tree().change_scene("res://characterCreation.tscn")
 	pass # Replace with function body.
 
 
