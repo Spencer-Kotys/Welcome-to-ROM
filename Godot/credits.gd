@@ -1,4 +1,4 @@
-extends Control
+extends GUI
 
 
 # Declare member variables here. Examples:

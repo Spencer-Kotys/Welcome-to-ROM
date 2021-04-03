@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/GUI/label_HP_bg.png" type="Texture" id=1]
+[ext_resource path="res://assets/font/Comfortaa-Bold.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 17
+outline_size = 3
+outline_color = Color( 0.329412, 0.196078, 0.196078, 1 )
+font_data = ExtResource( 2 )
+
+[node name="MarginContainer" type="MarginContainer"]
+margin_right = 170.0
+margin_bottom = 42.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_right = 170.0
+margin_bottom = 42.0
+texture = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="NinePatchRect"]
+margin_left = 25.0
+margin_right = 156.0
+margin_bottom = 42.0
+custom_fonts/font = SubResource( 1 )
+text = "Next Task"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Task" type="Label" parent="NinePatchRect"]
+margin_left = 25.0
+margin_top = 42.0
+margin_right = 156.0
+margin_bottom = 169.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Do this thing"
+__meta__ = {
+"_edit_use_anchors_": false
+}
