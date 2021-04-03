@@ -43,7 +43,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureProgress" type="TextureProgress" parent="."]
+[node name="MoraleProgress" type="TextureProgress" parent="."]
 margin_left = 104.0
 margin_right = 500.0
 margin_bottom = 54.0
