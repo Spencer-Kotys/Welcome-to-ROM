@@ -43,10 +43,10 @@ __meta__ = {
 }
 
 [node name="Time" type="Label" parent="NinePatchRect"]
-margin_left = 71.0034
-margin_top = 11.0
-margin_right = 130.003
-margin_bottom = 35.0
+margin_left = 72.1271
+margin_top = 10.6254
+margin_right = 131.127
+margin_bottom = 34.6254
 custom_fonts/font = SubResource( 2 )
 text = "22:00"
 align = 1
