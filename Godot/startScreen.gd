@@ -36,3 +36,8 @@ func _on_Quit_pressed():
 
 func _on_Button5_pressed():
 	get_tree().change_scene("res://LevelMockup.tscn")
+
+
+func _on_Test_Scene_pressed():
+	get_tree().change_scene("res://LevelMockup.tscn")
+	pass # Replace with function body.
