@@ -28,21 +28,20 @@ radius = 40.0
 height = 24.0
 
 [node name="MainCharacter" type="KinematicBody2D"]
-position = Vector2( 312, 259 )
+position = Vector2( 440, 336 )
 script = ExtResource( 9 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
-position = Vector2( 201, 40.0001 )
+position = Vector2( 73.6436, -36.4141 )
 scale = Vector2( 0.127329, 0.115942 )
 frames = SubResource( 1 )
 animation = "Idle"
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2( 201, 40.0001 )
+position = Vector2( 73.6438, -36.4139 )
 shape = SubResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( -311.421, -256.665 )
-anchor_mode = 0
+position = Vector2( 73.6438, -36.4139 )
 current = true
 process_mode = 0

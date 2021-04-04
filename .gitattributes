@@ -1,0 +1,2 @@
+# Manual override for GDScript files
+*.gd linguist-language=GDScript
