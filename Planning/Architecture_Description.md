@@ -32,7 +32,8 @@ simple running of programs and an easy way to export it to a binary when finishe
 ## OpenGL
 
 OpenGL is an open source API that is used to interact with the operating system/GPU
-to render 2D and 3D graphics.
+to render 2D and 3D graphics. Godot uses this graphics API over the more common
+DirectX API because OpenGL is open source and cross platform.
 
 [Learn more about OpenGL here](https://en.wikipedia.org/wiki/OpenGL)
 
@@ -40,4 +41,7 @@ to render 2D and 3D graphics.
 
 The operating system layer is the software that interacts with the hardware and
 takes OpenGL calls. It supports all of the layers above. OpenGL works with
-Microsoft Windows, Apple macOS, and GNU/Linux.
+Microsoft Windows, Apple macOS, and GNU/Linux. Godot can export to multiple
+operating systems as well to web servers.
+
+[Learn more about Godot exporting here](https://docs.godotengine.org/en/stable/getting_started/step_by_step/exporting.html)
