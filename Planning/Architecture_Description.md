@@ -45,3 +45,7 @@ Microsoft Windows, Apple macOS, and GNU/Linux. Godot can export to multiple
 operating systems as well to web servers.
 
 [Learn more about Godot exporting here](https://docs.godotengine.org/en/stable/getting_started/step_by_step/exporting.html)
+
+### Architecture Diagram
+
+![Architecture Diagram](https://github.com/macee/final-project-i-m-also-not-in-a-group/blob/main/Planning/Architecture%20Diagram.png)
