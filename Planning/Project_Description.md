@@ -12,7 +12,7 @@ between 3 to 4 minutes.
 
 ## Context Diagram
 
-![Context Diagrm](https://github.com/macee/final-project-i-m-also-not-in-a-group/blob/main/Context%20Diagram.png)
+![Context Diagram](https://github.com/macee/final-project-i-m-also-not-in-a-group/blob/main/Planning/Context%20Diagram.png)
 
 ## Stakeholders
 
