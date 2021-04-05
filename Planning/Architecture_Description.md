@@ -12,7 +12,7 @@ to a class in other programming languages.
 ## Supporting Scenes
 
 Godot allows to scenes to be nested within other scenes, called instancing.
-A supporting scene is something like the HUD or the character sprit itself.
+A supporting scene is something like the HUD or the character sprite itself.
 What this allows for is a high level of modularity, eliminating the need to
 recreate these scenes over and over again. These scenes are superimposed on the
 main scene and add to the main scene's functionality.
