@@ -1,12 +1,11 @@
 extends KinematicBody2D
 
-
-
 onready var sprite = get_node("Sprite")
 
 # Morale Meter stuff
 signal morale_changed
-export var max_morale = 100
+signal task_changed
+
 var morale = 50
 
 var speed = 300
@@ -72,3 +71,18 @@ func AnimationLoop():
 		#sprite.stop()
 		anim_mode = "Idle"
 	sprite.play(anim_mode)
+
+func _on_Area2D_body_entered(body):
+	print("Entered the area!")
+	morale = morale - 10
+	
+	emit_signal("morale_changed", morale)
+	emit_signal("task_changed", "Leave the area!")
+
+func _on_Area2D_body_exited(body):
+	print("Exited the area!")
+	morale = morale + 20
+	
+	emit_signal("morale_changed", morale)
+	emit_signal("task_changed", "Enter the area!")
+	

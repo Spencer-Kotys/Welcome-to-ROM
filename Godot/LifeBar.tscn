@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/GUI/lifebar_fill.png" type="Texture" id=3]
 [ext_resource path="res://assets/font/Comfortaa-Bold.ttf" type="DynamicFontData" id=4]
 
-[sub_resource type="GDScript" id=2]
+[sub_resource type="GDScript" id=1]
 script/source = "extends Control
 
 onready var morale_meter = $HUD/MoraleMeter/MoraleProgress
@@ -20,7 +20,7 @@ func _on_max_morale_updated(max_morale):
 	morale_meter.max_value = max_morale
 "
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 20
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
@@ -32,7 +32,10 @@ anchor_bottom = 0.013
 margin_top = 0.2
 margin_right = 502.0
 margin_bottom = 54.2
-script = SubResource( 2 )
+script = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="MoraleProgress" type="TextureProgress" parent="."]
 margin_left = 100.0
@@ -66,7 +69,7 @@ margin_left = 10.2449
 margin_top = 14.0
 margin_right = 94.2449
 margin_bottom = 40.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "Morale"
 __meta__ = {
 "_edit_use_anchors_": false
