@@ -17,11 +17,11 @@ func _ready():
 
 
 func _on_Male_pressed():
-	pass # Replace with function body.
+	$CenterContainer/VBoxContainer/Character_Name.text = "male"
 
 
 func _on_Female_pressed():
-	pass # Replace with function body.
+	$CenterContainer/VBoxContainer/Character_Name.text = "female"
 
 
 func _on_Continue_pressed():
