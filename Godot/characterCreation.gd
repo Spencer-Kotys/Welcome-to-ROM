@@ -2,8 +2,10 @@ extends Control
 
 
 # Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var maleNames = ["Male", "Bob", "Billy", "Billybob", "Alexander", "Spencer"]
+var maleInt = 0
+var femaleNames = ["Female", "Alice", "Alexandra", "Hannah", "Julia"]
+var femaleInt = 0
 
 
 # Called when the node enters the scene tree for the first time.
@@ -17,11 +19,19 @@ func _ready():
 
 
 func _on_Male_pressed():
-	$CenterContainer/VBoxContainer/Character_Name.text = "male"
+	$CenterContainer/VBoxContainer/Character_Name.text = maleNames[maleInt]
+	if maleInt < (maleNames.size() - 1):
+		maleInt = maleInt + 1
+	else:
+		maleInt = 0
 
 
 func _on_Female_pressed():
-	$CenterContainer/VBoxContainer/Character_Name.text = "female"
+	$CenterContainer/VBoxContainer/Character_Name.text = femaleNames[femaleInt]
+	if femaleInt < (femaleNames.size() - 1):
+		femaleInt = femaleInt + 1
+	else:
+		femaleInt = 0
 
 
 func _on_Continue_pressed():
