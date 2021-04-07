@@ -16,9 +16,28 @@ func _ready():
 #	pass
 
 
-func _on_Button3_pressed():
+func _on_Play_Game_pressed():
+	get_tree().change_scene("res://characterCreation.tscn")
+	pass # Replace with function body.
+
+
+func _on_How_To_Play_pressed():
+	get_tree().change_scene("res://howToPlay.tscn")
+	pass # Replace with function body.
+
+
+func _on_Credits_pressed():
 	get_tree().change_scene("res://credits.tscn")
+	pass # Replace with function body.
 
 
-func _on_Button4_pressed():
+func _on_Quit_pressed():
 	get_tree().quit()
+
+func _on_Button5_pressed():
+	get_tree().change_scene("res://LevelMockup.tscn")
+
+
+func _on_Test_Scene_pressed():
+	get_tree().change_scene("res://LevelMockup.tscn")
+	pass # Replace with function body.
