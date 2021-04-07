@@ -7,53 +7,7 @@ var text_tween_duration = 1.0
 var waiting_for_answer = false
 var waiting_for_input = false
 export(String, FILE, "*.json") var extenal_file = ''
-var dialog_script = [
-	{
-		'fade-in': 2
-	},
-
-	{
-		'text': 'Welcome to the dialog node! You can pick options'
-	},
-	{
-		'question': 'Choose your favourite color',
-		'options': [
-			{ 'label': 'Red', 'value': '#f7411d'},
-			{ 'label': 'Blue', 'value': '#1da0f7'}
-		],
-		'variable': 'fav_color'
-	},
-	{
-		'text': 'You picked the color [color=fav_color.value][fav_color][/color]'
-	},
-	{
-		'question': 'Are you sure you want the color [fav_color]?',
-		'options': [
-			{ 'label': 'No, let me pick again', 'value': '0'},
-			{ 'label': 'Yes, I love it', 'value': '1'}
-		],
-		'checkpoint': '-3'
-	},
-	{
-		'input': 'Now the name you want to set.',
-		'window_title': 'Write your name',
-		'variable': 'name'
-	},
-	{
-		'text': 'So, your name is [name] and you like the color [color=fav_color.value][fav_color][/color].'
-	},
-	{
-		'name': '[color=fav_color.value][name][/color]',
-		'text': 'I actually want to be able to pick more colors but you won\'t let me!'
-	},
-	{  
-		'name': 'Dialog System',
-		'text': 'It doesn\'t matter, this is only a demonstration!'
-	},
-	{
-		'action': 'game_end'
-	}
-]
+var dialog_script
 
 func file(file_path):
 	# Reading a json file to use as a dialog.
@@ -131,7 +85,7 @@ func start_text_tween():
 	$TextBubble/Tween.start()
 
 func update_name(event):
-	# This function will search for the name key and try to parse it into the NameLabel node of the dialog
+	 #This function will search for the name key and try to parse it into the NameLabel node of the dialog
 	if event.has('name'):
 		$TextBubble/NameLabel.bbcode_text = parse_text(event['name'])
 		if '[name]' in event['name']:
@@ -161,6 +115,13 @@ func load_dialog(skip_add = false):
 func event_handler(event):
 	# Handling an event and updating the available nodes accordingly. 
 	match event:
+		{'dialogue_end'}:
+			get_tree().paused = false
+			hide_dialog()
+		{'dialogue_start'}:
+			get_tree().paused = true
+			hide_dialog()
+
 		{'text'}, {'text', 'name'}:
 			show_dialog()
 			finished = false

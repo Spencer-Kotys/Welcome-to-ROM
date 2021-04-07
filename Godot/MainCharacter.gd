@@ -1,10 +1,12 @@
 extends KinematicBody2D
 
 onready var sprite = get_node("Sprite")
+onready var dialog = get_node("Root/CanvasLayer/Control/Dialog")
 
 # Morale Meter stuff
 signal morale_changed
 signal task_changed
+signal init_dialogue
 
 var morale = 50 # starting value for player morale
 
@@ -28,9 +30,9 @@ func MovementLoop():
 		var collision = get_slide_collision(index)
 		#if collision.collider.is_in_group("npcs") <- This right here would detect if the player bumped into another NPC
 		#if user collides with a static body, their morale goes down by 10
-		if collision.collider is StaticBody2D: 
-			morale = morale - 1;
-			emit_signal("morale_changed", morale)
+		if collision.collider is StaticBody2D && Input.is_action_just_pressed("ui_accept"):
+			get_tree().paused = true # MUST call this pause before EVERY dialogue initiation!!
+			emit_signal("init_dialogue")
 func AnimationLoop():
 	var anim_direction = "S"
 	var anim_mode = "Idle"
@@ -85,4 +87,4 @@ func _on_Area2D_body_exited(body):
 	morale = clamp(morale, 0, 100) # <-- this is important! it keeps morale from going over or under 100!
 	emit_signal("morale_changed", morale)
 	emit_signal("task_changed", "Enter the area!")
-	
+
