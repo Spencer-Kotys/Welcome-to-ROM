@@ -41,7 +41,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Task" type="Label" parent="NinePatchRect"]
+[node name="Task_Label" type="Label" parent="NinePatchRect"]
 margin_left = 16.5
 margin_top = 44.5
 margin_right = 147.5
