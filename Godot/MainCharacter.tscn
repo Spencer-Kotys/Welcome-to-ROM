@@ -24,9 +24,9 @@ animations = [ {
 "name": "East_Walk",
 "speed": 6.0
 }, {
-"frames": [ ExtResource( 1 ), ExtResource( 13 ) ],
+"frames": [ ExtResource( 12 ), ExtResource( 18 ) ],
 "loop": true,
-"name": "South_Idle",
+"name": "North_Idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ), ExtResource( 8 ), ExtResource( 4 ) ],
@@ -34,20 +34,20 @@ animations = [ {
 "name": "South_Walk",
 "speed": 6.0
 }, {
+"frames": [ ExtResource( 11 ), ExtResource( 17 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "North_Walk",
+"speed": 6.0
+}, {
 "frames": [ ExtResource( 5 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "East_Idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 18 ) ],
+"frames": [ ExtResource( 1 ), ExtResource( 13 ) ],
 "loop": true,
-"name": "North_Idle",
+"name": "South_Idle",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 11 ), ExtResource( 17 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "North_Walk",
-"speed": 6.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
