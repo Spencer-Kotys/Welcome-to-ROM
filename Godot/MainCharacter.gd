@@ -16,6 +16,7 @@ var dialogue_cooldown = false
 var speed = 200
 var move_direction = Vector2(0,0)
 var anim_direction = "Not Set"
+var anim_mode = "Idle"
 
 func _physics_process(delta):
 	MovementLoop()
@@ -37,11 +38,10 @@ func MovementLoop():
 		#if collision.collider.is_in_group("npcs") <- This right here would detect if the player bumped into another NPC
 		#if user collides with a static body, their morale goes down by 10
 		if collision.collider is StaticBody2D && Input.is_action_pressed("ui_accept") && dialogue_cooldown == false:
-			start_dialogue_timer()
+			start_dialogue() # <- Call this before every dialogue event
 			emit_signal("init_dialogue")
 			
 func AnimationLoop():
-	var anim_mode = "Idle"
 	var animation
 	match move_direction:
 		Vector2(-1,0):
@@ -110,7 +110,10 @@ func _on_Area2D_body_exited(body):
 
 func _on_dialogue_timer_timeout():
 	dialogue_cooldown = false
-	
-func start_dialogue_timer():
+
+# starts dialogue cooldown, and ensures that the idle animation plays when player is in dialogue
+# CALL BEFORE STARTING AND DIALOGUE EVENT
+func start_dialogue():
 	dialogue_cooldown = true
 	dialogue_timer.start()
+	sprite.play(anim_direction + "_Idle")
