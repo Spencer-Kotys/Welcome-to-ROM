@@ -12,7 +12,7 @@ to a class in other programming languages.
 ## Supporting Scenes
 
 Godot allows to scenes to be nested within other scenes, called instancing.
-A supporting scene is something like the HUD or the character sprit itself.
+A supporting scene is something like the HUD or the character sprite itself.
 What this allows for is a high level of modularity, eliminating the need to
 recreate these scenes over and over again. These scenes are superimposed on the
 main scene and add to the main scene's functionality.
@@ -45,3 +45,7 @@ Microsoft Windows, Apple macOS, and GNU/Linux. Godot can export to multiple
 operating systems as well to web servers.
 
 [Learn more about Godot exporting here](https://docs.godotengine.org/en/stable/getting_started/step_by_step/exporting.html)
+
+### Architecture Diagram
+
+![Architecture Diagram](https://github.com/macee/final-project-i-m-also-not-in-a-group/blob/main/Planning/Architecture%20Diagram.png)
