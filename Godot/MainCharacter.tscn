@@ -1,48 +1,76 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=19 format=2]
 
-[ext_resource path="res://assets/chararacters/Red Haired Boy Sprite Sheets/Transparent PNG/idle/frame-2.png" type="Texture" id=1]
-[ext_resource path="res://assets/chararacters/Red Haired Boy Sprite Sheets/Transparent PNG/idle/frame-1.png" type="Texture" id=2]
-[ext_resource path="res://assets/chararacters/Red Haired Boy Sprite Sheets/Transparent PNG/running/frame-1.png" type="Texture" id=3]
-[ext_resource path="res://assets/chararacters/Red Haired Boy Sprite Sheets/Transparent PNG/running/frame-3.png" type="Texture" id=4]
-[ext_resource path="res://assets/chararacters/Red Haired Boy Sprite Sheets/Transparent PNG/running/frame-6.png" type="Texture" id=5]
-[ext_resource path="res://assets/chararacters/Red Haired Boy Sprite Sheets/Transparent PNG/running/frame-5.png" type="Texture" id=6]
-[ext_resource path="res://assets/chararacters/Red Haired Boy Sprite Sheets/Transparent PNG/running/frame-4.png" type="Texture" id=7]
-[ext_resource path="res://assets/chararacters/Red Haired Boy Sprite Sheets/Transparent PNG/running/frame-2.png" type="Texture" id=8]
+[ext_resource path="res://assets/Player_Models/SE_Sprites/front_d_1.png" type="Texture" id=1]
+[ext_resource path="res://assets/Player_Models/SE_Sprites/front_w_2.png" type="Texture" id=3]
+[ext_resource path="res://assets/Player_Models/SE_Sprites/front_w_4.png" type="Texture" id=4]
+[ext_resource path="res://assets/Player_Models/SE_Sprites/right_d_1.png" type="Texture" id=5]
+[ext_resource path="res://assets/Player_Models/SE_Sprites/right_w_2.png" type="Texture" id=7]
+[ext_resource path="res://assets/Player_Models/SE_Sprites/front_w_3.png" type="Texture" id=8]
 [ext_resource path="res://MainCharacter.gd" type="Script" id=9]
+[ext_resource path="res://assets/Player_Models/SE_Sprites/right_w_4.png" type="Texture" id=10]
+[ext_resource path="res://assets/Player_Models/SE_Sprites/back_w_2.png" type="Texture" id=11]
+[ext_resource path="res://assets/Player_Models/SE_Sprites/back_d_1.png" type="Texture" id=12]
+[ext_resource path="res://assets/Player_Models/SE_Sprites/front_d_2.png" type="Texture" id=13]
+[ext_resource path="res://assets/Player_Models/SE_Sprites/right_d_2.png" type="Texture" id=14]
+[ext_resource path="res://assets/Player_Models/SE_Sprites/back_w_4.png" type="Texture" id=15]
+[ext_resource path="res://assets/Player_Models/SE_Sprites/right_w_3.png" type="Texture" id=16]
+[ext_resource path="res://assets/Player_Models/SE_Sprites/back_w_3.png" type="Texture" id=17]
+[ext_resource path="res://assets/Player_Models/SE_Sprites/back_d_2.png" type="Texture" id=18]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 16 ), ExtResource( 10 ) ],
 "loop": true,
-"name": "Idle",
+"name": "East_Walk",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "South_Idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 8 ), ExtResource( 4 ) ],
 "loop": true,
-"name": "Running",
+"name": "South_Walk",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "East_Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "North_Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 17 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "North_Walk",
 "speed": 6.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=2]
-radius = 40.0
-height = 24.0
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 19.5453, 31.7486 )
 
 [node name="MainCharacter" type="KinematicBody2D"]
-position = Vector2( 440, 336 )
+position = Vector2( 400, 280 )
 script = ExtResource( 9 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 pause_mode = 2
-position = Vector2( 73.6436, -36.4141 )
-scale = Vector2( 0.127329, 0.115942 )
+position = Vector2( 19.2806, 7.52802 )
+scale = Vector2( 2.66667, 2.66667 )
 frames = SubResource( 1 )
-animation = "Idle"
+animation = "North_Walk"
+frame = 1
+playing = true
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2( 73.6438, -36.4139 )
+position = Vector2( 21.0236, 7.99998 )
 shape = SubResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 73.6438, -36.4139 )
+position = Vector2( 21.2732, 7.60307 )
 current = true
 process_mode = 0
