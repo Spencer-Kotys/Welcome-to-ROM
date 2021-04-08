@@ -1,12 +1,16 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/Pixel_grid_4000x2000.svg.png" type="Texture" id=1]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=2]
 [ext_resource path="res://MainCharacter.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/buddy_green.png" type="Texture" id=4]
+[ext_resource path="res://CharacterBlock.gd" type="Script" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 70.4042, 683.111 )
+extents = Vector2( 70.2818, 68.0184 )
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 236.077
 
 [node name="Game" type="Node"]
 
@@ -15,21 +19,76 @@ position = Vector2( 509.782, 299.708 )
 scale = Vector2( 1.06782, 0.924089 )
 texture = ExtResource( 1 )
 
-[node name="MainCharacter" parent="." instance=ExtResource( 3 )]
-position = Vector2( 641, 398.93 )
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+pause_mode = 2
+anchor_left = 0.198
+anchor_top = 0.109
+anchor_right = 0.198
+anchor_bottom = 0.109
+margin_left = -202.752
+margin_top = -65.4
+margin_right = 821.248
+margin_bottom = 534.6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialog" type="Popup" parent="CanvasLayer/Control"]
+pause_mode = 2
+visible = true
+margin_left = 203.0
+margin_top = 65.0
+margin_right = 1223.0
+margin_bottom = 660.0
+mouse_filter = 1
+popup_exclusive = true
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="HUD" parent="CanvasLayer" instance=ExtResource( 2 )]
 rect_pivot_offset = Vector2( 364.718, 193.671 )
 
+[node name="MainCharacter" parent="." instance=ExtResource( 3 )]
+position = Vector2( 641, 398.93 )
+
+[node name="Sprite" parent="MainCharacter" index="0"]
+position = Vector2( 22.5842, 5.16833 )
+frame = 0
+
+[node name="Collision" parent="MainCharacter" index="1"]
+position = Vector2( 25.5274, 2.85585 )
+
+[node name="Camera2D" parent="MainCharacter" index="2"]
+position = Vector2( 25.5274, 2.85582 )
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 401.52, 362.516 )
+shape = SubResource( 1 )
+
 [node name="Sprite" type="Sprite" parent="StaticBody2D"]
-position = Vector2( 366.631, 423.902 )
-scale = Vector2( 1, 9.67515 )
+position = Vector2( 397.351, 362.516 )
 texture = ExtResource( 4 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 364.949, 426.061 )
-shape = SubResource( 1 )
+[node name="Area2D" type="Area2D" parent="StaticBody2D"]
+position = Vector2( 297.131, 163.879 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Area2D"]
+position = Vector2( 104.389, 197.778 )
+shape = SubResource( 2 )
+[connection signal="init_dialogue" from="MainCharacter" to="CanvasLayer/Control/Dialog" method="_on_MainCharacter_init_dialogue"]
+[connection signal="morale_changed" from="MainCharacter" to="CanvasLayer/HUD" method="_on_MainCharacter_morale_changed"]
+[connection signal="task_changed" from="MainCharacter" to="CanvasLayer/HUD" method="_on_MainCharacter_task_changed"]
+[connection signal="body_entered" from="StaticBody2D/Area2D" to="MainCharacter" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="StaticBody2D/Area2D" to="MainCharacter" method="_on_Area2D_body_exited"]
+
+[editable path="CanvasLayer/HUD"]
+
+[editable path="CanvasLayer/HUD/Control/MoraleMeter"]
+
+[editable path="MainCharacter"]

@@ -15,9 +15,9 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Final Project"
+config/name="Welcome to ROM"
+config/description="Welcome to ROM is a historical game detailing the struggles of cadets during the Covid 19 ROM of 2020. It is written by cadets who lived through these harrowing experiences."
 run/main_scene="res://startScreen.tscn"
-config/icon="res://icon.png"
 
 [rendering]
 
