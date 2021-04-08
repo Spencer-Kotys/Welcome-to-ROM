@@ -56,3 +56,7 @@ Game is available on PC.
 8. Users win Game
 
 9. Users Lose Game
+
+### Use Case Diagram
+
+![Use Case Diagram](https://github.com/macee/final-project-i-m-also-not-in-a-group/blob/main/Planning/Use%20Case%20Diagram.PNG)
