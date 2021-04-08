@@ -35,4 +35,4 @@ func _on_Female_pressed():
 
 
 func _on_Continue_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene("res://LevelMockup.tscn")
