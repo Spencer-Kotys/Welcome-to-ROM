@@ -116,6 +116,7 @@ func event_handler(event):
 	# Handling an event and updating the available nodes accordingly. 
 	match event:
 		{'dialogue_end'}:
+			# Unpause the game
 			get_tree().paused = false
 			hide_dialog()
 		{'dialogue_start'}:

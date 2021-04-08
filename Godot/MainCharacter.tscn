@@ -32,7 +32,7 @@ animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 8 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "South_Walk",
-"speed": 7.0
+"speed": 6.0
 }, {
 "frames": [ ExtResource( 5 ), ExtResource( 14 ) ],
 "loop": true,
