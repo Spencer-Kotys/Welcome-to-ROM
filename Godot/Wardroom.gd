@@ -2,7 +2,8 @@ extends Control
 
 onready var video = get_node("WardroomScene")
 
-
+func _ready():
+	GlobalAudio.stop() # stop music
 
 func _on_Button_pressed():
 	video.stop()
