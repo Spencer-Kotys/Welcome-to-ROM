@@ -18,6 +18,9 @@ var move_direction = Vector2(0,0)
 var anim_direction = "Not Set"
 var anim_mode = "Idle"
 
+func _ready():
+	GlobalAudio.play("res://music/Mournful-Departure-Asher-Fulero.ogg") # plays music
+
 func _physics_process(delta):
 	MovementLoop()
 	

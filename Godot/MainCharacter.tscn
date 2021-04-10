@@ -19,20 +19,10 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 7 ), ExtResource( 16 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "East_Walk",
-"speed": 6.0
-}, {
 "frames": [ ExtResource( 1 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "South_Idle",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ), ExtResource( 8 ), ExtResource( 4 ) ],
-"loop": true,
-"name": "South_Walk",
-"speed": 6.0
 }, {
 "frames": [ ExtResource( 5 ), ExtResource( 14 ) ],
 "loop": true,
@@ -47,6 +37,16 @@ animations = [ {
 "frames": [ ExtResource( 11 ), ExtResource( 17 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "North_Walk",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 8 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "South_Walk",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 16 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "East_Walk",
 "speed": 6.0
 } ]
 
@@ -63,7 +63,6 @@ position = Vector2( 19.2806, 7.52802 )
 scale = Vector2( 2.66667, 2.66667 )
 frames = SubResource( 1 )
 animation = "North_Walk"
-frame = 1
 playing = true
 
 [node name="Collision" type="CollisionShape2D" parent="."]
