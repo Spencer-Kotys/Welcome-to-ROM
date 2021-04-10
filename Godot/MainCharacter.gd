@@ -16,6 +16,9 @@ var speed = 200
 var move_direction = Vector2(0,0)
 var anim_direction = "Not Set"
 
+# Animation Variable
+var currentAnimation
+
 func _ready():
 	GlobalAudio.play("res://music/Mournful-Departure-Asher-Fulero.ogg") # plays music
 
@@ -92,9 +95,15 @@ func AnimationLoop():
 	# If player hasn't entered any movement directions yet, sets East as direction
 	if anim_direction == "Not Set":
 		anim_direction = "East"
-		
+	
 	animation = anim_direction + "_" + anim_mode
-	print(animation)
+	
+	if (animation != currentAnimation):
+		print(animation)
+		currentAnimation = animation
+	else:
+		pass
+	
 	sprite.play(animation)
 
 func _on_Area2D_body_entered(body):
