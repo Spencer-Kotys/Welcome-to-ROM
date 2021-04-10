@@ -34,3 +34,7 @@ func _on_Quit_pressed():
 
 func _on_Test_Scene_pressed():
 	get_tree().change_scene("res://LevelMockup.tscn")
+
+
+func _on_Wardroom_pressed():
+	get_tree().change_scene("res://Wardroom.tscn")
