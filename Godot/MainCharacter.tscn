@@ -1,7 +1,6 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://assets/Player_Models/SE_Sprites/front_d_1.png" type="Texture" id=1]
-[ext_resource path="res://Mournful-Departure-Asher-Fulero.ogg" type="AudioStream" id=2]
 [ext_resource path="res://assets/Player_Models/SE_Sprites/front_w_2.png" type="Texture" id=3]
 [ext_resource path="res://assets/Player_Models/SE_Sprites/front_w_4.png" type="Texture" id=4]
 [ext_resource path="res://assets/Player_Models/SE_Sprites/right_d_1.png" type="Texture" id=5]
@@ -25,6 +24,21 @@ animations = [ {
 "name": "East_Walk",
 "speed": 6.0
 }, {
+"frames": [ ExtResource( 3 ), ExtResource( 8 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "South_Walk",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "East_Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 17 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "North_Walk",
+"speed": 6.0
+}, {
 "frames": [ ExtResource( 12 ), ExtResource( 18 ) ],
 "loop": true,
 "name": "North_Idle",
@@ -34,21 +48,6 @@ animations = [ {
 "loop": true,
 "name": "South_Idle",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 5 ), ExtResource( 14 ) ],
-"loop": true,
-"name": "East_Idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ), ExtResource( 8 ), ExtResource( 4 ) ],
-"loop": true,
-"name": "South_Walk",
-"speed": 6.0
-}, {
-"frames": [ ExtResource( 11 ), ExtResource( 17 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "North_Walk",
-"speed": 6.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -75,8 +74,3 @@ shape = SubResource( 2 )
 position = Vector2( 21.2732, 7.60307 )
 current = true
 process_mode = 0
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 2 )
-volume_db = -14.136
-autoplay = true

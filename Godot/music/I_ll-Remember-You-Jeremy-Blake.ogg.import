@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/I_ll-Remember-You-Jeremy-Blake.ogg-b31f607686750abde7baed51dee20432.oggstr"
+
+[deps]
+
+source_file="res://music/I_ll-Remember-You-Jeremy-Blake.ogg"
+dest_files=[ "res://.import/I_ll-Remember-You-Jeremy-Blake.ogg-b31f607686750abde7baed51dee20432.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
