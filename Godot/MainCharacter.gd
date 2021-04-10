@@ -9,7 +9,6 @@ signal morale_changed
 signal task_changed
 signal init_dialogue
 
-var morale = 50 # starting value for player morale
 var dialogue_cooldown = false
 
 # Movement Variables
@@ -17,6 +16,9 @@ var speed = 200
 var move_direction = Vector2(0,0)
 var anim_direction = "Not Set"
 var anim_mode = "Idle"
+
+func _ready():
+	global.morale = 50; # Player's morale starts at 50
 
 func _physics_process(delta):
 	MovementLoop()
@@ -96,15 +98,16 @@ func AnimationLoop():
 	sprite.play(animation)
 
 func _on_Area2D_body_entered(body):
-	morale = morale - 10
-	morale = clamp(morale, 0, 100) # <-- this is important! it keeps morale from going over or under 100!
-	emit_signal("morale_changed", morale)
+	global.morale = global.morale + 20
+	global.morale = clamp(global.morale, 0, 100) # <-- this is important! it keeps morale from going over or under 100!
+	global.covidChance(5) # 5% chance of getting covid if you get near this box
+	emit_signal("morale_changed")
 	emit_signal("task_changed", "Leave the area!")
 
 func _on_Area2D_body_exited(body):
-	morale = morale + 20
-	morale = clamp(morale, 0, 100) # <-- this is important! it keeps morale from going over or under 100!
-	emit_signal("morale_changed", morale)
+	global.morale = global.morale - 10
+	global.morale = clamp(global.morale, 0, 100) # <-- this is important! it keeps morale from going over or under 100!
+	emit_signal("morale_changed")
 	emit_signal("task_changed", "Enter the area!")
 
 

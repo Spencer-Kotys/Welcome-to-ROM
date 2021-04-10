@@ -22,8 +22,9 @@ config/icon="res://assets/Player_Models/SE_Sprites/right_w_4.png"
 
 [autoload]
 
-global="*res://global.gd"
-GlobalAudio="*res://globalAudio.tscn"
+global="*res://global.tscn"
+globalAudio="*res://globalAudio.tscn"
+globalCovid="*res://globalCovid.gd"
 
 [display]
 
