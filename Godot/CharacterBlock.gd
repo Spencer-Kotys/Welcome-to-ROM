@@ -1,12 +1,11 @@
 extends Popup
 
 func _on_MainCharacter_init_dialogue():
-	get_tree().paused = true
 	popup()
 	var dialog = load("res://addons/dialogs/Dialog.tscn").instance()
 	dialog.dialog_script = [
 	{
-		'dialogue_start': 'Hello!'
+		'dialogue_start': 0
 	},
 	{
 		'text': 'Hello Kaydet!'
@@ -42,3 +41,4 @@ func _on_MainCharacter_init_dialogue():
 		'dialogue_end': 0
 	}]
 	add_child(dialog)
+	
