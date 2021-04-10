@@ -9,7 +9,7 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if (GlobalAudio.is_playing != true): # checkes if music is already playing
-		GlobalAudio.play("res://Naoya-Sakamata-Dissociation.ogg") #plays audio
+		GlobalAudio.play("res://music/Naoya-Sakamata-Dissociation.ogg") #plays audio
 	else:
 		pass
 

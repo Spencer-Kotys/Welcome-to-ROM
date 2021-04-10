@@ -17,7 +17,7 @@ var move_direction = Vector2(0,0)
 var anim_direction = "Not Set"
 
 func _ready():
-	GlobalAudio.play("res://Mournful-Departure-Asher-Fulero.ogg") # plays music
+	GlobalAudio.play("res://music/Mournful-Departure-Asher-Fulero.ogg") # plays music
 
 func _physics_process(delta):
 	MovementLoop()
