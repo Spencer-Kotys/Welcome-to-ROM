@@ -16,6 +16,9 @@ var speed = 200
 var move_direction = Vector2(0,0)
 var anim_direction = "Not Set"
 
+func _ready():
+	GlobalAudio.play("res://Mournful-Departure-Asher-Fulero.ogg") # plays music
+
 func _physics_process(delta):
 	MovementLoop()
 	
