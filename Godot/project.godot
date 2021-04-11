@@ -28,7 +28,7 @@ globalAudio="*res://globalAudio.tscn"
 [display]
 
 window/stretch/mode="viewport"
-window/stretch/aspect="keep"
+window/stretch/aspect="expand"
 
 [editor_plugins]
 

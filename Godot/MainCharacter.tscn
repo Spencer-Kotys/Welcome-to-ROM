@@ -29,6 +29,16 @@ animations = [ {
 "name": "East_Idle",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 7 ), ExtResource( 16 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "East_Walk",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 8 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "South_Walk",
+"speed": 6.0
+}, {
 "frames": [ ExtResource( 12 ), ExtResource( 18 ) ],
 "loop": true,
 "name": "North_Idle",
@@ -51,26 +61,30 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 19.5453, 31.7486 )
+extents = Vector2( 6.88193, 12.3034 )
 
 [node name="MainCharacter" type="KinematicBody2D"]
-position = Vector2( 400, 280 )
+position = Vector2( 408, 243.528 )
 script = ExtResource( 9 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 pause_mode = 2
 position = Vector2( 19.2806, 7.52802 )
-scale = Vector2( 2.66667, 2.66667 )
 frames = SubResource( 1 )
+<<<<<<< Updated upstream
 animation = "North_Walk"
 frame = 2
+=======
+animation = "South_Idle"
+>>>>>>> Stashed changes
 playing = true
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2( 21.0236, 7.99998 )
+position = Vector2( 19.6668, 7.7935 )
 shape = SubResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 21.2732, 7.60307 )
+position = Vector2( 19.6668, 7.7935 )
 current = true
+zoom = Vector2( 0.25, 0.25 )
 process_mode = 0
