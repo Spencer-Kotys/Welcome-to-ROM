@@ -19,6 +19,7 @@ var anim_mode = "Idle"
 
 func _ready():
 	global.morale = 50; # Player's morale starts at 50
+	globalAudio.play("res://music/Mournful-Departure-Asher-Fulero.ogg")
 
 func _physics_process(delta):
 	MovementLoop()
