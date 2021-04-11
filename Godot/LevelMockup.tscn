@@ -57,6 +57,7 @@ position = Vector2( 641, 398.93 )
 
 [node name="Sprite" parent="MainCharacter" index="0"]
 position = Vector2( 22.5842, 5.16833 )
+frame = 1
 
 [node name="Collision" parent="MainCharacter" index="1"]
 position = Vector2( 25.5274, 2.85585 )
