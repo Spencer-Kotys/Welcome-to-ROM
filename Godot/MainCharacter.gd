@@ -5,20 +5,27 @@ onready var sprite = get_node("Sprite")
 onready var dialogue_timer = get_node("dialogue_timer")
 
 # Signals
-signal morale_changed
+signal add_morale
+signal subtract_morale
 signal task_changed
 signal init_dialogue
 
 var dialogue_cooldown = false
 
 # Movement Variables
-var speed = 200
+var speed = 75
 var move_direction = Vector2(0,0)
 var anim_direction = "Not Set"
 var anim_mode = "Idle"
 
+# local vars
+
 func _ready():
+<<<<<<< Updated upstream
 	global.morale = 50; # Player's morale starts at 50
+=======
+	globalAudio.play("res://music/Mournful-Departure-Asher-Fulero.ogg")
+>>>>>>> Stashed changes
 
 func _physics_process(delta):
 	MovementLoop()
@@ -37,8 +44,7 @@ func MovementLoop():
 	# Collision detection, detect what is being collided with
 	for index in get_slide_count():
 		var collision = get_slide_collision(index)
-		#if collision.collider.is_in_group("npcs") <- This right here would detect if the player bumped into another NPC
-		#if user collides with a static body, their morale goes down by 10
+
 		if collision.collider is StaticBody2D && Input.is_action_pressed("ui_accept") && dialogue_cooldown == false:
 			start_dialogue() # <- Call this before every dialogue event
 			emit_signal("init_dialogue")
@@ -98,18 +104,7 @@ func AnimationLoop():
 	sprite.play(animation)
 
 func _on_Area2D_body_entered(body):
-	global.morale = global.morale + 20
-	global.morale = clamp(global.morale, 0, 100) # <-- this is important! it keeps morale from going over or under 100!
-	global.covidChance(5) # 5% chance of getting covid if you get near this box
-	emit_signal("morale_changed")
-	emit_signal("task_changed", "Leave the area!")
-
-func _on_Area2D_body_exited(body):
-	global.morale = global.morale - 10
-	global.morale = clamp(global.morale, 0, 100) # <-- this is important! it keeps morale from going over or under 100!
-	emit_signal("morale_changed")
-	emit_signal("task_changed", "Enter the area!")
-
+	emit_signal("add_morale", 20)
 
 func _on_dialogue_timer_timeout():
 	dialogue_cooldown = false
@@ -120,3 +115,6 @@ func start_dialogue():
 	dialogue_cooldown = true
 	dialogue_timer.start()
 	sprite.play(anim_direction + "_Idle")
+
+func _on_Ladderwell_area_entered(area):
+	pass # Replace with function body.

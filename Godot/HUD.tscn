@@ -30,6 +30,7 @@ anchor_bottom = 0.0
 margin_top = -8.73071
 margin_right = 500.0
 margin_bottom = 44.2693
+script = null
 
 [node name="DayCounter" parent="Control" instance=ExtResource( 3 )]
 anchor_left = 0.0
