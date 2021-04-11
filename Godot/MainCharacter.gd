@@ -122,3 +122,8 @@ func start_dialogue():
 	dialogue_cooldown = true
 	dialogue_timer.start()
 	sprite.play(anim_direction + "_Idle")
+
+
+func _on_Wardroom_body_entered(body):
+	print("You are going to the Wardroom")
+	get_tree().change_scene("res://Wardroom.tscn")
