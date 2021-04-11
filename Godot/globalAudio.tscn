@@ -10,5 +10,5 @@ __meta__ = {
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 pause_mode = 1
-volume_db = -10.097
+volume_db = -34.33
 autoplay = true

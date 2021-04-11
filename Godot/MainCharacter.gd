@@ -21,11 +21,7 @@ var anim_mode = "Idle"
 # local vars
 
 func _ready():
-<<<<<<< Updated upstream
 	global.morale = 50; # Player's morale starts at 50
-=======
-	globalAudio.play("res://music/Mournful-Departure-Asher-Fulero.ogg")
->>>>>>> Stashed changes
 
 func _physics_process(delta):
 	MovementLoop()
