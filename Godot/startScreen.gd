@@ -8,8 +8,8 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if (GlobalAudio.is_playing != true): # checkes if music is already playing
-		GlobalAudio.play("res://music/Naoya-Sakamata-Dissociation.ogg") #plays audio
+	if (globalAudio.is_playing != true): # checkes if music is already playing
+		globalAudio.play("res://music/Naoya-Sakamata-Dissociation.ogg") #plays audio
 	else:
 		pass
 
@@ -37,3 +37,7 @@ func _on_Quit_pressed():
 
 func _on_Test_Scene_pressed():
 	get_tree().change_scene("res://LevelMockup.tscn")
+
+
+func _on_Wardroom_pressed():
+	get_tree().change_scene("res://Wardroom.tscn")
