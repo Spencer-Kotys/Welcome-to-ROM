@@ -8,7 +8,8 @@ onready var dialogue_timer = get_node("dialogue_timer")
 signal add_morale
 signal subtract_morale
 signal task_changed
-signal init_dialogue
+signal init_greenboy_dialogue
+signal window_popup
 
 var dialogue_cooldown = false
 
@@ -42,10 +43,14 @@ func MovementLoop():
 	# Collision detection, detect what is being collided with
 	for index in get_slide_count():
 		var collision = get_slide_collision(index)
-
-		if collision.collider is StaticBody2D && Input.is_action_pressed("ui_accept") && dialogue_cooldown == false:
-			start_dialogue() # <- Call this before every dialogue event
-			emit_signal("init_dialogue")
+		if collision.collider is StaticBody2D && Input.is_action_just_pressed("ui_accept") && dialogue_cooldown == false:
+			if collision.collider.name == "Player Bed":
+				print("This is your bed")
+			if collision.collider.name == "Window":
+				print("This is a window")
+			elif collision.collider.name == "Green Boy":
+				start_dialogue() # <- Call this before every dialogue event
+				emit_signal("init_greenboy_dialogue")
 
 func AnimationLoop():
 	var animation
@@ -96,7 +101,7 @@ func AnimationLoop():
 
 	# If player hasn't entered any movement directions yet, sets East as direction
 	if anim_direction == "Not Set":
-		anim_direction = "East"
+		anim_direction = "South"
 
 	animation = anim_direction + "_" + anim_mode
 	sprite.play(animation)
@@ -113,6 +118,3 @@ func start_dialogue():
 	dialogue_cooldown = true
 	dialogue_timer.start()
 	sprite.play(anim_direction + "_Idle")
-
-func _on_Ladderwell_area_entered(area):
-	pass # Replace with function body.
