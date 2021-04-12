@@ -94,7 +94,7 @@ func AnimationLoop():
 	
 	# If player hasn't entered any movement directions yet, sets East as direction
 	if anim_direction == "Not Set":
-		anim_direction = "East"
+		anim_direction = "South"
 		
 	animation = anim_direction + "_" + anim_mode
 	sprite.play(animation)
