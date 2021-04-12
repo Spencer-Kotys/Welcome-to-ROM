@@ -19,6 +19,11 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 16 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "East_Walk",
+"speed": 6.0
+}, {
 "frames": [ ExtResource( 1 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "South_Idle",
