@@ -29,4 +29,4 @@ func _on_Female_pressed():
 func _on_Continue_pressed():
 	global.playerName = $CenterContainer/VBoxContainer/Name_HBox/Character_Name.text # set global character name
 	global.playerGender = $CenterContainer/VBoxContainer/Gender.text # set global character gender
-	get_tree().change_scene("res://LevelMockup.tscn")
+	get_tree().change_scene("res://Spawn 1.tscn")

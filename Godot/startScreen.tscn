@@ -30,9 +30,9 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 margin_left = 438.0
-margin_top = 174.0
+margin_top = 186.0
 margin_right = 586.0
-margin_bottom = 425.0
+margin_bottom = 413.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -83,15 +83,8 @@ margin_top = 207.0
 margin_right = 148.0
 margin_bottom = 227.0
 text = "Test Scene"
-
-[node name="Wardroom" type="Button" parent="CenterContainer/VBoxContainer"]
-margin_top = 231.0
-margin_right = 148.0
-margin_bottom = 251.0
-text = "Wardroom Scene"
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Play Game" to="." method="_on_Play_Game_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/How To Play" to="." method="_on_How_To_Play_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Credits" to="." method="_on_Credits_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Test Scene" to="." method="_on_Test_Scene_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Wardroom" to="." method="_on_Wardroom_pressed"]

@@ -1,11 +1,11 @@
 extends Control
 
-onready var video = get_node("WardroomScene")
+onready var video = get_node("FormationScene")
 
 func _on_Button_pressed():
 	video.stop()
 	get_tree().change_scene("res://Spawn 2.tscn")
 
 
-func _on_WardroomScene_finished():
+func _on_FormationScene_finished():
 	get_tree().change_scene("res://Spawn 2.tscn")

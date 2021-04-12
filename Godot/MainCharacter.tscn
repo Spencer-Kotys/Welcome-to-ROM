@@ -19,29 +19,24 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "South_Idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 5 ), ExtResource( 14 ) ],
-"loop": true,
-"name": "East_Idle",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 7 ), ExtResource( 16 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "East_Walk",
 "speed": 6.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 8 ), ExtResource( 4 ) ],
+"frames": [ ExtResource( 1 ), ExtResource( 13 ) ],
 "loop": true,
-"name": "South_Walk",
-"speed": 6.0
+"name": "South_Idle",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 12 ), ExtResource( 18 ) ],
 "loop": true,
 "name": "North_Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "East_Idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 11 ), ExtResource( 17 ), ExtResource( 15 ) ],
@@ -53,30 +48,21 @@ animations = [ {
 "loop": true,
 "name": "South_Walk",
 "speed": 6.0
-}, {
-"frames": [ ExtResource( 7 ), ExtResource( 16 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "East_Walk",
-"speed": 6.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 6.88193, 12.3034 )
 
 [node name="MainCharacter" type="KinematicBody2D"]
-position = Vector2( 408, 243.528 )
+position = Vector2( 408, 240 )
 script = ExtResource( 9 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 pause_mode = 2
 position = Vector2( 19.2806, 7.52802 )
 frames = SubResource( 1 )
-<<<<<<< Updated upstream
-animation = "North_Walk"
-frame = 2
-=======
 animation = "South_Idle"
->>>>>>> Stashed changes
+frame = 1
 playing = true
 
 [node name="Collision" type="CollisionShape2D" parent="."]
