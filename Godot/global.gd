@@ -7,7 +7,7 @@ var custom_variables = {}
 var playerName = null # stores player's name
 var playerGender = null # stores player's gender
 var day = null # stores day value
-var morale = null # stores morale value
+var morale = 50 # stores morale value
 var has_covid = null # true or false for if the player has covid
 var bagged = null
 var time_start = null
@@ -36,3 +36,5 @@ func bagChance(percent_chance):
 	if num <= percent_chance:
 		global.bagged = true
 		print("You have been bagged!")
+
+	

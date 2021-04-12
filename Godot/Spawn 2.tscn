@@ -1,0 +1,149 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://ChaseHall.tscn" type="PackedScene" id=1]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=2]
+[ext_resource path="res://MainCharacter.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/buddy_green.png" type="Texture" id=4]
+[ext_resource path="res://CharacterBlock.gd" type="Script" id=5]
+[ext_resource path="res://LadderWell.gd" type="Script" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10.6522, 2.59363 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 7.57043, 9.53735 )
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 28.0084
+
+[node name="Game" type="Node"]
+
+[node name="ChaseHall" parent="." instance=ExtResource( 1 )]
+position = Vector2( 408, 184 )
+
+[node name="Ladderwell" type="Area2D" parent="ChaseHall"]
+position = Vector2( 703.379, -27.6842 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChaseHall/Ladderwell"]
+position = Vector2( -271.838, 87.3331 )
+shape = SubResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+pause_mode = 2
+anchor_left = 0.198
+anchor_top = 0.109
+anchor_right = 0.198
+anchor_bottom = 0.109
+margin_left = -202.752
+margin_top = -65.4
+margin_right = 821.248
+margin_bottom = 534.6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialog" type="Popup" parent="CanvasLayer/Control"]
+pause_mode = 2
+margin_right = 1024.0
+margin_bottom = 600.0
+mouse_filter = 1
+popup_exclusive = true
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LadderWell" type="Popup" parent="CanvasLayer/Control"]
+margin_right = 1024.0
+margin_bottom = 600.0
+script = ExtResource( 7 )
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control/LadderWell"]
+margin_top = 2.0
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/LadderWell/CenterContainer"]
+margin_left = 429.0
+margin_top = 268.0
+margin_right = 594.0
+margin_bottom = 330.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer"]
+margin_right = 165.0
+margin_bottom = 14.0
+text = "Where do you want to go?"
+
+[node name="Wardroom" type="Button" parent="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer"]
+margin_top = 18.0
+margin_right = 165.0
+margin_bottom = 38.0
+text = "Wardroom"
+
+[node name="Formation" type="Button" parent="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer"]
+margin_right = 12.0
+margin_bottom = 20.0
+text = "Formation"
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource( 2 )]
+rect_pivot_offset = Vector2( 364.718, 193.671 )
+
+[node name="MainCharacter" parent="." instance=ExtResource( 3 )]
+position = Vector2( 816.746, 247.735 )
+
+[node name="Sprite" parent="MainCharacter" index="0"]
+position = Vector2( 22.5842, 5.16833 )
+frame = 1
+
+[node name="Collision" parent="MainCharacter" index="1"]
+position = Vector2( 23.1113, 5.39507 )
+
+[node name="Camera2D" parent="MainCharacter" index="2"]
+position = Vector2( 23.1113, 5.39507 )
+
+[node name="dialogue_timer" type="Timer" parent="MainCharacter"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 0, 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 668.256, 320 )
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 668.256, 320 )
+scale = Vector2( 0.0995832, 0.130106 )
+texture = ExtResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D"]
+position = Vector2( 668.256, 320 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Area2D"]
+position = Vector2( 6.10352e-05, 1.52588e-05 )
+shape = SubResource( 3 )
+[connection signal="body_entered" from="ChaseHall/Ladderwell" to="CanvasLayer/Control/LadderWell" method="_on_Ladderwell_body_entered"]
+[connection signal="body_exited" from="ChaseHall/Ladderwell" to="CanvasLayer/Control/LadderWell" method="_on_Ladderwell_body_exited"]
+[connection signal="pressed" from="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer/Wardroom" to="CanvasLayer/Control/LadderWell" method="_on_Wardroom_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer/Formation" to="CanvasLayer/Control/LadderWell" method="_on_Formation_pressed"]
+[connection signal="add_morale" from="MainCharacter" to="CanvasLayer/HUD" method="_on_MainCharacter_add_morale"]
+[connection signal="init_dialogue" from="MainCharacter" to="CanvasLayer/Control/Dialog" method="_on_MainCharacter_init_dialogue"]
+[connection signal="subtract_morale" from="MainCharacter" to="CanvasLayer/HUD" method="_on_MainCharacter_subtract_morale"]
+[connection signal="task_changed" from="MainCharacter" to="CanvasLayer/HUD" method="_on_MainCharacter_task_changed"]
+[connection signal="timeout" from="MainCharacter/dialogue_timer" to="MainCharacter" method="_on_dialogue_timer_timeout"]
+[connection signal="body_entered" from="StaticBody2D/Area2D" to="MainCharacter" method="_on_Area2D_body_entered"]
+
+[editable path="ChaseHall"]
+
+[editable path="CanvasLayer/HUD"]
+
+[editable path="CanvasLayer/HUD/Control/MoraleMeter"]
+
+[editable path="MainCharacter"]

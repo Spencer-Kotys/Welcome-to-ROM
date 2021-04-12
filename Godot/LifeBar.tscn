@@ -7,17 +7,6 @@
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Control
-
-onready var morale_meter = $MoraleProgress
-onready var update_tween = $MoraleProgress/Tween
-
-func __on_MainCharacter_morale_changed(morale, amount):
-	#morale_meter.value = morale
-	update_tween.interpolate_property(morale_meter, \"value\", morale_meter.value, morale, 0.4, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
-	update_tween.start()
-	
-func _on_max_morale_updated(max_morale):
-	morale_meter.max_value = max_morale
 "
 
 [sub_resource type="DynamicFont" id=2]
