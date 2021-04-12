@@ -1,22 +1,24 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://ChaseHall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=2]
 [ext_resource path="res://MainCharacter.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/buddy_green.png" type="Texture" id=4]
 [ext_resource path="res://CharacterBlock.gd" type="Script" id=5]
+[ext_resource path="res://Spawn 2.gd" type="Script" id=6]
 [ext_resource path="res://LadderWell.gd" type="Script" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10.6522, 2.59363 )
 
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 9.77979, 3.78979 )
+
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 7.57043, 9.53735 )
 
-[sub_resource type="CircleShape2D" id=3]
-radius = 28.0084
-
 [node name="Game" type="Node"]
+script = ExtResource( 6 )
 
 [node name="ChaseHall" parent="." instance=ExtResource( 1 )]
 position = Vector2( 408, 184 )
@@ -27,6 +29,13 @@ position = Vector2( 703.379, -27.6842 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChaseHall/Ladderwell"]
 position = Vector2( -271.838, 87.3331 )
 shape = SubResource( 1 )
+
+[node name="Room" type="Area2D" parent="ChaseHall"]
+position = Vector2( -408, -184 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChaseHall/Room"]
+position = Vector2( 504.268, 243.649 )
+shape = SubResource( 4 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -100,14 +109,13 @@ rect_pivot_offset = Vector2( 364.718, 193.671 )
 position = Vector2( 816.746, 247.735 )
 
 [node name="Sprite" parent="MainCharacter" index="0"]
-position = Vector2( 22.5842, 5.16833 )
-frame = 1
+position = Vector2( 23.1113, 12.1375 )
 
 [node name="Collision" parent="MainCharacter" index="1"]
-position = Vector2( 23.1113, 5.39507 )
+position = Vector2( 23.1113, 12.1375 )
 
 [node name="Camera2D" parent="MainCharacter" index="2"]
-position = Vector2( 23.1113, 5.39507 )
+position = Vector2( 23.1113, 12.1375 )
 
 [node name="dialogue_timer" type="Timer" parent="MainCharacter"]
 
@@ -122,15 +130,9 @@ shape = SubResource( 2 )
 position = Vector2( 668.256, 320 )
 scale = Vector2( 0.0995832, 0.130106 )
 texture = ExtResource( 4 )
-
-[node name="Area2D" type="Area2D" parent="StaticBody2D"]
-position = Vector2( 668.256, 320 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Area2D"]
-position = Vector2( 6.10352e-05, 1.52588e-05 )
-shape = SubResource( 3 )
 [connection signal="body_entered" from="ChaseHall/Ladderwell" to="CanvasLayer/Control/LadderWell" method="_on_Ladderwell_body_entered"]
 [connection signal="body_exited" from="ChaseHall/Ladderwell" to="CanvasLayer/Control/LadderWell" method="_on_Ladderwell_body_exited"]
+[connection signal="body_entered" from="ChaseHall/Room" to="." method="_on_Room_body_entered"]
 [connection signal="pressed" from="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer/Wardroom" to="CanvasLayer/Control/LadderWell" method="_on_Wardroom_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer/Formation" to="CanvasLayer/Control/LadderWell" method="_on_Formation_pressed"]
 [connection signal="add_morale" from="MainCharacter" to="CanvasLayer/HUD" method="_on_MainCharacter_add_morale"]
@@ -138,7 +140,6 @@ shape = SubResource( 3 )
 [connection signal="subtract_morale" from="MainCharacter" to="CanvasLayer/HUD" method="_on_MainCharacter_subtract_morale"]
 [connection signal="task_changed" from="MainCharacter" to="CanvasLayer/HUD" method="_on_MainCharacter_task_changed"]
 [connection signal="timeout" from="MainCharacter/dialogue_timer" to="MainCharacter" method="_on_dialogue_timer_timeout"]
-[connection signal="body_entered" from="StaticBody2D/Area2D" to="MainCharacter" method="_on_Area2D_body_entered"]
 
 [editable path="ChaseHall"]
 
