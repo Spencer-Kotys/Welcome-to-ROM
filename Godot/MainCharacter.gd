@@ -9,6 +9,7 @@ signal add_morale
 signal subtract_morale
 signal task_changed
 signal init_greenboy_dialogue
+signal window_popup
 
 var dialogue_cooldown = false
 
@@ -43,6 +44,8 @@ func MovementLoop():
 		if collision.collider is StaticBody2D && Input.is_action_just_pressed("ui_accept") && dialogue_cooldown == false:
 			if collision.collider.name == "Player Bed":
 				print("This is your bed")
+			if collision.collider.name == "Window":
+				emit_signal("window_popup")
 			elif collision.collider.name == "Green Boy":
 				start_dialogue() # <- Call this before every dialogue event
 				emit_signal("init_greenboy_dialogue")
