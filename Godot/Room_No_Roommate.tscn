@@ -1,11 +1,9 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://MainCharacter.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/roomtile_no_roomate.png" type="Texture" id=2]
 [ext_resource path="res://Room_No_Roommate.gd" type="Script" id=3]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Window Popup.gd" type="Script" id=5]
-[ext_resource path="res://assets/186280585.jpg" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8.22084, 4.11847 )
@@ -138,31 +136,10 @@ current = false
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HUD" parent="CanvasLayer" instance=ExtResource( 4 )]
-visible = false
 margin_left = 0.297668
 margin_right = 40.2976
 margin_bottom = 40.0
-
-[node name="Window Popup" type="Popup" parent="CanvasLayer"]
-anchor_left = -0.589
-anchor_top = 0.019
-anchor_right = -0.589
-anchor_bottom = 0.019
-margin_left = 481.136
-margin_top = -88.4
-margin_right = 723.136
-margin_bottom = 52.6
-script = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="FileDialog" type="Sprite" parent="CanvasLayer/Window Popup"]
-position = Vector2( 510, 293 )
-scale = Vector2( 0.929688, 0.77193 )
-texture = ExtResource( 6 )
 [connection signal="body_entered" from="Room/ExitRoom" to="." method="_on_ExitRoom_body_entered"]
 [connection signal="body_entered" from="Room/Room Objects/Player Bed/Player Bed" to="MainCharacter" method="_on_Player_Bed_body_entered"]
-[connection signal="window_popup" from="MainCharacter" to="CanvasLayer/Window Popup" method="_on_MainCharacter_window_popup"]
 
 [editable path="MainCharacter"]
