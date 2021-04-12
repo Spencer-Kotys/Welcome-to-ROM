@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://CharacterBlock.gd" type="Script" id=1]
 [ext_resource path="res://ChaseHall.tscn" type="PackedScene" id=2]
@@ -6,9 +6,13 @@
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/buddy_green.png" type="Texture" id=5]
 [ext_resource path="res://LadderWell.gd" type="Script" id=6]
+[ext_resource path="res://Spawn 1.gd" type="Script" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10.6522, 2.59363 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 7.83759, 3.3176 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 7.57043, 9.53735 )
@@ -17,6 +21,7 @@ extents = Vector2( 7.57043, 9.53735 )
 radius = 28.0084
 
 [node name="Game" type="Node"]
+script = ExtResource( 7 )
 
 [node name="ChaseHall" parent="." instance=ExtResource( 2 )]
 position = Vector2( 408, 184 )
@@ -27,6 +32,12 @@ position = Vector2( 703.379, -27.6842 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChaseHall/Ladderwell"]
 position = Vector2( -271.838, 87.3331 )
 shape = SubResource( 1 )
+
+[node name="Room" type="Area2D" parent="ChaseHall"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChaseHall/Room"]
+position = Vector2( 96.8092, 59.6489 )
+shape = SubResource( 4 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -101,6 +112,7 @@ position = Vector2( 476.249, 292.182 )
 
 [node name="Sprite" parent="MainCharacter" index="0"]
 position = Vector2( 22.5842, 5.16833 )
+frame = 0
 
 [node name="Collision" parent="MainCharacter" index="1"]
 position = Vector2( 23.1113, 5.39507 )
@@ -130,6 +142,7 @@ position = Vector2( 6.10352e-05, 1.52588e-05 )
 shape = SubResource( 3 )
 [connection signal="body_entered" from="ChaseHall/Ladderwell" to="CanvasLayer/Control/LadderWell" method="_on_Ladderwell_body_entered"]
 [connection signal="body_exited" from="ChaseHall/Ladderwell" to="CanvasLayer/Control/LadderWell" method="_on_Ladderwell_body_exited"]
+[connection signal="body_entered" from="ChaseHall/Room" to="." method="_on_Room_body_entered"]
 [connection signal="pressed" from="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer/Wardroom" to="CanvasLayer/Control/LadderWell" method="_on_Wardroom_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer/Formation" to="CanvasLayer/Control/LadderWell" method="_on_Formation_pressed"]
 [connection signal="add_morale" from="MainCharacter" to="CanvasLayer/HUD" method="_on_MainCharacter_add_morale"]

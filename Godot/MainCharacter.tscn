@@ -24,14 +24,14 @@ animations = [ {
 "name": "East_Walk",
 "speed": 6.0
 }, {
-"frames": [ ExtResource( 1 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "South_Idle",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 12 ), ExtResource( 18 ) ],
 "loop": true,
 "name": "North_Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "South_Idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 5 ), ExtResource( 14 ) ],
