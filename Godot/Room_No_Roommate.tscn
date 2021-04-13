@@ -139,7 +139,6 @@ shape = SubResource( 11 )
 [node name="Sprite" parent="MainCharacter" index="0"]
 position = Vector2( -408, -196.11 )
 animation = "North_Idle"
-frame = 1
 
 [node name="Collision" parent="MainCharacter" index="1"]
 position = Vector2( -407.702, -197.4 )
@@ -158,5 +157,6 @@ margin_bottom = 40.0
 [connection signal="body_entered" from="Room/ExitRoom" to="." method="_on_ExitRoom_body_entered"]
 [connection signal="body_entered" from="Room/Room Objects/Player Bed/Player Bed" to="Room/Room Objects/Player Bed/Sleep" method="_on_Player_Bed_body_entered"]
 [connection signal="body_exited" from="Room/Room Objects/Player Bed/Player Bed" to="Room/Room Objects/Player Bed/Sleep" method="_on_Player_Bed_body_exited"]
+[connection signal="pressed" from="Room/Room Objects/Player Bed/Sleep/Button" to="Room/Room Objects/Player Bed/Sleep" method="_on_Button_pressed"]
 
 [editable path="MainCharacter"]
