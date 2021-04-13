@@ -6,6 +6,7 @@ func _ready():
 	day = day + 1
 	if (14 == day):
 		print("You Win")
+		get_tree().change_scene("res://Win.tscn")
 	else:
 		global.day = str(day)
 		yield(get_tree().create_timer(1.0), "timeout")
