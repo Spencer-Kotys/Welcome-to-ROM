@@ -10,6 +10,7 @@ signal subtract_morale
 signal task_changed
 signal init_greenboy_dialogue
 signal window_popup
+signal init_bed_dialogue
 
 var dialogue_cooldown = false
 
@@ -45,7 +46,8 @@ func MovementLoop():
 		var collision = get_slide_collision(index)
 		if collision.collider is StaticBody2D && Input.is_action_just_pressed("ui_accept") && dialogue_cooldown == false:
 			if collision.collider.name == "Player Bed":
-				print("This is your bed")
+				start_dialogue()
+				emit_signal("init_bed_dialogue")
 			if collision.collider.name == "Window":
 				print("This is a window")
 			elif collision.collider.name == "Green Boy":

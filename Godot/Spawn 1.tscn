@@ -104,15 +104,13 @@ position = Vector2( 476.249, 292.182 )
 
 [node name="Sprite" parent="MainCharacter" index="0"]
 position = Vector2( 22.5842, 5.16833 )
-frame = 1
+frame = 0
 
 [node name="Collision" parent="MainCharacter" index="1"]
 position = Vector2( 23.1113, 5.39507 )
 
 [node name="Camera2D" parent="MainCharacter" index="2"]
 position = Vector2( 23.1113, 5.39507 )
-
-[node name="dialogue_timer" type="Timer" parent="MainCharacter"]
 
 [node name="Green Boy" type="StaticBody2D" parent="."]
 position = Vector2( 0, 2 )
@@ -142,7 +140,6 @@ shape = SubResource( 4 )
 [connection signal="init_greenboy_dialogue" from="MainCharacter" to="CanvasLayer/Control/GreenBoyDialogue" method="_on_MainCharacter_init_greenboy_dialogue"]
 [connection signal="subtract_morale" from="MainCharacter" to="CanvasLayer/HUD" method="_on_MainCharacter_subtract_morale"]
 [connection signal="task_changed" from="MainCharacter" to="CanvasLayer/HUD" method="_on_MainCharacter_task_changed"]
-[connection signal="timeout" from="MainCharacter/dialogue_timer" to="MainCharacter" method="_on_dialogue_timer_timeout"]
 [connection signal="body_entered" from="Green Boy/Area2D" to="MainCharacter" method="_on_Area2D_body_entered"]
 
 [editable path="ChaseHall"]
