@@ -1,11 +1,15 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Naoya-Sakamata-Dissociation.ogg" type="AudioStream" id=1]
+[ext_resource path="res://globalAudio.gd" type="Script" id=2]
 
-[node name="Node2D" type="Node2D"]
+[node name="globalAudio" type="Control"]
+pause_mode = 2
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-pause_mode = 1
-stream = ExtResource( 1 )
-volume_db = -10.097
+pause_mode = 2
+volume_db = -34.33
 autoplay = true

@@ -1,16 +1,18 @@
-extends AudioStreamPlayer
+extends Control
 
+# Variables
+onready var _player = $AudioStreamPlayer # Load music player
+var is_playing # Is music playing
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+# Function to play music
+func play(track_url : String):
+	stop() # stop music that is playing
+	var new_track = load(track_url) # load in track
+	_player.stream = new_track # set stream property
+	_player.play() # play track
+	is_playing = true # set is_playing to true
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+# Function to stop music
+func stop():
+	_player.stop() # stop music
+	is_playing = false # set is_playing to false
