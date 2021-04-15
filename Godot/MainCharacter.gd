@@ -10,6 +10,7 @@ signal subtract_morale
 signal task_changed
 signal init_greenboy_dialogue
 signal init_companyofficer_dialogue
+signal init_hs_dialogue
 signal window_popup
 
 var dialogue_cooldown = false
@@ -55,6 +56,9 @@ func MovementLoop():
 			elif collision.collider.name == "Company Officer":
 				start_dialogue() # <- Call this before every dialogue event
 				emit_signal("init_companyofficer_dialogue")
+			elif collision.collider.name == "HS":
+				start_dialogue() # <- Call this before every dialogue event
+				emit_signal("init_hs_dialogue")
 func AnimationLoop():
 	var animation
 	match move_direction:
@@ -115,6 +119,9 @@ func _on_Area2D_body_entered(body):
 
 func _on_COarea_body_entered(body):
 	emit_signal("subtract_morale", 20)
+
+func _on_HSarea_body_entered(body):
+	emit_signal("add_morale", 20)
 
 func _on_dialogue_timer_timeout():
 	dialogue_cooldown = false
