@@ -1,14 +1,15 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://GreenBoyDialogue.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ChaseHall.tscn" type="PackedScene" id=2]
 [ext_resource path="res://MainCharacter.tscn" type="PackedScene" id=3]
-[ext_resource path="res://YellowBoyDialogue.tscn" type="PackedScene" id=4]
+[ext_resource path="res://CompanyOfficerDialogue.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/buddy_green.png" type="Texture" id=5]
 [ext_resource path="res://LadderWell.gd" type="Script" id=6]
 [ext_resource path="res://Spawn 1.gd" type="Script" id=7]
 [ext_resource path="res://Green Boy.gd" type="Script" id=8]
-[ext_resource path="res://Yellow Boy.gd" type="Script" id=9]
+[ext_resource path="res://Company Officer.gd" type="Script" id=9]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10.6522, 2.59363 )
@@ -57,7 +58,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="YellowBoyDialogue" parent="CanvasLayer/Control" instance=ExtResource( 4 )]
+[node name="CompanyOfficerDialogue" parent="CanvasLayer/Control" instance=ExtResource( 4 )]
+margin_left = -24.0
+margin_top = -16.0
+margin_right = 1000.0
+margin_bottom = 573.0
 
 [node name="GreenBoyDialogue" parent="CanvasLayer/Control" instance=ExtResource( 1 )]
 
@@ -99,12 +104,13 @@ margin_right = 12.0
 margin_bottom = 20.0
 text = "Formation"
 
+[node name="HUD" parent="CanvasLayer/Control" instance=ExtResource( 10 )]
+
 [node name="MainCharacter" parent="." instance=ExtResource( 3 )]
 position = Vector2( 476.249, 292.182 )
 
 [node name="Sprite" parent="MainCharacter" index="0"]
 position = Vector2( 22.5842, 5.16833 )
-frame = 1
 
 [node name="Collision" parent="MainCharacter" index="1"]
 position = Vector2( 23.1113, 5.39507 )
@@ -134,23 +140,23 @@ position = Vector2( 668.256, 320 )
 position = Vector2( 6.10352e-05, 1.52588e-05 )
 shape = SubResource( 4 )
 
-[node name="Yellow Boy" type="StaticBody2D" parent="."]
+[node name="Company Officer" type="StaticBody2D" parent="."]
 position = Vector2( 0, 2 )
 script = ExtResource( 9 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Yellow Boy"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Company Officer"]
 position = Vector2( 583.746, 322.943 )
 shape = SubResource( 3 )
 
-[node name="Sprite" type="Sprite" parent="Yellow Boy"]
+[node name="Sprite" type="Sprite" parent="Company Officer"]
 position = Vector2( 583.746, 322.102 )
 scale = Vector2( 0.0995832, 0.130106 )
 texture = ExtResource( 5 )
 
-[node name="Area2D" type="Area2D" parent="Yellow Boy"]
+[node name="COarea" type="Area2D" parent="Company Officer"]
 position = Vector2( 668.256, 320 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Yellow Boy/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Company Officer/COarea"]
 position = Vector2( -85.351, 1.68178 )
 shape = SubResource( 4 )
 [connection signal="body_entered" from="ChaseHall/Ladderwell" to="CanvasLayer/Control/LadderWell" method="_on_Ladderwell_body_entered"]
@@ -158,10 +164,11 @@ shape = SubResource( 4 )
 [connection signal="body_entered" from="ChaseHall/Room" to="." method="_on_Room_body_entered"]
 [connection signal="pressed" from="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer/Wardroom" to="CanvasLayer/Control/LadderWell" method="_on_Wardroom_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer/Formation" to="CanvasLayer/Control/LadderWell" method="_on_Formation_pressed"]
+[connection signal="init_companyofficer_dialogue" from="MainCharacter" to="CanvasLayer/Control/CompanyOfficerDialogue" method="_on_MainCharacter_init_companyofficer_dialogue"]
 [connection signal="init_greenboy_dialogue" from="MainCharacter" to="CanvasLayer/Control/GreenBoyDialogue" method="_on_MainCharacter_init_greenboy_dialogue"]
 [connection signal="timeout" from="MainCharacter/dialogue_timer" to="MainCharacter" method="_on_dialogue_timer_timeout"]
 [connection signal="body_entered" from="Green Boy/Area2D" to="MainCharacter" method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="Yellow Boy/Area2D" to="MainCharacter" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Company Officer/COarea" to="MainCharacter" method="_on_COarea_body_entered"]
 
 [editable path="ChaseHall"]
 
