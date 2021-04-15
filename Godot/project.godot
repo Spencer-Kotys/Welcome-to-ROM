@@ -24,7 +24,6 @@ config/icon="res://assets/Player_Models/SE_Sprites/right_w_4.png"
 
 global="*res://global.tscn"
 globalAudio="*res://globalAudio.tscn"
-PauseMenu="*res://PauseMenu.tscn"
 
 [display]
 
