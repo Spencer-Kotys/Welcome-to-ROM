@@ -51,7 +51,9 @@ func MovementLoop():
 			elif collision.collider.name == "Green Boy":
 				start_dialogue() # <- Call this before every dialogue event
 				emit_signal("init_greenboy_dialogue")
-
+			elif collision.collider.name == "Yellow Boy":
+				start_dialogue() # <- Call this before every dialogue event
+				emit_signal("init_yellowboy_dialogue")
 func AnimationLoop():
 	var animation
 	match move_direction:
