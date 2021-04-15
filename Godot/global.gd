@@ -38,4 +38,9 @@ func bagChance(percent_chance):
 		global.bagged = true
 		print("You have been bagged!")
 
-	
+# Returns inputted JSON file as text that can be loaded into dialog_script
+func read_JSON(path):
+	var file = File.new()
+	file.open(path, file.READ)
+	var text = file.get_as_text()
+	return parse_json(text)

@@ -1,5 +1,4 @@
 extends Popup
-var in_dialogue = false
 
 func _on_MainCharacter_init_bed_dialogue():
 	popup()

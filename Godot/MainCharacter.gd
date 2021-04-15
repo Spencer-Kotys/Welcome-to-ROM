@@ -11,6 +11,7 @@ signal task_changed
 signal init_greenboy_dialogue
 signal window_popup
 signal init_bed_dialogue
+signal init_roommate_dialogue
 
 var dialogue_cooldown = false
 
@@ -48,11 +49,14 @@ func MovementLoop():
 			if collision.collider.name == "Player Bed":
 				start_dialogue()
 				emit_signal("init_bed_dialogue")
-			if collision.collider.name == "Window":
+			elif collision.collider.name == "Window":
 				print("This is a window")
 			elif collision.collider.name == "Green Boy":
 				start_dialogue() # <- Call this before every dialogue event
 				emit_signal("init_greenboy_dialogue")
+			elif collision.collider.name == "Roommate":
+				start_dialogue()
+				emit_signal("init_roommate_dialogue")
 
 func AnimationLoop():
 	var animation
