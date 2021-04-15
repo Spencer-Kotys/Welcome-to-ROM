@@ -14,6 +14,7 @@ signal init_bed_dialogue
 signal init_roommate_dialogue
 
 var dialogue_cooldown = false
+var area_index = 0
 
 # Movement Variables
 var speed = 75
@@ -24,7 +25,6 @@ var anim_mode = "Idle"
 # local vars
 
 func _ready():
-	global.morale = 50; # Player's morale starts at 50
 	globalAudio.play("res://music/Mournful-Departure-Asher-Fulero.ogg")
 	global.time_start = OS.get_unix_time()
 
@@ -113,9 +113,11 @@ func AnimationLoop():
 	sprite.play(animation)
 
 func _on_Area2D_body_entered(body):
-	emit_signal("add_morale", 20)
-	global.covidChance(5)
-
+	area_index = area_index + 1
+	if area_index > 2:
+		emit_signal("add_morale", 20)
+		global.covidChance(5)
+	
 func _on_dialogue_timer_timeout():
 	dialogue_cooldown = false
 
