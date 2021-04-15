@@ -22,12 +22,12 @@ config/icon="res://assets/Player_Models/SE_Sprites/right_w_4.png"
 
 [autoload]
 
-global="*res://global.gd"
-GlobalAudio="*res://globalAudio.tscn"
+global="*res://global.tscn"
+globalAudio="*res://globalAudio.tscn"
 
 [display]
 
-window/stretch/mode="2d"
+window/stretch/mode="viewport"
 window/stretch/aspect="keep"
 
 [editor_plugins]
@@ -71,11 +71,11 @@ next={
 
 [layer_names]
 
-2d_physics/layer_1="player"
+2d_physics/layer_1="obstacle"
 2d_physics/layer_2="obstacle"
 2d_physics/layer_3="NPC"
+2d_physics/layer_4="player_bed"
 
 [rendering]
 
-quality/2d/use_pixel_snap=true
 environment/default_environment="res://default_env.tres"

@@ -2,37 +2,31 @@ extends Control
 
 
 # Declare member variables here. Examples:
-var maleNames = ["Male", "Bob", "Billy", "Billybob", "Alexander", "Spencer"]
-var maleInt = 0
-var femaleNames = ["Female", "Alice", "Alexandra", "Hannah", "Julia"]
-var femaleInt = 0
-
+var Names = ["Alexander", "Alexandra", "Julia", "Hannah", "Spencer"]
+var nameInt = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _on_Name_Generator_pressed():
+	$CenterContainer/VBoxContainer/Name_HBox/Character_Name.text = Names[nameInt]
+	if nameInt < (Names.size() - 1):
+		nameInt = nameInt + 1
+	else:
+		nameInt = 0
 
 
 func _on_Male_pressed():
-	$CenterContainer/VBoxContainer/Character_Name.text = maleNames[maleInt]
-	if maleInt < (maleNames.size() - 1):
-		maleInt = maleInt + 1
-	else:
-		maleInt = 0
+	$CenterContainer/VBoxContainer/Gender.text = "Male"
 
 
 func _on_Female_pressed():
-	$CenterContainer/VBoxContainer/Character_Name.text = femaleNames[femaleInt]
-	if femaleInt < (femaleNames.size() - 1):
-		femaleInt = femaleInt + 1
-	else:
-		femaleInt = 0
+	$CenterContainer/VBoxContainer/Gender.text = "Female"
 
 
 func _on_Continue_pressed():
-	get_tree().change_scene("res://LevelMockup.tscn")
+	global.playerName = $CenterContainer/VBoxContainer/Name_HBox/Character_Name.text # set global character name
+	global.playerGender = $CenterContainer/VBoxContainer/Gender.text # set global character gender
+	get_tree().change_scene("res://Spawn 1.tscn")
