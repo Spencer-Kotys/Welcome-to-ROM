@@ -8,7 +8,10 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	if (globalAudio.is_playing != true): # checkes if music is already playing
+		globalAudio.play("res://music/Naoya-Sakamata-Dissociation.ogg") #plays audio
+	else:
+		pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -33,7 +36,7 @@ func _on_Quit_pressed():
 
 
 func _on_Test_Scene_pressed():
-	get_tree().change_scene("res://LevelMockup.tscn")
+	get_tree().change_scene("res://Spawn 1.tscn")
 
 
 func _on_Wardroom_pressed():

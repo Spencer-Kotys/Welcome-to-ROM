@@ -8,6 +8,7 @@ var waiting_for_answer = false
 var waiting_for_input = false
 export(String, FILE, "*.json") var extenal_file = ''
 var dialog_script
+signal dialogue_finished
 
 func file(file_path):
 	# Reading a json file to use as a dialog.

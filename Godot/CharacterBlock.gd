@@ -1,6 +1,6 @@
 extends Popup
 
-func _on_MainCharacter_init_dialogue():
+func _on_MainCharacter_init_greenboy_dialogue():
 	popup()
 	var dialog = load("res://addons/dialogs/Dialog.tscn").instance()
 	dialog.dialog_script = [

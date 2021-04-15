@@ -22,7 +22,8 @@ config/icon="res://assets/Player_Models/SE_Sprites/right_w_4.png"
 
 [autoload]
 
-global="*res://global.gd"
+global="*res://global.tscn"
+globalAudio="*res://globalAudio.tscn"
 
 [display]
 
@@ -70,9 +71,10 @@ next={
 
 [layer_names]
 
-2d_physics/layer_1="player"
+2d_physics/layer_1="obstacle"
 2d_physics/layer_2="obstacle"
 2d_physics/layer_3="NPC"
+2d_physics/layer_4="player_bed"
 
 [rendering]
 
