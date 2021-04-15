@@ -19,3 +19,10 @@ func _on_MainCharacter_init_bed_dialogue():
 		'dialogue_end': 0
 	}]
 	add_child(dialog)
+	
+func _process(delta):
+	if global.in_dialogue == false:
+		if 'sleep' in global.custom_variables: #make sure the sleep variable is in the custom_variables dictioary to prevent errors from trying to use it before its been set
+			if global.custom_variables.get('sleep').value == '0':
+				global.custom_variables.get('sleep').value = '1'
+				get_tree().change_scene("res://Sleeping.tscn")

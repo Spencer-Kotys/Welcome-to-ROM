@@ -119,9 +119,11 @@ func event_handler(event):
 		{'dialogue_end'}:
 			# Unpause the game
 			get_tree().paused = false
+			global.in_dialogue = false
 			hide_dialog()
 		{'dialogue_start'}:
 			get_tree().paused = true
+			global.in_dialogue = true
 			hide_dialog()
 
 		{'text'}, {'text', 'name'}:
