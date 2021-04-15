@@ -111,6 +111,7 @@ func AnimationLoop():
 
 func _on_Area2D_body_entered(body):
 	emit_signal("add_morale", 20)
+	global.covidChance(5)
 
 func _on_COarea_body_entered(body):
 	emit_signal("subtract_morale", 20)
