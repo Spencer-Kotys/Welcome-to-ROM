@@ -25,8 +25,6 @@ func covidChance(percent_chance):
 	if num <= percent_chance:
 		global.has_covid = true
 		print("You got covid!")
-		get_tree().change_scene("res://lose.tscn")
-		time_end = OS.get_unix_time()
 	
 func bagChance(percent_chance):
 	# Generate a random int between 1 and 100
