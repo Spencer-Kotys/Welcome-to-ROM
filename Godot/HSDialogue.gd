@@ -1,6 +1,6 @@
 extends Popup
 
-func _on_MainCharacter_init_companyofficer_dialogue():
+func _on_MainCharacter_init_hs_dialogue():
 	popup()
 	var dialog = load("res://addons/dialogs/Dialog.tscn").instance()
 	dialog.dialog_script = [
@@ -25,14 +25,8 @@ func _on_MainCharacter_init_companyofficer_dialogue():
 	{
 		'text': 'Okay. You are feeling [feel], have a better day.'
 	},
-	#{
-	#if destination == 'nowhere':
-	#	'text': 'You need to choose somewhere to go. Exit the area as soon as possible.'
-	#else:
-	#	'text': 'Very well. Please go directly there.'
-	#},
-	
 	{
 		'dialogue_end': 0
 	}]
 	add_child(dialog)
+
