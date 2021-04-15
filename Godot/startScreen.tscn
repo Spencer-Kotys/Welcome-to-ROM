@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://startScreen.gd" type="Script" id=1]
 [ext_resource path="res://assets/font/Comfortaa-Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/titlename.png" type="Texture" id=3]
 
 [sub_resource type="Theme" id=1]
 
@@ -83,6 +84,10 @@ margin_top = 207.0
 margin_right = 148.0
 margin_bottom = 227.0
 text = "Test Scene"
+
+[node name="titlename" type="Sprite" parent="."]
+position = Vector2( 522.932, 115.193 )
+texture = ExtResource( 3 )
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Play Game" to="." method="_on_Play_Game_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/How To Play" to="." method="_on_How_To_Play_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Credits" to="." method="_on_Credits_pressed"]
