@@ -12,6 +12,7 @@ var has_covid = false # true or false for if the player has covid
 var bagged = null
 var time_start = 0
 var time_end = 0
+var in_dialogue = null
 
 # percent_chance would be an integer between 1 and 100
 # so if you wanted a 5% chance of getting covid enter '5' into the function

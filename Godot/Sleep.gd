@@ -1,12 +1,28 @@
 extends Popup
+var in_dialogue = false
 
-func _on_Player_Bed_body_entered(body):
+func _on_MainCharacter_init_bed_dialogue():
 	popup()
 
-
-func _on_Player_Bed_body_exited(body):
-	self.hide()
-
-
-func _on_Button_pressed():
-	get_tree().change_scene("res://Sleeping.tscn")
+	var dialog = load("res://addons/dialogs/Dialog.tscn").instance()
+	dialog.dialog_script = [
+	{
+		'dialogue_start': 0
+	},
+	{
+		'question': 'Would you like to go to bed?',
+		'options': [{ 'label': 'Yes', 'value': '0'},
+					{ 'label': 'No', 'value': '1'}],
+		'variable': 'sleep'
+	},
+	{
+		'dialogue_end': 0
+	}]
+	add_child(dialog)
+	
+func _process(delta):
+	if global.in_dialogue == false:
+		if 'sleep' in global.custom_variables: #make sure the sleep variable is in the custom_variables dictioary to prevent errors from trying to use it before its been set
+			if global.custom_variables.get('sleep').value == '0':
+				global.custom_variables.get('sleep').value = '1'
+				get_tree().change_scene("res://Sleeping.tscn")
