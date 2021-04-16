@@ -17,7 +17,6 @@ signal init_bed_dialogue
 signal init_roommate_dialogue
 
 var dialogue_cooldown = false
-var area_index = 0
 
 # Movement Variables
 var speed = 75
@@ -62,6 +61,9 @@ func MovementLoop():
 			elif collision.collider.name == "Cadet1":
 				start_dialogue() # <- Call this before every dialogue event
 				emit_signal("init_cadet1_dialogue")
+			elif collision.collider.name == "Roommate":
+				start_dialogue() # <- Call this before every dialogue event
+				emit_signal("init_roommate_dialogue")
 func AnimationLoop():
 	var animation
 	match move_direction:
