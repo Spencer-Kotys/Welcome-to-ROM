@@ -9,7 +9,11 @@ signal add_morale
 signal subtract_morale
 signal task_changed
 signal init_greenboy_dialogue
+signal init_companyofficer_dialogue
+signal init_hs_dialogue
+signal init_cadet1_dialogue
 signal window_popup
+signal init_bed_dialogue
 
 var dialogue_cooldown = false
 
@@ -45,13 +49,22 @@ func MovementLoop():
 		var collision = get_slide_collision(index)
 		if collision.collider is StaticBody2D && Input.is_action_just_pressed("ui_accept") && dialogue_cooldown == false:
 			if collision.collider.name == "Player Bed":
-				print("This is your bed")
+				start_dialogue()
+				emit_signal("init_bed_dialogue")
 			if collision.collider.name == "Window":
 				print("This is a window")
 			elif collision.collider.name == "Green Boy":
 				start_dialogue() # <- Call this before every dialogue event
 				emit_signal("init_greenboy_dialogue")
-
+			elif collision.collider.name == "Company Officer":
+				start_dialogue() # <- Call this before every dialogue event
+				emit_signal("init_companyofficer_dialogue")
+			elif collision.collider.name == "HS":
+				start_dialogue() # <- Call this before every dialogue event
+				emit_signal("init_hs_dialogue")
+			elif collision.collider.name == "Cadet1":
+				start_dialogue() # <- Call this before every dialogue event
+				emit_signal("init_cadet1_dialogue")
 func AnimationLoop():
 	var animation
 	match move_direction:
@@ -108,6 +121,19 @@ func AnimationLoop():
 
 func _on_Area2D_body_entered(body):
 	emit_signal("add_morale", 20)
+	global.covidChance(5)
+
+func _on_COarea_body_entered(body):
+	emit_signal("subtract_morale", 20)
+	global.covidChance(8)
+
+func _on_HSarea_body_entered(body):
+	emit_signal("add_morale", 5)
+	global.covidChance(2)
+
+func _on_Cadet1area_body_entered(body):
+	emit_signal("add_morale", 15)
+	global.covidChance(6)
 
 func _on_dialogue_timer_timeout():
 	dialogue_cooldown = false
@@ -118,3 +144,4 @@ func start_dialogue():
 	dialogue_cooldown = true
 	dialogue_timer.start()
 	sprite.play(anim_direction + "_Idle")
+

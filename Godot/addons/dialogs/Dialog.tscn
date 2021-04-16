@@ -6,7 +6,7 @@
 [ext_resource path="res://addons/dialogs/Theme.tres" type="Theme" id=4]
 [ext_resource path="res://addons/dialogs/Images/portraits/df-1.png" type="Texture" id=5]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id=12]
 resource_name = "IDLE"
 loop = true
 tracks/0/type = "value"
@@ -127,7 +127,7 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TextBubble/NextIndicator"]
 autoplay = "IDLE"
-anims/IDLE = SubResource( 1 )
+anims/IDLE = SubResource( 12 )
 
 [node name="NameLabel" type="RichTextLabel" parent="TextBubble"]
 margin_left = 2.0

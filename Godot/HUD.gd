@@ -29,3 +29,5 @@ func _on_MainCharacter_subtract_morale(subtract_amount):
 	global.morale = morale
 
 
+func _on_MainCharacter_task_changed():
+	pass # Replace with function body.

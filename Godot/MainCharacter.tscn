@@ -19,6 +19,26 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 17 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "North_Walk",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "North_Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "East_Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "South_Idle",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 7 ), ExtResource( 16 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "East_Walk",
@@ -29,29 +49,19 @@ animations = [ {
 "name": "South_Idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ), ExtResource( 14 ) ],
-"loop": true,
-"name": "East_Idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 12 ), ExtResource( 18 ) ],
-"loop": true,
-"name": "North_Idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 11 ), ExtResource( 17 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "North_Walk",
-"speed": 6.0
-}, {
 "frames": [ ExtResource( 3 ), ExtResource( 8 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "South_Walk",
 "speed": 6.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 16 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "East_Walk",
+"speed": 6.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 6.88193, 12.3034 )
+extents = Vector2( 6.09705, 10.1034 )
 
 [node name="MainCharacter" type="KinematicBody2D"]
 position = Vector2( 408, 240 )
@@ -62,6 +72,7 @@ pause_mode = 2
 position = Vector2( 19.2806, 7.52802 )
 frames = SubResource( 1 )
 animation = "South_Idle"
+frame = 1
 playing = true
 
 [node name="Collision" type="CollisionShape2D" parent="."]
@@ -73,3 +84,6 @@ position = Vector2( 19.6668, 7.7935 )
 current = true
 zoom = Vector2( 0.25, 0.25 )
 process_mode = 0
+
+[node name="dialogue_timer" type="Timer" parent="."]
+[connection signal="timeout" from="dialogue_timer" to="." method="_on_dialogue_timer_timeout"]
