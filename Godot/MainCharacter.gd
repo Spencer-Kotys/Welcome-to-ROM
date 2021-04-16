@@ -14,8 +14,10 @@ signal init_hs_dialogue
 signal init_cadet1_dialogue
 signal window_popup
 signal init_bed_dialogue
+signal init_roommate_dialogue
 
 var dialogue_cooldown = false
+var area_index = 0
 
 # Movement Variables
 var speed = 75
@@ -24,11 +26,6 @@ var anim_direction = "Not Set"
 var anim_mode = "Idle"
 
 # local vars
-
-func _ready():
-	global.morale = 50; # Player's morale starts at 50
-	globalAudio.play("res://music/Mournful-Departure-Asher-Fulero.ogg")
-	global.time_start = OS.get_unix_time()
 
 func _physics_process(delta):
 	MovementLoop()
@@ -51,7 +48,7 @@ func MovementLoop():
 			if collision.collider.name == "Player Bed":
 				start_dialogue()
 				emit_signal("init_bed_dialogue")
-			if collision.collider.name == "Window":
+			elif collision.collider.name == "Window":
 				print("This is a window")
 			elif collision.collider.name == "Green Boy":
 				start_dialogue() # <- Call this before every dialogue event
@@ -144,4 +141,3 @@ func start_dialogue():
 	dialogue_cooldown = true
 	dialogue_timer.start()
 	sprite.play(anim_direction + "_Idle")
-

@@ -115,7 +115,6 @@ position = Vector2( 816.721, 256.473 )
 
 [node name="Sprite" parent="MainCharacter" index="0"]
 position = Vector2( 22.5842, 5.16833 )
-frame = 1
 
 [node name="Collision" parent="MainCharacter" index="1"]
 position = Vector2( 23.1113, 5.39507 )
@@ -173,7 +172,6 @@ shape = SubResource( 7 )
 [connection signal="init_greenboy_dialogue" from="MainCharacter" to="CanvasLayer/Control/GreenBoyDialogue" method="_on_MainCharacter_init_greenboy_dialogue"]
 [connection signal="subtract_morale" from="MainCharacter" to="CanvasLayer/HUD" method="_on_MainCharacter_subtract_morale"]
 [connection signal="task_changed" from="MainCharacter" to="CanvasLayer/HUD" method="_on_MainCharacter_task_changed"]
-[connection signal="timeout" from="MainCharacter/dialogue_timer" to="MainCharacter" method="_on_dialogue_timer_timeout"]
 [connection signal="body_entered" from="Green Boy/Area2D" to="MainCharacter" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Yellow Boy/Area2D" to="MainCharacter" method="_on_Area2D_body_entered"]
 

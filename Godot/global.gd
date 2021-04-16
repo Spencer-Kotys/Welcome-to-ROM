@@ -25,8 +25,6 @@ func covidChance(percent_chance):
 	if num <= percent_chance:
 		global.has_covid = true
 		print("You got covid!")
-		get_tree().change_scene("res://lose.tscn")
-		time_end = OS.get_unix_time()
 	
 func bagChance(percent_chance):
 	# Generate a random int between 1 and 100
@@ -38,4 +36,9 @@ func bagChance(percent_chance):
 		global.bagged = true
 		print("You have been bagged!")
 
-	
+# Returns inputted JSON file as text that can be loaded into dialog_script
+func read_JSON(path):
+	var file = File.new()
+	file.open(path, file.READ)
+	var text = file.get_as_text()
+	return parse_json(text)

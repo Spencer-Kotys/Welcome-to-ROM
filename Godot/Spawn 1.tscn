@@ -137,23 +137,22 @@ position = Vector2( 23.1113, 5.08007 )
 position = Vector2( 23.1113, -1.04904e-05 )
 
 [node name="Green Boy" type="StaticBody2D" parent="."]
-position = Vector2( 0, 2 )
+position = Vector2( 673.262, 322.958 )
 script = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Green Boy"]
-position = Vector2( 668.256, 320 )
+position = Vector2( 0, 3.05176e-05 )
 shape = SubResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="Green Boy"]
-position = Vector2( 668.256, 320 )
+position = Vector2( 6.10352e-05, 0 )
 scale = Vector2( 0.0995832, 0.130106 )
 texture = ExtResource( 5 )
 
 [node name="Area2D" type="Area2D" parent="Green Boy"]
-position = Vector2( 668.256, 320 )
+position = Vector2( 3.05176e-05, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Green Boy/Area2D"]
-position = Vector2( 6.10352e-05, 1.52588e-05 )
 shape = SubResource( 4 )
 
 [node name="Company Officer" type="StaticBody2D" parent="."]
