@@ -16,7 +16,7 @@ func _on_MainCharacter_init_cadet1_dialogue():
 		'variable': 'currentstate'
 	},
 	{
-		'text': 'I do not know about [currentstate], but you should know I am hungry.'
+		'text': 'Hmm well you should know I am hungry.'
 	},
 		{
 		'dialogue_end': 0
