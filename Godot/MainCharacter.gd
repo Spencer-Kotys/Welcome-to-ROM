@@ -24,10 +24,6 @@ var anim_mode = "Idle"
 
 # local vars
 
-func _ready():
-	globalAudio.play("res://music/Mournful-Departure-Asher-Fulero.ogg")
-	global.time_start = OS.get_unix_time()
-
 func _physics_process(delta):
 	MovementLoop()
 
