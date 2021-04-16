@@ -73,3 +73,4 @@ text = "Formation"
 rect_pivot_offset = Vector2( 364.718, 193.671 )
 [connection signal="pressed" from="Control/LadderWell/CenterContainer/VBoxContainer/Wardroom" to="Control/LadderWell" method="_on_Wardroom_pressed"]
 [connection signal="pressed" from="Control/LadderWell/CenterContainer/VBoxContainer/Formation" to="Control/LadderWell" method="_on_Formation_pressed"]
+[connection signal="mouse_entered" from="HUD" to="HUD" method="_on_HUD_mouse_entered"]
