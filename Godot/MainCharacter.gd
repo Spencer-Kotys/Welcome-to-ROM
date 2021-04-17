@@ -66,6 +66,7 @@ func MovementLoop():
 				start_dialogue() # <- Call this before every dialogue event
 				emit_signal("init_roommate_dialogue")
 			elif collision.collider.name == "Right Desk":
+				print("This is your desk")
 				start_dialogue() # <- Call this before every dialogue event
 				emit_signal("init_desk_dialogue")
 func AnimationLoop():
