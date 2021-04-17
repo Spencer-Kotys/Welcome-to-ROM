@@ -10,10 +10,10 @@ func _on_MainCharacter_init_desk_dialogue():
 		'dialogue_start': 0
 	},
 	{
-		'question': 'Would you like to go to bed?',
+		'question': 'Would you like to work at your desk?',
 		'options': [{ 'label': 'Yes', 'value': '0'},
 					{ 'label': 'No', 'value': '1'}],
-		'variable': 'sleep'
+		'variable': 'work'
 	},
 	{
 		'dialogue_end': 0
