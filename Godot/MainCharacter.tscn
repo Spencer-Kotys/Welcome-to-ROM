@@ -24,6 +24,11 @@ animations = [ {
 "name": "North_Walk",
 "speed": 6.0
 }, {
+"frames": [ ExtResource( 3 ), ExtResource( 8 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "South_Walk",
+"speed": 6.0
+}, {
 "frames": [ ExtResource( 5 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "East_Idle",
@@ -38,11 +43,6 @@ animations = [ {
 "loop": true,
 "name": "South_Idle",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ), ExtResource( 8 ), ExtResource( 4 ) ],
-"loop": true,
-"name": "South_Walk",
-"speed": 6.0
 }, {
 "frames": [ ExtResource( 12 ), ExtResource( 18 ) ],
 "loop": true,
@@ -62,7 +62,6 @@ pause_mode = 2
 position = Vector2( 19.2806, 7.52802 )
 frames = SubResource( 1 )
 animation = "South_Idle"
-frame = 1
 playing = true
 
 [node name="Collision" type="CollisionShape2D" parent="."]

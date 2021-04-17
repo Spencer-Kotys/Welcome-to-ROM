@@ -15,6 +15,7 @@ signal init_cadet1_dialogue
 signal window_popup
 signal init_bed_dialogue
 signal init_roommate_dialogue
+signal init_desk_dialogue
 
 var dialogue_cooldown = false
 
@@ -65,7 +66,8 @@ func MovementLoop():
 				start_dialogue() # <- Call this before every dialogue event
 				emit_signal("init_roommate_dialogue")
 			elif collision.collider.name == "Right Desk":
-				print("This is your desk")
+				start_dialogue() # <- Call this before every dialogue event
+				emit_signal("init_desk_dialogue")
 func AnimationLoop():
 	var animation
 	match move_direction:
