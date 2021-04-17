@@ -64,6 +64,8 @@ func MovementLoop():
 			elif collision.collider.name == "Roommate":
 				start_dialogue() # <- Call this before every dialogue event
 				emit_signal("init_roommate_dialogue")
+			elif collision.collider.name == "Right Desk":
+				print("This is your desk")
 func AnimationLoop():
 	var animation
 	match move_direction:
