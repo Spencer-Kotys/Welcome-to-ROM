@@ -171,9 +171,12 @@ __meta__ = {
 }
 
 [node name="Desk" type="Popup" parent="CanvasLayer"]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_right = 1024.0
+margin_bottom = 600.0
 script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="body_entered" from="Room/ExitRoom" to="." method="_on_ExitRoom_body_entered"]
 [connection signal="body_entered" from="Room/Room Objects/Player Bed/Player Bed" to="CanvasLayer/Sleep" method="_on_Player_Bed_body_entered"]
 [connection signal="body_exited" from="Room/Room Objects/Player Bed/Player Bed" to="CanvasLayer/Sleep" method="_on_Player_Bed_body_exited"]
