@@ -13,6 +13,7 @@ var bagged = null
 var time_start = 0
 var time_end = 0
 var in_dialogue = null
+var screening_form_complete = false # is screeing from complete
 
 # percent_chance would be an integer between 1 and 100
 # so if you wanted a 5% chance of getting covid enter '5' into the function
