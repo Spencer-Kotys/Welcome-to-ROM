@@ -31,7 +31,7 @@ margin_right = 159.0
 margin_bottom = 32.0
 text = "What is your name?"
 
-[node name="LineEdit" type="LineEdit" parent="CenterContainer/VBoxContainer"]
+[node name="NameEdit" type="LineEdit" parent="CenterContainer/VBoxContainer"]
 margin_top = 36.0
 margin_right = 159.0
 margin_bottom = 60.0
@@ -42,7 +42,7 @@ margin_right = 159.0
 margin_bottom = 78.0
 text = "Company?"
 
-[node name="LineEdit2" type="LineEdit" parent="CenterContainer/VBoxContainer"]
+[node name="CompanyEdit" type="LineEdit" parent="CenterContainer/VBoxContainer"]
 margin_top = 82.0
 margin_right = 159.0
 margin_bottom = 106.0
@@ -101,7 +101,7 @@ margin_right = 159.0
 margin_bottom = 208.0
 text = "Concerns?"
 
-[node name="LineEdit3" type="LineEdit" parent="CenterContainer/VBoxContainer"]
+[node name="ConcernsEdit" type="LineEdit" parent="CenterContainer/VBoxContainer"]
 margin_top = 212.0
 margin_right = 159.0
 margin_bottom = 236.0
@@ -111,4 +111,11 @@ margin_top = 240.0
 margin_right = 159.0
 margin_bottom = 260.0
 text = "Complete Form"
+
+[node name="Warning" type="Label" parent="CenterContainer/VBoxContainer"]
+visible = false
+margin_top = 264.0
+margin_right = 266.0
+margin_bottom = 278.0
+text = "You must fill out your name and company"
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Complete" to="." method="_on_Complete_pressed"]
