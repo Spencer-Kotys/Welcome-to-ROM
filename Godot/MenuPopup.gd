@@ -5,8 +5,8 @@ func _process(delta):
 		if get_tree().paused == true: #when esc is pressed, game is still paused...
 			get_tree().paused = false
 			hide()
-			print("hello")
 		else:
+			print("Pausing game")
 			get_tree().paused = true
 		popup()
 

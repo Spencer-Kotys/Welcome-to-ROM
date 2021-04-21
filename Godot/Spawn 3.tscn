@@ -114,6 +114,7 @@ text = "Formation"
 [node name="HUD" parent="CanvasLayer/Control" instance=ExtResource( 10 )]
 
 [node name="MainCharacter" parent="." instance=ExtResource( 3 )]
+pause_mode = 1
 position = Vector2( 482.395, 254.958 )
 
 [node name="Sprite" parent="MainCharacter" index="0"]

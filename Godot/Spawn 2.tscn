@@ -114,11 +114,11 @@ text = "Formation"
 [node name="HUD" parent="CanvasLayer/Control" instance=ExtResource( 10 )]
 
 [node name="MainCharacter" parent="." instance=ExtResource( 3 )]
+pause_mode = 1
 position = Vector2( 816.523, 252.97 )
 
 [node name="Sprite" parent="MainCharacter" index="0"]
 position = Vector2( 22.5842, 5.16833 )
-frame = 1
 
 [node name="Collision" parent="MainCharacter" index="1"]
 position = Vector2( 23.1113, 5.08007 )

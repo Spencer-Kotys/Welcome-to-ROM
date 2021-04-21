@@ -43,6 +43,7 @@ extents = Vector2( 10, 8.40345 )
 extents = Vector2( 4.0503, 8.58025 )
 
 [node name="Node2D" type="Node2D"]
+pause_mode = 1
 script = ExtResource( 3 )
 
 [node name="Room" type="Sprite" parent="."]
@@ -131,6 +132,7 @@ position = Vector2( -15.7668, -27.3291 )
 shape = SubResource( 12 )
 
 [node name="MainCharacter" parent="." instance=ExtResource( 1 )]
+pause_mode = 1
 
 [node name="Sprite" parent="MainCharacter" index="0"]
 position = Vector2( -408, -196.11 )

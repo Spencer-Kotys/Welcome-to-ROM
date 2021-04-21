@@ -121,6 +121,7 @@ position = Vector2( 19.1426, 58.6716 )
 shape = SubResource( 11 )
 
 [node name="MainCharacter" parent="." instance=ExtResource( 1 )]
+pause_mode = 1
 
 [node name="Sprite" parent="MainCharacter" index="0"]
 position = Vector2( -408, -196.11 )
