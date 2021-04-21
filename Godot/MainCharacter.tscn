@@ -24,14 +24,9 @@ animations = [ {
 "name": "North_Walk",
 "speed": 6.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 8 ), ExtResource( 4 ) ],
+"frames": [ ExtResource( 12 ), ExtResource( 18 ) ],
 "loop": true,
-"name": "South_Walk",
-"speed": 6.0
-}, {
-"frames": [ ExtResource( 5 ), ExtResource( 14 ) ],
-"loop": true,
-"name": "East_Idle",
+"name": "North_Idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ), ExtResource( 16 ), ExtResource( 10 ) ],
@@ -39,14 +34,19 @@ animations = [ {
 "name": "East_Walk",
 "speed": 6.0
 }, {
+"frames": [ ExtResource( 5 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "East_Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 8 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "South_Walk",
+"speed": 6.0
+}, {
 "frames": [ ExtResource( 1 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "South_Idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 12 ), ExtResource( 18 ) ],
-"loop": true,
-"name": "North_Idle",
 "speed": 5.0
 } ]
 
@@ -75,4 +75,6 @@ zoom = Vector2( 0.25, 0.25 )
 process_mode = 0
 
 [node name="dialogue_timer" type="Timer" parent="."]
+
+[node name="new_scene_timer" type="Timer" parent="."]
 [connection signal="timeout" from="dialogue_timer" to="." method="_on_dialogue_timer_timeout"]
