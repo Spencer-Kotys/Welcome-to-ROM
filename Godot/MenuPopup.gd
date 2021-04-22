@@ -1,14 +1,13 @@
 extends Popup
 
 func _process(delta):
-	if Input.is_action_pressed("pause"):
+	if Input.is_action_just_pressed("pause"):
 		if get_tree().paused == true: #when esc is pressed, game is still paused...
-			get_tree().paused = false
-			hide()
+			_on_Resume_pressed()
 		else:
-			print("Pausing game")
+			print("paused")
 			get_tree().paused = true
-		popup()
+			popup()
 
 func _on_MainMenu_pressed():
 	get_tree().change_scene("res://startScreen.tscn")

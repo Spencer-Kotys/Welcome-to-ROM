@@ -133,22 +133,22 @@ func AnimationLoop():
 func _on_Area2D_body_entered(body):
 	if new_scene_cooldown == false:
 		print("Green boy area entered")
-		global.covidChance(5)
+		global.covidChance(1)
 
 func _on_COarea_body_entered(body):
 	if new_scene_cooldown == false:
 		print("CO area entered")
-		global.covidChance(8)
+		global.bagChance(5)
 
 func _on_HSarea_body_entered(body):
 	if new_scene_cooldown == false:
 		print("HS area entered")
-		global.covidChance(2)
+		global.covidChance(1)
 
 func _on_Cadet1area_body_entered(body):
 	if new_scene_cooldown == false:
 		print("Cadet 1 area entered")
-		global.covidChance(6)
+		global.covidChance(2)
 
 func _on_dialogue_timer_timeout():
 	dialogue_cooldown = false

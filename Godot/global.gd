@@ -10,8 +10,6 @@ var day = "1" # stores day value
 var morale = 50 # stores morale value
 var has_covid = false # true or false for if the player has covid
 var bagged = null
-var time_start = 0
-var time_end = 0
 var in_dialogue = null
 var screening_form_complete = false # is screeing from complete
 

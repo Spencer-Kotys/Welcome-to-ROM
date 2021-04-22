@@ -8,7 +8,9 @@ func _ready():
 		print("You Win")
 		get_tree().change_scene("res://Win.tscn")
 	if (global.has_covid == true):
-		get_tree().change_scene("res://lose.tscn")
+		get_tree().change_scene("res://lose_covid.tscn")
+	if (global.bagged == true):
+		get_tree().change_scene("res://lose_covid.tscn")
 	else:
 		global.day = str(day)
 		yield(get_tree().create_timer(1.0), "timeout")

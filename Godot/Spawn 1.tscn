@@ -120,10 +120,10 @@ visible = false
 [node name="MainCharacter" parent="." instance=ExtResource( 3 )]
 pause_mode = 1
 position = Vector2( 476.249, 292.182 )
+z_index = 1
 
 [node name="Sprite" parent="MainCharacter" index="0"]
 position = Vector2( 22.5842, 5.16833 )
-frame = 0
 
 [node name="Collision" parent="MainCharacter" index="1"]
 position = Vector2( 23.1113, 5.08007 )

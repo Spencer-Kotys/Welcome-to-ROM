@@ -8,15 +8,15 @@ func _on_MainCharacter_init_cadet1_dialogue():
 		'dialogue_start': 0
 	},
 	{
-		'text': 'Hello shipmate.'
+		'name': 'Friend', 'text': 'Hello shipmate.'
 	},
 	{
-		'input': 'What is going on?',
+		'name': 'Friend', 'input': 'What is going on?',
 		'window_title': 'Response:',
 		'variable': 'currentstate'
 	},
 	{
-		'text': 'Hmm well you should know I am hungry.'
+		'name': 'Friend', 'text': 'Hmm well you should know I am hungry.'
 	},
 		{
 		'dialogue_end': 0

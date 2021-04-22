@@ -116,6 +116,7 @@ text = "Formation"
 [node name="MainCharacter" parent="." instance=ExtResource( 3 )]
 pause_mode = 1
 position = Vector2( 482.395, 254.958 )
+z_index = 1
 
 [node name="Sprite" parent="MainCharacter" index="0"]
 position = Vector2( 22.5842, 5.16833 )
