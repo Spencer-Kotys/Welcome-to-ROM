@@ -42,3 +42,7 @@ func read_JSON(path):
 	file.open(path, file.READ)
 	var text = file.get_as_text()
 	return parse_json(text)
+
+# Changes task and adds to time when complete
+func taskAssign(newTask, addedTime):
+	task = newTask
