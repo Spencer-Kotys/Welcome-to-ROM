@@ -55,6 +55,7 @@ func MovementLoop():
 				emit_signal("init_bed_dialogue")
 			elif collision.collider.name == "Window":
 				print("This is a window")
+				global.taskAssign("-demo",1) # THIS IS FOR DEV PURPOSES ONLY
 			elif collision.collider.name == "Green Boy":
 				start_dialogue() # <- Call this before every dialogue event
 				emit_signal("init_greenboy_dialogue")

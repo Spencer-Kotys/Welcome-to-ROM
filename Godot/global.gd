@@ -48,7 +48,10 @@ func read_JSON(path):
 func taskAssign(newTask, addedTime):
 	task = newTask
 	var tTime = (int(time)/100) + int(addedTime)
-	if (10 > tTime):
+	if (23 < tTime):
+		time = "0" + str(tTime-24) + ":00"
+		day = str(int(day) + 1) # Increase day when reaching midnight
+	elif (10 > tTime):
 		time = "0" + str(tTime) + ":00"
 	else:
 		time = str(tTime) + ":00"
