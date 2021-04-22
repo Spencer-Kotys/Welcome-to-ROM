@@ -23,13 +23,6 @@ func _on_MainCharacter_init_companyofficer_dialogue():
 	{
 		'text': 'So you are going destination.value'
 	},
-	#{
-	#if destination == 'nowhere':
-	#	'text': 'You need to choose somewhere to go. Exit the area as soon as possible.'
-	#else:
-	#	'text': 'Very well. Please go directly there.'
-	#},
-	
 	{
 		'dialogue_end': 0
 	}]
