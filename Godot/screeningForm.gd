@@ -7,4 +7,5 @@ func _on_Complete_pressed():
 		$CenterContainer/VBoxContainer/Warning.visible = true
 	else:
 		global.screening_form_complete = true
+		global.taskAssign("-Turn in Screening Form",1)
 		get_tree().change_scene("res://Room_No_Roommate.tscn")

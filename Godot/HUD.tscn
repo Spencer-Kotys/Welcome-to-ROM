@@ -25,10 +25,7 @@ margin_top = 20.0
 margin_right = 1004.0
 margin_bottom = 580.0
 
-[node name="PauseMenu" type="MarginContainer" parent="Control" instance=ExtResource( 6 )]
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="PauseMenu" parent="Control" instance=ExtResource( 6 )]
 
 [node name="MoraleMeter" parent="Control" instance=ExtResource( 1 )]
 anchor_top = 0.0
