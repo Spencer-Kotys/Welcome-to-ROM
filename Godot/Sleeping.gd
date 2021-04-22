@@ -13,6 +13,7 @@ func _ready():
 		get_tree().change_scene("res://lose_covid.tscn")
 	else:
 		global.day = str(day)
+		global.time = "06:00" # reset time
 		yield(get_tree().create_timer(1.0), "timeout")
 		
 		# 50% chance of your roommate being in the room with you after waking up
