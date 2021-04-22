@@ -12,7 +12,8 @@ var has_covid = false # true or false for if the player has covid
 var bagged = null
 var in_dialogue = null
 var screening_form_complete = false # is screeing from complete
-var task = "-None"
+var task = "-None" # stores task
+var time = "6" # stores time value
 
 # percent_chance would be an integer between 1 and 100
 # so if you wanted a 5% chance of getting covid enter '5' into the function
