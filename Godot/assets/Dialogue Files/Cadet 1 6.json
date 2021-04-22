@@ -1,7 +1,7 @@
 [
 	{"dialogue_start": 0},
 	{
-		"name": "Friend", "text": "Hey, what\'s up?"
+		"name": "Friend", "text": "Hey, how's it going?"
 	},
 	{
 		"name": "Friend", "question": "What do you think is going to be for dinner?"
@@ -13,7 +13,7 @@
 			{"label": "peas and carrots", "value": "Green and orange, my two favorite colors."},
 			{"label": "mixed vegetables", "value": "Are these better than a salad?"},
 			{"label": "potato wedges", "value": "Or really any potatoes."},
-			{"label": "slab of tofu (ooh I love being vegetarian)", "value": "Ahh yes me too. What's not to love."}
+			{"label": "slab of tofu (I love being vegetarian)", "value": "Ahh yes me too. What's not to love."}
 		],
 		"variable": "menu"
 	},

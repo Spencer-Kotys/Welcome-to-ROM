@@ -1,0 +1,26 @@
+[
+	{"dialogue_start": 0},
+	{
+		"name": "Friend", "text": "Have you heard, summer assignments are out!"
+	},
+	{
+		"name": "Friend", "question": "What would your preference be?"
+		"options": [
+			{"label": "A station in Maine", "value": "1"},
+			{"label": "ANY AIR STATION", "value": "2"},
+			{"label": "Alameda, California", "value": "3"},
+			{"label": "Icebreaker on the West Coast", "value": "4"},
+			{"label": "Great Lakes baby", "value": "5"},
+			{"label": "Small cutter in Florida", "value": "6"},
+			{"label": "Sector anything", "value": "7"},
+			{"label": "Washington DC", "value": "8"},
+			{"label": "11 week Eagle", "value": "9"}
+		],
+		"variable": "preference"
+	},
+	{
+		"name": "Friend", "text": "Interesting, I wanted a Bouy Tender."
+	},
+	
+	{"dialogue_end": 0}  
+]
