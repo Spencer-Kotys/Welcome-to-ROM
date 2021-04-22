@@ -4,7 +4,7 @@ func _on_MainCharacter_init_bed_dialogue():
 	popup()
 
 	var dialog = load("res://addons/dialogs/Dialog.tscn").instance()
-	if "22:00" == global.time:
+	if (6 > (int(global.time)/100) || 15 < (int(global.time)/100)):
 		dialog.dialog_script = [
 		{
 			'dialogue_start': 0
