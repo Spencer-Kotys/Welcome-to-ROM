@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/back_w_2.png-18d918ec65ba15f7ce82b8f2283e6ade.stex"
+path="res://.import/HS-model.png-417d3d6412b9ae4863d5f6f530f8e4bd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Player_Models/SE_Sprites/back_w_2.png"
-dest_files=[ "res://.import/back_w_2.png-18d918ec65ba15f7ce82b8f2283e6ade.stex" ]
+source_file="res://assets/Player_Models/HS-model.png"
+dest_files=[ "res://.import/HS-model.png-417d3d6412b9ae4863d5f6f530f8e4bd.stex" ]
 
 [params]
 

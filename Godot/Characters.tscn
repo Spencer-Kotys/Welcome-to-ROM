@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Green Boy.gd" type="Script" id=1]
 [ext_resource path="res://Company Officer.gd" type="Script" id=2]
@@ -7,11 +7,12 @@
 [ext_resource path="res://Cadet1.gd" type="Script" id=5]
 [ext_resource path="res://assets/Player_Models/SE_Sprites/right_d_2.png" type="Texture" id=6]
 [ext_resource path="res://assets/Player_Models/SE_Sprites/right_d_1.png" type="Texture" id=7]
+[ext_resource path="res://assets/Player_Models/HS-model.png" type="Texture" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10.0936, 14.0968 )
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 7 ), ExtResource( 6 ) ],
 "loop": true,
@@ -19,7 +20,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CircleShape2D" id=3]
 radius = 15.7458
 
 [node name="Characters" type="Node2D"]
@@ -35,7 +36,7 @@ shape = SubResource( 1 )
 [node name="Sprite" type="AnimatedSprite" parent="Cadet1"]
 position = Vector2( 875.414, 292.186 )
 scale = Vector2( 0.989446, 1.05111 )
-frames = SubResource( 3 )
+frames = SubResource( 2 )
 animation = "left_idle"
 frame = 1
 playing = true
@@ -46,27 +47,27 @@ position = Vector2( 668.256, 320 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cadet1/Cadet1area"]
 position = Vector2( 206.212, -27.8144 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="HS" type="StaticBody2D" parent="."]
 position = Vector2( 0, 2 )
 script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="HS"]
-position = Vector2( 608, 256.75 )
-scale = Vector2( 0.101604, 0.128085 )
-texture = ExtResource( 3 )
+position = Vector2( 608.966, 256.601 )
+scale = Vector2( 0.90948, 1.11162 )
+texture = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HS"]
-position = Vector2( 608, 241.837 )
+position = Vector2( 608.892, 238.149 )
 shape = SubResource( 1 )
 
 [node name="HSarea" type="Area2D" parent="HS"]
 position = Vector2( 668.256, 320 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HS/HSarea"]
-position = Vector2( -60.256, -67.7094 )
-shape = SubResource( 2 )
+position = Vector2( -59.3642, -70.3461 )
+shape = SubResource( 3 )
 
 [node name="Company Officer" type="StaticBody2D" parent="."]
 position = Vector2( 0, 2 )
@@ -86,7 +87,7 @@ position = Vector2( 668.256, 320 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Company Officer/COarea"]
 position = Vector2( -152.635, 11.1446 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="Green Boy" type="StaticBody2D" parent="."]
 position = Vector2( 673.262, 322.958 )
@@ -106,4 +107,4 @@ position = Vector2( 3.05176e-05, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Green Boy/Area2D"]
 position = Vector2( 18.7299, 10.1866 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )

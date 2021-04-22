@@ -9,10 +9,10 @@ func _on_MainCharacter_init_hs_dialogue():
 			'dialogue_start': 0
 		},
 		{
-			'text': 'My name is HS3.'
+			'name': 'HS3', 'text': 'My name is HS3.'
 		},
 		{
-			'text': 'Thank you for turning in your screeing form, have a nice day!'
+			'name': 'HS3', 'text': 'Thank you for turning in your screeing form, have a nice day!'
 		},
 		{
 			'dialogue_end': 0
@@ -24,10 +24,10 @@ func _on_MainCharacter_init_hs_dialogue():
 			'dialogue_start': 0
 		},
 		{
-			'text': 'My name is HS3.'
+			'name': 'HS3', 'text': 'My name is HS3.'
 		},
 		{
-			'question': 'How are you feeling?',
+			'name': 'HS3', 'question': 'How are you feeling?',
 			'options': [
 				{ 'label': 'amazing', 'value': 'That is amazing. Who knew such a thing was possible in ROM?'},
 				{ 'label': 'good', 'value': 'Well, that is good. Have an even better day'},
@@ -39,13 +39,13 @@ func _on_MainCharacter_init_hs_dialogue():
 			'variable': 'feel'
 		},
 		{
-			'text': 'You feel [feel]. feel.value'
+			'name': 'HS3', 'text': 'You feel [feel]. feel.value'
 		},
 		
 		#This needs to somehow link to a separate dialogue if you need something from the clinic @spencer or anyone OR we don't have to do this.
 		
 		{
-			'question': 'Do you need anything from the clinic?',
+			'name': 'HS3', 'question': 'Do you need anything from the clinic?',
 			'options': [
 				{ 'label': 'Yes', 'value': 'do'},
 				{ 'label': 'No', 'value': 'do not'}
@@ -53,7 +53,7 @@ func _on_MainCharacter_init_hs_dialogue():
 			'variable': 'clinic_need'
 		},
 		{
-			'question': 'Are you sure you clinic_need.value need something from the clinic?',
+			'name': 'HS3', 'question': 'Are you sure you clinic_need.value need something from the clinic?',
 			'options': [
 				{ 'label': 'No, let think about it.', 'value': '0'},
 				{ 'label': 'Yes!', 'value': '1'}

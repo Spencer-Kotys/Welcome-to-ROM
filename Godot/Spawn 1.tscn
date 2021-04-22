@@ -114,7 +114,6 @@ text = "Formation"
 [node name="HUD" parent="CanvasLayer/Control" instance=ExtResource( 10 )]
 
 [node name="PauseMenu" parent="CanvasLayer/Control/HUD/Control" index="0"]
-pause_mode = 2
 visible = false
 
 [node name="MainCharacter" parent="." instance=ExtResource( 3 )]
