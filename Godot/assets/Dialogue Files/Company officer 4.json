@@ -1,0 +1,21 @@
+[
+	{"dialogue_start": 0},
+	{
+		"name": "Company Officer", "text": "Hey how\'s it going"
+	},
+	{
+		"name": "Company Officer", "question": "Cadet, have you been social distancing?"
+		"options": [
+			{"label": "Yes, of course Sir.", "value": "Very well. Keep doing your job and stay healthy."},
+			{"label": "Most of the time Sir.", "value": "You need to be more careful, but this is acceptable. Don\'t bring Coronavirus into my wing area."},
+			{"label": "You see me social distancing, right Sir?", "value": "That\'s a yes or no question. Sure, I may see you social distancing but your response makes me think you are not when in private."},
+			{"label": "No, Sir.", "value": "Are you kidding me? How do you expect to stay healthy when you are interacting with other humans in close proximity???"}
+		],
+		"variable": "distancing"
+	},
+	{
+		"name": "Company Officer", "text": "distancing.value"
+	},
+	
+	{"dialogue_end": 0}  
+]

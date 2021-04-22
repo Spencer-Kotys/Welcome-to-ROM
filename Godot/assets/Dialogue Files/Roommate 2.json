@@ -1,0 +1,10 @@
+[
+	{"dialogue_start": 0},
+	{
+		"name": "Roommate", "text": "Hey how\'s life outside the room?"
+	},
+	{
+		"name": "Roommate", "text": "Just peachy, I expect. I could stay trapped in here forever though, no matter how nice the day"
+	},
+	{"dialogue_end": 0}  
+]

@@ -1,0 +1,22 @@
+[
+	{"dialogue_start": 0},
+	{
+		"name": "Friend", "input": "What task are you trying to complete?"
+		"window_title": "",	"variable": "task"
+	},
+	{
+		"name": "Friend", "question": "Forget [task]. Why don't we just ignore that and go live it up in my room?"
+		"options": [
+			{"label": "LETS GO PARTAY.", "value": "Are you KIDDING? LET\'s! Oh wait COVID policy states you can't come in my room sorry."},
+			{"label": "Is that such a good idea?", "value": "Well of course. Unless you don't want to get in trouble, which is important to me so you can't come."},
+			{"label": "Have you read the 18 page rule book? Definately not.", "value": "Oh rightttt, forgot that tiny detail."},
+			{"label": "No way!", "value": "Good, I didn't want you to come anyways."}
+		],
+		"variable": "party"
+	},
+	{
+		"name": "Friend", "text": "party.value"
+	},
+	
+	{"dialogue_end": 0}  
+]

@@ -1,0 +1,22 @@
+[
+	{"dialogue_start": 0},
+	{
+		"name": "Friend", "question": "What company are you in? My curiosity has gotten the best of me."
+		"options": [
+			{"label": "Alfa", "value": "Ahh the Gators."},
+			{"label": "Bravo", "value": "So the Bulls have come to play then."},
+			{"label": "Charlie", "value": "Ssssso you\'re Cobrasssss."},
+			{"label": "Delta", "value": "What up Dawg?"},
+			{"label": "Echo", "value": "Fly high, Eagle."},
+			{"label": "Foxtrot", "value": "Stop Floundering around fishy."},
+			{"label": "Golf", "value": "Get psyched, it\'s the Gophers."},
+			{"label": "Hotel", "value": "Hammerheads are swimming in hot, ready for the kill."}
+		],
+		"variable": "company"
+	},
+	{
+		"name": "Friend", "text": "So [company]. company.value"
+	},
+	
+	{"dialogue_end": 0}  
+]
