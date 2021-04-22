@@ -3,13 +3,14 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var day = int(global.day)
-	day = day + 1
-	if (14 == day):
+	if (6 < int(global.time)/100):
+		day = day + 1
+	elif (14 == day):
 		print("You Win")
 		get_tree().change_scene("res://Win.tscn")
-	if (global.has_covid == true):
+	elif (global.has_covid == true):
 		get_tree().change_scene("res://lose_covid.tscn")
-	if (global.bagged == true):
+	elif (global.bagged == true):
 		get_tree().change_scene("res://lose_covid.tscn")
 	else:
 		global.day = str(day)
