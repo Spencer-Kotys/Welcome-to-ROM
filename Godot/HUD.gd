@@ -12,6 +12,7 @@ func _ready():
 func _process(delta):
 	morale_meter.value = global.morale
 	$Control/DayCounter/Background/Day.text = global.day
+	$Control/Task/NinePatchRect/Task_Label.text = "none"
 
 func _on_MainCharacter_add_morale(add_amount):
 	morale = global.morale + add_amount
