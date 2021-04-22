@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-![Project Image]()
+![Project Image](./UpdateImages/Project.png)
 
 ROM is a two-dimensional simulation game, and it uses a top-down design in which
 the camera follows the player.
@@ -35,11 +35,11 @@ and staying healthy, then they win!
 
 ## Project Board
 
-![Project Board - Weeks]()
+![Project Board - Weeks](./UpdateImages/weeks.png)
 
-![Project Board - To Do/Done]()
+![Project Board - To Do/Done](./UpdateImages/todo_done.png)
 
-![Project Board - Issues]()
+![Project Board - Issues](./UpdateImages/Issue.png)
 
 Creating and maintaining this board has been a combination of adding cards for
 each week based on what we want to complete each sprint and creating issues
@@ -114,7 +114,7 @@ resources and tutorials online made it quick to learn. Godot is also a very
 lightweight program, meaning it runs well on the school laptops, does not take
 up a lot of space, and loads quickly when we need to work.
 
-![Mock up Game image]()
+![Mock up Game image](./UpdateImages/MockProject.png)
 
 The image above is from testing the first mock-up of the game’s HUD. The HUD
 itself hasn’t changed much, but we no longer have to use screenshots of Pokémon
