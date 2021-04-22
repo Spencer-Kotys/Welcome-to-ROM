@@ -13,7 +13,7 @@ var bagged = null
 var in_dialogue = null
 var screening_form_complete = false # is screeing from complete
 var task = "-None" # stores task
-var time = "6" # stores time value
+var time = "06:00" # stores time value
 
 # percent_chance would be an integer between 1 and 100
 # so if you wanted a 5% chance of getting covid enter '5' into the function
@@ -47,3 +47,9 @@ func read_JSON(path):
 # Changes task and adds to time when complete
 func taskAssign(newTask, addedTime):
 	task = newTask
+	var tTime = (int(time)/100) + int(addedTime)
+	if (10 > tTime):
+		time = "0" + str(tTime) + ":00"
+	else:
+		time = str(tTime) + ":00"
+	print(time)
