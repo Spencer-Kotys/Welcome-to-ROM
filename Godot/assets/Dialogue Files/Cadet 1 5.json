@@ -1,7 +1,7 @@
 [
 	{"dialogue_start": 0},
 	{
-		"name": "Friend", "question": "What company are you in? My curiosity has gotten the best of me."
+		"name": "Friend", "question": "So what company are you in?",
 		"options": [
 			{"label": "Alfa", "value": "Ahh the Gators."},
 			{"label": "Bravo", "value": "So the Bulls have come to play then."},

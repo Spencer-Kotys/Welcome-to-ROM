@@ -1,10 +1,10 @@
 [
 	{"dialogue_start": 0},
 	{
-		"name": "Friend", "text": "Hey, how's it going?"
+		"name": "Friend", "text": "Hey, what do you think is for dinner?"
 	},
 	{
-		"name": "Friend", "question": "What do you think is going to be for dinner?"
+		"name": "Friend", "question": "Hmmm",
 		"options": [
 			{"label": "chicken", "value": "Expected."},
 			{"label": "more chicken", "value": "I see you, optimist that you are."},
@@ -18,7 +18,7 @@
 		"variable": "menu"
 	},
 	{
-		"name": "Friend", "text": "company.value But seriously, [menu] does make sense."
+		"name": "Friend", "text": "menu.value But seriously, [menu] does make sense."
 	},
 	
 	{"dialogue_end": 0}  

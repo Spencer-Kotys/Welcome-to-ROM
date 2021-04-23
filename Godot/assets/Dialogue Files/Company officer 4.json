@@ -4,7 +4,7 @@
 		"name": "Company Officer", "text": "Hey how\'s it going"
 	},
 	{
-		"name": "Company Officer", "question": "Cadet, have you been social distancing?"
+		"name": "Company Officer", "question": "Cadet, have you been social distancing?",
 		"options": [
 			{"label": "Yes, of course Sir.", "value": "Very well. Keep doing your job and stay healthy."},
 			{"label": "Most of the time Sir.", "value": "You need to be more careful, but this is acceptable. Don\'t bring Coronavirus into my wing area."},
