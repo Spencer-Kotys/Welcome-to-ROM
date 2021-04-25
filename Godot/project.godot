@@ -18,6 +18,9 @@ _global_script_class_icons={
 config/name="Welcome to ROM"
 config/description="Welcome to ROM is a historical game detailing the struggles of cadets during the Covid 19 ROM of 2020. It is written by cadets who lived through these harrowing experiences."
 run/main_scene="res://startScreen.tscn"
+boot_splash/image="res://assets/titlename.png"
+boot_splash/fullsize=false
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://assets/Player_Models/SE_Sprites/right_w_4.png"
 
 [autoload]
@@ -83,4 +86,5 @@ pause={
 
 [rendering]
 
+environment/default_clear_color=Color( 0, 0, 0, 1 )
 environment/default_environment="res://default_env.tres"

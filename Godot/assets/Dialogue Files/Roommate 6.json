@@ -1,0 +1,8 @@
+[
+	{"dialogue_start": 0},
+	{
+		"name": "Roommate", "input": "Check your computer."
+	},
+	
+	{"dialogue_end": 0}  
+]

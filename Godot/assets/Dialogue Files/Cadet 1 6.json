@@ -1,0 +1,25 @@
+[
+	{"dialogue_start": 0},
+	{
+		"name": "Friend", "text": "Hey, what do you think is for dinner?"
+	},
+	{
+		"name": "Friend", "question": "Hmmm",
+		"options": [
+			{"label": "chicken", "value": "Expected."},
+			{"label": "more chicken", "value": "I see you, optimist that you are."},
+			{"label": "rice", "value": "It's all about the side dishes then."},
+			{"label": "pizza", "value": "Classic, you can never go wrong with a slice of pizza."},
+			{"label": "peas and carrots", "value": "Green and orange, my two favorite colors."},
+			{"label": "mixed vegetables", "value": "Are these better than a salad?"},
+			{"label": "potato wedges", "value": "Or really any potatoes."},
+			{"label": "slab of tofu (I love being vegetarian)", "value": "Ahh yes me too. What's not to love."}
+		],
+		"variable": "menu"
+	},
+	{
+		"name": "Friend", "text": "menu.value But seriously, [menu] does make sense."
+	},
+	
+	{"dialogue_end": 0}  
+]

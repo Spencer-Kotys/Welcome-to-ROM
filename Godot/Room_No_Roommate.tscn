@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://MainCharacter.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/roomtile_no_roomate.png" type="Texture" id=2]
 [ext_resource path="res://Room_No_Roommate.gd" type="Script" id=3]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Sleep.gd" type="Script" id=5]
+[ext_resource path="res://Desk.gd" type="Script" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8.22084, 4.11847 )
@@ -120,11 +121,11 @@ position = Vector2( 19.1426, 58.6716 )
 shape = SubResource( 11 )
 
 [node name="MainCharacter" parent="." instance=ExtResource( 1 )]
+pause_mode = 1
 
 [node name="Sprite" parent="MainCharacter" index="0"]
 position = Vector2( -408, -196.11 )
 animation = "North_Idle"
-frame = 0
 
 [node name="Collision" parent="MainCharacter" index="1"]
 position = Vector2( -407.702, -197.4 )
@@ -150,9 +151,21 @@ script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Desk" type="Popup" parent="CanvasLayer"]
+margin_left = -1.0
+margin_right = 1024.0
+margin_bottom = 600.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="body_entered" from="Room/ExitRoom" to="." method="_on_ExitRoom_body_entered"]
 [connection signal="body_entered" from="Room/Room Objects/Player Bed/Player Bed" to="CanvasLayer/Sleep" method="_on_Player_Bed_body_entered"]
 [connection signal="body_exited" from="Room/Room Objects/Player Bed/Player Bed" to="CanvasLayer/Sleep" method="_on_Player_Bed_body_exited"]
 [connection signal="init_bed_dialogue" from="MainCharacter" to="CanvasLayer/Sleep" method="_on_MainCharacter_init_bed_dialogue"]
+[connection signal="init_desk_dialogue" from="MainCharacter" to="CanvasLayer/Desk" method="_on_MainCharacter_init_desk_dialogue"]
+[connection signal="timeout" from="MainCharacter/new_scene_timer" to="MainCharacter" method="_on_new_scene_timer_timeout"]
 
 [editable path="MainCharacter"]
