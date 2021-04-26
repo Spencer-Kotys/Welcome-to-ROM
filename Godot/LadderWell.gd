@@ -18,29 +18,29 @@ func _on_Formation_pressed():
 
 
 func _on_Chapel_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene("res://Chapel.tscn")
 
 
 func _on_Colors_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene("res://Colors.tscn")
 
 
 func _on_CrownPark_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene("res://CrownPark.tscn")
 
 
 func _on_DryDock_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene("res://DryDock.tscn")
 
 
 func _on_Gym_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene("res://Gym.tscn")
 
 
 func _on_Pool_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene("res://Pool.tscn")
 
 
 func _on_Walk_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene("res://Walk.tscn")
 
