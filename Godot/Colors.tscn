@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/Video Scenes/Colors.webm" type="VideoStream" id=1]
+[ext_resource path="res://assets/iconfinder_ic_skip_next_48px_352132.png" type="Texture" id=2]
+[ext_resource path="res://Colors.gd" type="Script" id=3]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorsScene" type="VideoPlayer" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+stream = ExtResource( 1 )
+autoplay = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 472.0
+margin_top = 520.0
+margin_right = 552.0
+margin_bottom = 558.0
+text = "Skip"
+icon = ExtResource( 2 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="finished" from="ColorsScene" to="." method="_on_FormationScene_finished"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
