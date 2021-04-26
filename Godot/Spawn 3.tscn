@@ -88,9 +88,9 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/LadderWell/CenterContainer"]
 margin_left = 429.0
-margin_top = 268.0
+margin_top = 184.0
 margin_right = 594.0
-margin_bottom = 330.0
+margin_bottom = 414.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -173,6 +173,13 @@ frame = 0
 [connection signal="body_entered" from="ChaseHall/Room" to="." method="_on_Room_body_entered"]
 [connection signal="pressed" from="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer/Wardroom" to="CanvasLayer/Control/LadderWell" method="_on_Wardroom_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer/Formation" to="CanvasLayer/Control/LadderWell" method="_on_Formation_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer/Chapel" to="CanvasLayer/Control/LadderWell" method="_on_Chapel_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer/Colors" to="CanvasLayer/Control/LadderWell" method="_on_Colors_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer/CrownPark" to="CanvasLayer/Control/LadderWell" method="_on_CrownPark_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer/DryDock" to="CanvasLayer/Control/LadderWell" method="_on_DryDock_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer/Gym" to="CanvasLayer/Control/LadderWell" method="_on_Gym_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer/Pool" to="CanvasLayer/Control/LadderWell" method="_on_Pool_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer/Walk" to="CanvasLayer/Control/LadderWell" method="_on_Walk_pressed"]
 [connection signal="add_morale" from="MainCharacter" to="CanvasLayer/Control/HUD" method="_on_MainCharacter_add_morale"]
 [connection signal="init_cadet1_dialogue" from="MainCharacter" to="CanvasLayer/Control/Cadet1Dialogue" method="_on_MainCharacter_init_cadet1_dialogue"]
 [connection signal="init_companyofficer_dialogue" from="MainCharacter" to="CanvasLayer/Control/CompanyOfficerDialogue" method="_on_MainCharacter_init_companyofficer_dialogue"]

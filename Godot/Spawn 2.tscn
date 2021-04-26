@@ -121,12 +121,12 @@ margin_right = 12.0
 margin_bottom = 20.0
 text = "Colors"
 
-[node name="Crown Park" type="Button" parent="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer"]
+[node name="CrownPark" type="Button" parent="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer"]
 margin_right = 12.0
 margin_bottom = 20.0
 text = "Crown Park"
 
-[node name="Dry Dock" type="Button" parent="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer"]
+[node name="DryDock" type="Button" parent="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer"]
 margin_right = 12.0
 margin_bottom = 20.0
 text = "Dry Dock"
@@ -155,7 +155,6 @@ z_index = 1
 
 [node name="Sprite" parent="MainCharacter" index="0"]
 position = Vector2( 22.5842, 5.16833 )
-frame = 1
 
 [node name="Collision" parent="MainCharacter" index="1"]
 position = Vector2( 23.1113, 5.08007 )
@@ -165,11 +164,21 @@ position = Vector2( 23.1113, -1.04904e-05 )
 
 [node name="Characters" parent="." instance=ExtResource( 5 )]
 
+[node name="Sprite" parent="Characters/Cadet1" index="1"]
+frame = 0
+
 [connection signal="body_entered" from="ChaseHall/Ladderwell" to="CanvasLayer/Control/LadderWell" method="_on_Ladderwell_body_entered"]
 [connection signal="body_exited" from="ChaseHall/Ladderwell" to="CanvasLayer/Control/LadderWell" method="_on_Ladderwell_body_exited"]
 [connection signal="body_entered" from="ChaseHall/Room" to="." method="_on_Room_body_entered"]
 [connection signal="pressed" from="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer/Wardroom" to="CanvasLayer/Control/LadderWell" method="_on_Wardroom_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer/Formation" to="CanvasLayer/Control/LadderWell" method="_on_Formation_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer/Chapel" to="CanvasLayer/Control/LadderWell" method="_on_Chapel_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer/Colors" to="CanvasLayer/Control/LadderWell" method="_on_Colors_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer/CrownPark" to="CanvasLayer/Control/LadderWell" method="_on_CrownPark_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer/DryDock" to="CanvasLayer/Control/LadderWell" method="_on_DryDock_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer/Gym" to="CanvasLayer/Control/LadderWell" method="_on_Gym_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer/Pool" to="CanvasLayer/Control/LadderWell" method="_on_Pool_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer/Walk" to="CanvasLayer/Control/LadderWell" method="_on_Walk_pressed"]
 [connection signal="add_morale" from="MainCharacter" to="CanvasLayer/Control/HUD" method="_on_MainCharacter_add_morale"]
 [connection signal="init_cadet1_dialogue" from="MainCharacter" to="CanvasLayer/Control/Cadet1Dialogue" method="_on_MainCharacter_init_cadet1_dialogue"]
 [connection signal="init_companyofficer_dialogue" from="MainCharacter" to="CanvasLayer/Control/CompanyOfficerDialogue" method="_on_MainCharacter_init_companyofficer_dialogue"]
