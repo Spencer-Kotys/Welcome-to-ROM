@@ -33,5 +33,5 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="finished" from="ChapelScene" to="." method="_on_FormationScene_finished"]
+[connection signal="finished" from="ChapelScene" to="." method="_on_ChapelScene_finished"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
