@@ -88,9 +88,9 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/LadderWell/CenterContainer"]
 margin_left = 429.0
-margin_top = 268.0
+margin_top = 184.0
 margin_right = 594.0
-margin_bottom = 330.0
+margin_bottom = 414.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -111,6 +111,41 @@ margin_right = 12.0
 margin_bottom = 20.0
 text = "Formation"
 
+[node name="Chapel" type="Button" parent="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer"]
+margin_right = 12.0
+margin_bottom = 20.0
+text = "Chapel"
+
+[node name="Colors" type="Button" parent="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer"]
+margin_right = 12.0
+margin_bottom = 20.0
+text = "Colors"
+
+[node name="Crown Park" type="Button" parent="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer"]
+margin_right = 12.0
+margin_bottom = 20.0
+text = "Crown Park"
+
+[node name="Dry Dock" type="Button" parent="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer"]
+margin_right = 12.0
+margin_bottom = 20.0
+text = "Dry Dock"
+
+[node name="Gym" type="Button" parent="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer"]
+margin_right = 12.0
+margin_bottom = 20.0
+text = "Gym"
+
+[node name="Pool" type="Button" parent="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer"]
+margin_right = 12.0
+margin_bottom = 20.0
+text = "Pool"
+
+[node name="Walk" type="Button" parent="CanvasLayer/Control/LadderWell/CenterContainer/VBoxContainer"]
+margin_right = 12.0
+margin_bottom = 20.0
+text = "Walk"
+
 [node name="HUD" parent="CanvasLayer/Control" instance=ExtResource( 10 )]
 
 [node name="MainCharacter" parent="." instance=ExtResource( 3 )]
@@ -129,6 +164,7 @@ position = Vector2( 23.1113, 5.08007 )
 position = Vector2( 23.1113, -1.04904e-05 )
 
 [node name="Characters" parent="." instance=ExtResource( 5 )]
+
 [connection signal="body_entered" from="ChaseHall/Ladderwell" to="CanvasLayer/Control/LadderWell" method="_on_Ladderwell_body_entered"]
 [connection signal="body_exited" from="ChaseHall/Ladderwell" to="CanvasLayer/Control/LadderWell" method="_on_Ladderwell_body_exited"]
 [connection signal="body_entered" from="ChaseHall/Room" to="." method="_on_Room_body_entered"]
@@ -145,12 +181,8 @@ position = Vector2( 23.1113, -1.04904e-05 )
 [connection signal="body_entered" from="Characters/Cadet1/Cadet1area" to="MainCharacter" method="_on_Cadet1area_body_entered"]
 [connection signal="body_entered" from="Characters/HS/HSarea" to="MainCharacter" method="_on_HSarea_body_entered"]
 [connection signal="body_entered" from="Characters/Company Officer/COarea" to="MainCharacter" method="_on_COarea_body_entered"]
-[connection signal="body_entered" from="Characters/Green Boy/Area2D" to="MainCharacter" method="_on_Area2D_body_entered"]
 
 [editable path="ChaseHall"]
-
 [editable path="CanvasLayer/Control/HUD"]
-
 [editable path="MainCharacter"]
-
 [editable path="Characters"]
