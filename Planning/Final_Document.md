@@ -163,5 +163,3 @@ operating systems as well to web servers.
 ## Summary of results, reflection
 
 ## Demo
-
-## Team self assessment
