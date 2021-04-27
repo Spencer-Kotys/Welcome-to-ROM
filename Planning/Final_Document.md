@@ -227,6 +227,11 @@ with the group, assign deadlines, and have a better idea of where the project
 was going. It also became easier to assign non-coding based tasks to group
 members who didn’t feel as comfortable working in Godot.
 
+### Successes
+
+We were able to successfully complete our project and create a video game the
+encapsulates what it felt like to be a cadet during ROM.
+
 ## Assessment of complexity velocity
 
 ## Summary of results, reflection
