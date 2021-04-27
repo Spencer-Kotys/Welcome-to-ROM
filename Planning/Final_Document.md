@@ -158,6 +158,27 @@ operating systems as well to web servers.
 
 ## Assessment of team strategy, challenges, successes
 
+### Team strategy
+
+Our teams strategy was to assign work according to ability. This means that the
+best developers wrote code, while those with artistic skills drew the art, and
+others contributed in the best way they could.
+
+During each of our lab sessions we would meet to discuss the progress made this
+week and decide what we wanted to work on next week. Then we would decide who
+was going to work on what and assign them an issue on GitHub to take who was
+doing what, along with adding a card to the project board.
+
+In Agile development terms we would describe each week as a "scrum" where we
+planned our schedule and work around.
+
+Towards the end of the development cycle we began assigning releases to each
+scrum. For example the first week we did this was v0.1-alpha and then 0.2 and
+so on. For each release we would compile the game code and create a stand alone
+application.
+
+With this strategy we were able to keep moving towards a finished product.
+
 ## Assessment of complexity velocity
 
 ## Summary of results, reflection
