@@ -179,6 +179,54 @@ application.
 
 With this strategy we were able to keep moving towards a finished product.
 
+### Challenges
+
+Getting GitHub to interface well with our game engine, Godot, has been one of
+our biggest reoccurring issues.
+
+After changing to a different branch, GitHub Desktop will bring changes from the
+previous branch to the current branch despite no changes being made to the
+current branch. A work-around to this has just been immediately discarding
+changes upon a branch switch.
+
+Another problem came up when we tried to restore stashed changes, and it broke
+the entire game. This was because GitHub was treating our Godot scenes as if
+they were text files, and was inserting text to identify where the changes were.
+In order to fix it, we had to manually go through all the altered Godot files
+and delete GitHub’s added text. The solution going forward has been to either
+commit or discard changes before changing to a different branch so they are not
+stashed.
+
+Finally, early on in development, a group member pushed a change to our main
+branch that broke most of the systems. This was fixed through selective
+reversions and re-commits, and then the permanent solution was to have only
+Spencer coordinate merging all the individual member branches into main.
+
+A recently fixed problem turned out to be caused by the Godot engine itself.
+When loading into a new scene (i.e. walking from the main hallway into the
+player’s room or vice versa), the player’s morale bar would spike up in value,
+seemingly at random. It turned out this was a common bug in Godot; upon
+entering a new scene the physics engine automatically detects collision with
+all the objects in that scene. This was an issue because player morale was set
+to go up upon colliding with certain characters in the main hallway. This is
+why the morale meter would spike upon loading the scene. The only fix to this
+was a workaround with a 1 second timer. The timer starts when the scene loads
+in, and while it’s, running collision detection is turned off. This creates a
+one second buffer when loading into a new scene and it prevents all the
+collisions from being immediately detected and increasing the player’s morale.
+We also had to use a timer to fix a similar collision issue with the dialogue
+system. Giving the game a single second to run through a couple more process
+loops before impacting the player has improved overall game stability.
+
+Communication and the assignment of specific tasks was a big issue at the
+beginning of the development cycle. When all we had was a blank game file, it
+was hard to assign specific tasks to certain people. This led to development
+being a bit rushed in the beginning by one or two people. However, once we had
+a baseline to work with and improve upon, it became much easier to coordinate
+with the group, assign deadlines, and have a better idea of where the project
+was going. It also became easier to assign non-coding based tasks to group
+members who didn’t feel as comfortable working in Godot.
+
 ## Assessment of complexity velocity
 
 ## Summary of results, reflection
