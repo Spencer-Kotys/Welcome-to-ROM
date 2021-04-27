@@ -14,7 +14,7 @@ between 3 to 4 minutes.
 
 ### Context Diagram
 
-![Context Diagram](https://github.com/macee/final-project-i-m-also-not-in-a-group/blob/main/Planning/Context%20Diagram.png)
+![Context Diagram](./Context%20Diagram.png)
 
 ### Stakeholders
 
@@ -102,7 +102,7 @@ Game is available on PC.
 
 ### Use Case Diagram
 
-![Use Case Diagram](https://github.com/macee/final-project-i-m-also-not-in-a-group/blob/main/Planning/Use%20Case%20Diagram.PNG)
+![Use Case Diagram](./Use%20Case%20Diagram.PNG)
 
 ## Architecture
 
@@ -154,7 +154,7 @@ operating systems as well to web servers.
 
 ### Architecture Diagram
 
-![Architecture Diagram](https://github.com/macee/final-project-i-m-also-not-in-a-group/blob/main/Planning/Architecture%20Diagram.png)
+![Architecture Diagram](./Architecture%20Diagram.png)
 
 ## Assessment of team strategy, challenges, successes
 
