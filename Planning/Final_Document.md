@@ -230,7 +230,28 @@ members who didn’t feel as comfortable working in Godot.
 ### Successes
 
 We were able to successfully complete our project and create a video game the
-encapsulates what it felt like to be a cadet during ROM.
+encapsulates what it felt like to be a cadet during ROM. Of our requirements we
+met the following:
+
+1. Player will use keyboard and mouse to interact with the system.
+
+2. There will be a chance the player will lose the game.
+
+3. There will be a morale meter.
+
+4. There is an end goal for the player.
+
+5. The game will be 2D.
+
+6. The game will have a top down view.
+
+7. Time will be internally calculated and tracked.
+
+8. Players will have daily tasks.
+
+9. A game engine will be used to create the game.
+
+10. Game is available on PC.
 
 ## Assessment of complexity velocity
 
