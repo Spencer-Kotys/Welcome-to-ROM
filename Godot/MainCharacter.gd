@@ -121,6 +121,7 @@ func AnimationLoop():
 			sprite.set_flip_h(false)
 	if move_direction != Vector2(0,0):
 		anim_mode = "Walk"
+		globalAudio.sound_effect("Footstep_Tile_Left.ogg")
 	else:
 		anim_mode = "Idle"
 
