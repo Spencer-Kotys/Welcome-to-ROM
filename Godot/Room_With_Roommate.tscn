@@ -30,7 +30,7 @@ extents = Vector2( 11.8906, 18.9731 )
 extents = Vector2( 16.1128, 5.18435 )
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 12.1842, 9.00792 )
+extents = Vector2( 12.1842, 12.1497 )
 
 [sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 10, 8.40345 )
@@ -103,7 +103,7 @@ shape = SubResource( 7 )
 [node name="Right Desk" type="StaticBody2D" parent="Room/Room Objects"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Room/Room Objects/Right Desk"]
-position = Vector2( 28.9542, -26.0588 )
+position = Vector2( 27.4858, -27.4125 )
 shape = SubResource( 8 )
 
 [node name="Right Stereo" type="StaticBody2D" parent="Room/Room Objects"]
@@ -137,7 +137,6 @@ pause_mode = 1
 [node name="Sprite" parent="MainCharacter" index="0"]
 position = Vector2( -408, -196.11 )
 animation = "North_Idle"
-frame = 1
 
 [node name="Collision" parent="MainCharacter" index="1"]
 position = Vector2( -407.702, -197.4 )
@@ -179,6 +178,7 @@ script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="body_entered" from="Room/ExitRoom" to="." method="_on_ExitRoom_body_entered"]
 [connection signal="body_entered" from="Room/Room Objects/Player Bed/Player Bed" to="CanvasLayer/Sleep" method="_on_Player_Bed_body_entered"]
 [connection signal="body_exited" from="Room/Room Objects/Player Bed/Player Bed" to="CanvasLayer/Sleep" method="_on_Player_Bed_body_exited"]

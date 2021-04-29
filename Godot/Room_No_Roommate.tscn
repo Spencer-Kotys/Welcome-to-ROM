@@ -29,7 +29,7 @@ extents = Vector2( 11.8906, 18.9731 )
 extents = Vector2( 16.1128, 5.18435 )
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 12.1842, 9.00792 )
+extents = Vector2( 12.1842, 11.0682 )
 
 [sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 10, 8.40345 )
@@ -98,7 +98,7 @@ shape = SubResource( 7 )
 [node name="Right Desk" type="StaticBody2D" parent="Room/Room Objects"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Room/Room Objects/Right Desk"]
-position = Vector2( 28.9542, -26.0588 )
+position = Vector2( 27.7604, -26.2815 )
 shape = SubResource( 8 )
 
 [node name="Right Stereo" type="StaticBody2D" parent="Room/Room Objects"]

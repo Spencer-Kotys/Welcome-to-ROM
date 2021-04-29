@@ -4,9 +4,7 @@ extends Node
 var custom_variables = {}
 
 # Global Variables
-var playerName = null # stores player's name
-var playerGender = null # stores player's gender
-var day = "4" # stores day value
+var day = "1" # stores day value
 var morale = 50 # stores morale value
 var has_covid = false # true or false for if the player has covid
 var bagged = null

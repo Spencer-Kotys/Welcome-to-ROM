@@ -95,6 +95,7 @@ margin_right = 187.0
 margin_bottom = 251.0
 size_flags_horizontal = 4
 text = "Continue"
+
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Name_HBox/Name_Generator" to="." method="_on_Name_Generator_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/Male" to="." method="_on_Male_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/Female" to="." method="_on_Female_pressed"]
