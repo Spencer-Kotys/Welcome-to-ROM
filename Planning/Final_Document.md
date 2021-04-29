@@ -255,6 +255,44 @@ met the following:
 
 ## Assessment of complexity velocity
 
+### Week 1
+
+Project Description
+
+Making Godot Project
+
+### Week 2
+
+Project Requirements
+
+Use Case Diagram
+
+Architecture Diagram
+
+Artwork prototype
+
+### Week 3
+
+Version 0.1 Alpha
+
+Complexity Score Total: 63
+
+### Week 4
+
+Version 0.2 Alpha
+
+Complexity Score Total: 39
+
+### Week 5
+
+Version 0.3 Alpha
+
+Complexity Score Total: 28
+
+### Final Push
+
+Version 1.0
+
 ## Summary of results, reflection
 
 ## Demo
