@@ -8,7 +8,7 @@ var playerName = null # stores player's name
 var playerGender = null # stores player's gender
 var day = "1" # stores day value
 var morale = 50 # stores morale value
-var has_covid = false # true or false for if the player has covid
+var has_covid = true # true or false for if the player has covid
 var bagged = null
 var in_dialogue = null
 var co_interact = false
@@ -24,7 +24,7 @@ func covidChance(percent_chance):
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	var num = rng.randi_range(1, 100)
-	#print(num)
+	print("Covid Chance Num:" + String(num))
 	if num <= percent_chance:
 		global.has_covid = true
 		print("You got covid!")

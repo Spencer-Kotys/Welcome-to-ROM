@@ -29,7 +29,7 @@ func _on_MainCharacter_init_companyofficer_dialogue():
 			'dialogue_end': 0
 		}]
 	elif global.day == '4' || global.day == '11':
-		[
+			dialog.dialog_script = [
 			{"dialogue_start": 0},
 			{
 				"name": "Company Officer", "text": "Hey how\'s it going"
@@ -49,8 +49,8 @@ func _on_MainCharacter_init_companyofficer_dialogue():
 			},
 			{"dialogue_end": 0}  
 		]
-	elif global.day == '1' || global.day == '7' || global.day == '10' || global.day == '13':
-		[
+	elif global.day == '1' or global.day == '7' or global.day == '10' or global.day or '13':
+			dialog.dialog_script = [
 			{"dialogue_start": 0},
 			{
 				"name": "Company Officer", 
@@ -70,7 +70,7 @@ func _on_MainCharacter_init_companyofficer_dialogue():
 			{"dialogue_end": 0}  
 		]
 	elif global.day == '3' || global.day == '6' || global.day == '9':
-		[
+			dialog.dialog_script = [
 			{"dialogue_start": 0},
 			{
 				"name": "Company Officer", 
@@ -84,7 +84,7 @@ func _on_MainCharacter_init_companyofficer_dialogue():
 			{"dialogue_end": 0}  
 		]
 	elif global.day == '12':
-		[
+			dialog.dialog_script = [
 			{"dialogue_start": 0},
 			{
 				"name": "Company Officer", 

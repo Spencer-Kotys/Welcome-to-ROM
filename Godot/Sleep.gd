@@ -4,7 +4,7 @@ func _on_MainCharacter_init_bed_dialogue():
 	popup()
 
 	var dialog = load("res://addons/dialogs/Dialog.tscn").instance()
-	if (6 > (int(global.time)/100) || 15 < (int(global.time)/100)):
+	if (6 > (int(global.time)/100) || 21 < (int(global.time)/100)):
 		dialog.dialog_script = [
 		{
 			'dialogue_start': 0
@@ -24,7 +24,7 @@ func _on_MainCharacter_init_bed_dialogue():
 			'dialogue_start':0
 		},
 		{
-			'text': 'You cannot sleep yet'
+			'text': 'You cannot sleep yet.'
 		},
 		{
 			'dialogue_end': 0

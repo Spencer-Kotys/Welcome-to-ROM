@@ -24,7 +24,7 @@ func _on_MainCharacter_init_cadet1_dialogue():
 			'dialogue_end': 0
 		}]
 	elif global.day == '5' || global.day == '9':
-		[
+		dialog.dialog_script = [
 		{"dialogue_start": 0},
 		{
 			"name": "Friend", "input": "What task are you trying to complete?",
@@ -47,7 +47,7 @@ func _on_MainCharacter_init_cadet1_dialogue():
 		{"dialogue_end": 0}
 		]
 	elif global.day == '1' || global.day == '10' || global.day == '8':
-		[
+		dialog.dialog_script = [
 			{"dialogue_start": 0},
 			{
 				"name": "Friend", "question": "So what company are you in?",
@@ -69,7 +69,7 @@ func _on_MainCharacter_init_cadet1_dialogue():
 			{"dialogue_end": 0}
 		]
 	elif global.day == '2' || global.day == '6' || global.day == '4' || global.day == '11':
-		[
+		dialog.dialog_script = [
 			{"dialogue_start": 0},
 			{
 			"name": "Friend", "text": "Hey, what do you think is for dinner?"
@@ -94,7 +94,7 @@ func _on_MainCharacter_init_cadet1_dialogue():
 			{"dialogue_end": 0}
 		]
 	elif global.day == '3' || global.day == '13':
-		[
+		dialog.dialog_script = [
 			{"dialogue_start": 0},
 			{
 			"name": "Friend", "text": "Have you heard?! Summer assignments are out this week!"
@@ -123,7 +123,7 @@ func _on_MainCharacter_init_cadet1_dialogue():
 			{"dialogue_end": 0}
 		]
 	elif global.day == '7':
-		[
+		dialog.dialog_script = [
 			{"dialogue_start": 0},
 			{
 				"name": "Friend", "text": "Hello sHiPmaTe"

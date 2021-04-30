@@ -20,7 +20,7 @@ func _process(delta):
 		label.text = "Where do you want to go?"
 		label.show()
 	# Can only go to the wardroom at 0800, 1200, and 1800
-	if (global.time == "08:00" or global.time == "12:00" or global.time == "18:00") and globalTasks.colors == false and globalTasks.formation_over == true:
+	if global.task == "Go to Lunch." or global.task == "Go to Breakfast.":
 		wardroom_button.show()
 	else:
 		wardroom_button.hide()

@@ -67,21 +67,23 @@ func day_1():
 		CO_dialogue_on = true
 		if global.co_interact == true:
 			global.timeAdd(3)
-			CO_dialogue_on = false
 			global.co_interact = false
 	elif global.time == "16:00":
 		global.taskAssign("Do as you wish.", 0)
 		is_workday = false
 		friend_dialogue_on = true
+	elif global.time == "17:00":
+		CO_dialogue_on = false
 	elif global.time == "22:00":
 		global.taskAssign("It's bedtime!", 0)
 		is_workday = true
+		friend_dialogue_on = false
 
 func day_2():
 	if morning_routine_over == false:
 		morning_routine()
 	elif global.time == "09:00":
-		global.taskAssign("Go to the pool.", 0)
+		global.taskAssign("Go to the Pool.", 0)
 	elif global.time == "10:00":
 		global.timeAdd(2)
 	elif global.time == "12:00" and formation_over == false:
@@ -91,15 +93,17 @@ func day_2():
 		CO_dialogue_on = true
 		if global.co_interact == true:
 			global.timeAdd(3)
-			CO_dialogue_on = false
 			global.co_interact = false
 	elif global.time == "16:00":
 		global.taskAssign("Do as you wish.", 0)
 		is_workday = false
 		friend_dialogue_on = true
+	elif global.time == "17:00":
+		CO_dialogue_on = false
 	elif global.time == "22:00":
 		global.taskAssign("It's bedtime!", 0)
 		is_workday = true
+		friend_dialogue_on = false
 
 func day_3():
 	if morning_routine_over == false:
@@ -115,15 +119,17 @@ func day_3():
 		CO_dialogue_on = true
 		if global.co_interact == true:
 			global.timeAdd(3)
-			CO_dialogue_on = false
 			global.co_interact = false
 	elif global.time == "16:00":
 		global.taskAssign("Do as you wish.", 0)
 		is_workday = false
 		friend_dialogue_on = true
+	elif global.time == "17:00":
+		CO_dialogue_on = false
 	elif global.time == "22:00":
 		global.taskAssign("It's bedtime!", 0)
 		is_workday = true
+		friend_dialogue_on = false
 
 func day_4():
 	if morning_routine_over == false:
@@ -139,15 +145,17 @@ func day_4():
 		CO_dialogue_on = true
 		if global.co_interact == true:
 			global.timeAdd(3)
-			CO_dialogue_on = false
 			global.co_interact = false
 	elif global.time == "16:00":
 		global.taskAssign("Do as you wish.", 0)
 		is_workday = false
 		friend_dialogue_on = true
+	elif global.time == "17:00":
+		CO_dialogue_on = false
 	elif global.time == "22:00":
 		global.taskAssign("It's bedtime!", 0)
 		is_workday = true
+		friend_dialogue_on = false
 
 func day_5():
 	colors = true
@@ -164,15 +172,17 @@ func day_5():
 		CO_dialogue_on = true
 		if global.co_interact == true:
 			global.timeAdd(3)
-			CO_dialogue_on = false
 			global.co_interact = false
 	elif global.time == "16:00":
 		global.taskAssign("Do as you wish.", 0)
 		is_workday = false
 		friend_dialogue_on = true
+	elif global.time == "17:00":
+		CO_dialogue_on = false
 	elif global.time == "22:00":
 		global.taskAssign("It's bedtime!", 0)
 		is_workday = true
+		friend_dialogue_on = false
 
 func day_6():
 	if morning_routine_over == false:
@@ -188,15 +198,17 @@ func day_6():
 		CO_dialogue_on = true
 		if global.co_interact == true:
 			global.timeAdd(3)
-			CO_dialogue_on = false
 			global.co_interact = false
 	elif global.time == "16:00":
 		global.taskAssign("Do as you wish.", 0)
 		is_workday = false
 		friend_dialogue_on = true
+	elif global.time == "17:00":
+		CO_dialogue_on = false
 	elif global.time == "22:00":
 		global.taskAssign("It's bedtime!", 0)
 		is_workday = true
+		friend_dialogue_on = false
 
 func day_7():
 	if morning_routine_over == false:
@@ -212,15 +224,17 @@ func day_7():
 		CO_dialogue_on = true
 		if global.co_interact == true:
 			global.timeAdd(3)
-			CO_dialogue_on = false
 			global.co_interact = false
 	elif global.time == "16:00":
 		global.taskAssign("Do as you wish.", 0)
 		is_workday = false
 		friend_dialogue_on = true
+	elif global.time == "17:00":
+		CO_dialogue_on = false
 	elif global.time == "22:00":
 		global.taskAssign("It's bedtime!", 0)
 		is_workday = true
+		friend_dialogue_on = false
 
 func day_8():
 	colors = true
@@ -237,15 +251,17 @@ func day_8():
 		CO_dialogue_on = true
 		if global.co_interact == true:
 			global.timeAdd(3)
-			CO_dialogue_on = false
 			global.co_interact = false
 	elif global.time == "16:00":
 		global.taskAssign("Do as you wish.", 0)
 		is_workday = false
 		friend_dialogue_on = true
+	elif global.time == "17:00":
+		CO_dialogue_on = false
 	elif global.time == "22:00":
 		global.taskAssign("It's bedtime!", 0)
 		is_workday = true
+		friend_dialogue_on = false
 
 func day_9():
 	if morning_routine_over == false:
@@ -261,15 +277,17 @@ func day_9():
 		CO_dialogue_on = true
 		if global.co_interact == true:
 			global.timeAdd(3)
-			CO_dialogue_on = false
 			global.co_interact = false
 	elif global.time == "16:00":
 		global.taskAssign("Do as you wish.", 0)
 		is_workday = false
 		friend_dialogue_on = true
+	elif global.time == "17:00":
+		CO_dialogue_on = false
 	elif global.time == "22:00":
 		global.taskAssign("It's bedtime!", 0)
 		is_workday = true
+		friend_dialogue_on = false
 
 func day_10():
 	if morning_routine_over == false:
@@ -285,15 +303,17 @@ func day_10():
 		CO_dialogue_on = true
 		if global.co_interact == true:
 			global.timeAdd(3)
-			CO_dialogue_on = false
 			global.co_interact = false
 	elif global.time == "16:00":
 		global.taskAssign("Do as you wish.", 0)
 		is_workday = false
 		friend_dialogue_on = true
+	elif global.time == "17:00":
+		CO_dialogue_on = false
 	elif global.time == "22:00":
 		global.taskAssign("It's bedtime!", 0)
 		is_workday = true
+		friend_dialogue_on = false
 
 func day_11():
 	if morning_routine_over == false:
@@ -309,15 +329,17 @@ func day_11():
 		CO_dialogue_on = true
 		if global.co_interact == true:
 			global.timeAdd(3)
-			CO_dialogue_on = false
 			global.co_interact = false
 	elif global.time == "16:00":
 		global.taskAssign("Do as you wish.", 0)
 		is_workday = false
 		friend_dialogue_on = true
+	elif global.time == "17:00":
+		CO_dialogue_on = false
 	elif global.time == "22:00":
 		global.taskAssign("It's bedtime!", 0)
 		is_workday = true
+		friend_dialogue_on = false
 
 func day_12():
 	colors = true
@@ -334,15 +356,17 @@ func day_12():
 		CO_dialogue_on = true
 		if global.co_interact == true:
 			global.timeAdd(3)
-			CO_dialogue_on = false
 			global.co_interact = false
 	elif global.time == "16:00":
 		global.taskAssign("Do as you wish.", 0)
 		is_workday = false
 		friend_dialogue_on = true
+	elif global.time == "17:00":
+		CO_dialogue_on = false
 	elif global.time == "22:00":
 		global.taskAssign("It's bedtime!", 0)
 		is_workday = true
+		friend_dialogue_on = false
 	
 func day_13():
 	if morning_routine_over == false:
@@ -358,12 +382,14 @@ func day_13():
 		CO_dialogue_on = true
 		if global.co_interact == true:
 			global.timeAdd(3)
-			CO_dialogue_on = false
 			global.co_interact = false
 	elif global.time == "16:00":
 		global.taskAssign("Do as you wish.", 0)
 		is_workday = false
 		friend_dialogue_on = true
+	elif global.time == "17:00":
+		CO_dialogue_on = false
 	elif global.time == "22:00":
 		global.taskAssign("It's bedtime!", 0)
 		is_workday = true
+		friend_dialogue_on = false

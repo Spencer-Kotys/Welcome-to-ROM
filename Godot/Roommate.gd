@@ -8,13 +8,13 @@ func _on_MainCharacter_init_roommate_dialogue():
 	
 	
 	if global.day == '1' || global.day == '4' || global.day == '9' || global.day == '13':
-		[
+		dialog.dialog_script = [
 			{"dialogue_start": 0},
 			{"name": "Roommate", "text": "Hey how\'s it going?"},
 			{"dialogue_end": 0}  
 		]
 	elif global.day == '2' || global.day == '7' || global.day == '11':
-		[
+		dialog.dialog_script = [
 			{"dialogue_start": 0},
 			{
 				"name": "Roommate", "text": "Hey how\'s life outside the room?"
@@ -25,7 +25,7 @@ func _on_MainCharacter_init_roommate_dialogue():
 			{"dialogue_end": 0}  
 		]
 	elif global.day == '5' || global.day == '6' || global.day == '8':
-		[
+		dialog.dialog_script = [
 			{"dialogue_start": 0},
 			{
 				"name": "Roommate", "text": "You should go look out the window. OCS is getting wrecked out there."
@@ -33,7 +33,7 @@ func _on_MainCharacter_init_roommate_dialogue():
 			{"dialogue_end": 0}  
 		]
 	elif global.day == '3' || global.day == '10' || global.day == '12':
-		[
+		dialog.dialog_script = [
 			{"dialogue_start": 0},
 			{
 				"name": "Roommate", "text": "Check your computer."

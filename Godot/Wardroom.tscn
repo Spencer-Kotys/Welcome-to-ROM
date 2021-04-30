@@ -30,5 +30,6 @@ custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 text = "Skip"
 icon = ExtResource( 3 )
 expand_icon = true
+
 [connection signal="finished" from="WardroomScene" to="." method="_on_WardroomScene_finished"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
