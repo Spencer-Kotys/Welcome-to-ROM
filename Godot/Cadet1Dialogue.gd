@@ -3,7 +3,7 @@ extends Popup
 func _on_MainCharacter_init_cadet1_dialogue():
 	popup()
 	var dialog = load("res://addons/dialogs/Dialog.tscn").instance()
-	
+
 	if global.day == '12':
 		dialog.dialog_script = [
 		{
@@ -43,8 +43,8 @@ func _on_MainCharacter_init_cadet1_dialogue():
 		{
 			"name": "Friend", "text": "party.value"
 		},
-	
-		{"dialogue_end": 0}  
+
+		{"dialogue_end": 0}
 		]
 	elif global.day == '1' || global.day == '10' || global.day == '8':
 		[
@@ -66,7 +66,7 @@ func _on_MainCharacter_init_cadet1_dialogue():
 			{
 				"name": "Friend", "text": "So [company]. company.value"
 			},
-			{"dialogue_end": 0}  
+			{"dialogue_end": 0}
 		]
 	elif global.day == '2' || global.day == '6' || global.day == '4' || global.day == '11':
 		[
@@ -91,7 +91,7 @@ func _on_MainCharacter_init_cadet1_dialogue():
 			{
 				"name": "Friend", "text": "menu.value But seriously, [menu] does make sense."
 			},
-			{"dialogue_end": 0}  
+			{"dialogue_end": 0}
 		]
 	elif global.day == '3' || global.day == '13':
 		[
@@ -117,10 +117,10 @@ func _on_MainCharacter_init_cadet1_dialogue():
 				],
 				"variable": "preference"
 			},
-			{ 
+			{
 				"name": "Friend", "text": "preference.value"
 			},
-			{"dialogue_end": 0}  
+			{"dialogue_end": 0}
 		]
 	elif global.day == '7':
 		[
@@ -128,7 +128,7 @@ func _on_MainCharacter_init_cadet1_dialogue():
 			{
 				"name": "Friend", "text": "Hello sHiPmaTe"
 			},
-			{"dialogue_end": 0}  
+			{"dialogue_end": 0}
 		]
-	
+
 	add_child(dialog)
