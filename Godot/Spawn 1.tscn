@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://LadderWell.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ChaseHall.tscn" type="PackedScene" id=2]
 [ext_resource path="res://MainCharacter.tscn" type="PackedScene" id=3]
 [ext_resource path="res://CompanyOfficerDialogue.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Characters.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Interior-Door_Close.wav" type="AudioStream" id=6]
 [ext_resource path="res://Spawn 1.gd" type="Script" id=7]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=10]
 [ext_resource path="res://HSDialogue.gd" type="Script" id=12]
@@ -84,7 +85,6 @@ z_index = 1
 
 [node name="Sprite" parent="MainCharacter" index="0"]
 position = Vector2( 22.5842, 5.16833 )
-frame = 1
 
 [node name="Collision" parent="MainCharacter" index="1"]
 position = Vector2( 23.1113, 5.08007 )
@@ -93,6 +93,12 @@ position = Vector2( 23.1113, 5.08007 )
 position = Vector2( 23.1113, -1.04904e-05 )
 
 [node name="Characters" parent="." instance=ExtResource( 5 )]
+
+[node name="Sprite" parent="Characters/Cadet1" index="1"]
+frame = 0
+
+[node name="DoorSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
 
 [connection signal="body_entered" from="ChaseHall/Room" to="." method="_on_Room_body_entered"]
 [connection signal="init_cadet1_dialogue" from="MainCharacter" to="CanvasLayer/Control/Cadet1Dialogue" method="_on_MainCharacter_init_cadet1_dialogue"]

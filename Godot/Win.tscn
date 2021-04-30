@@ -45,4 +45,5 @@ margin_top = 87.0
 margin_right = 196.0
 margin_bottom = 107.0
 text = "Continue"
+
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Continue" to="." method="_on_Continue_pressed"]

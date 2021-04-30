@@ -24,9 +24,9 @@ func _on_MainCharacter_init_cadet1_dialogue():
 			'dialogue_end': 0
 		}]
 	elif global.day == '5' || global.day == '9':
-		dialog.dialog_script = global.read_JSON("res://assets/Dialogue Files/Cadet 1 3.json")
+		dialog.dialog_script = global.read_JSON("res://assets/Dialogue Files/Cadet_1_3.json")
 	elif global.day == '1' || global.day == '10' || global.day == '8':
-		dialog.dialog_script = global.read_JSON("res://assets/Dialogue Files/Cadet 1 5.json")
+		dialog.dialog_script = global.read_JSON("res://assets/Dialogue Files/Cadet_1_5.json")
 	elif global.day == '2' || global.day == '6' || global.day == '4' || global.day == '11':
 		dialog.dialog_script = global.read_JSON("res://assets/Dialogue Files/Cadet 1 6.json")
 	elif global.day == '3' || global.day == '13':
