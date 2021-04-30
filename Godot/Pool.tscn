@@ -34,4 +34,5 @@ __meta__ = {
 }
 
 [connection signal="finished" from="PoolScene" to="." method="_on_FormationScene_finished"]
+[connection signal="finished" from="PoolScene" to="." method="_on_PoolScene_finished"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
