@@ -13,6 +13,7 @@ func _ready():
 	global.has_covid = false
 	global.bagged = false
 	global.time = "06:00"
+	global.day = "1"
 	if (globalAudio.is_playing != true): # checkes if music is already playing
 		globalAudio.play("res://music/Naoya-Sakamata-Dissociation.ogg") #plays audio
 	else:
