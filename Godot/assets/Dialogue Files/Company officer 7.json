@@ -1,7 +1,8 @@
 [
 	{"dialogue_start": 0},
 	{
-		"name": "Company Officer", "question": "On a scale of 1-5, how much do you miss your family or pets?",
+		"name": "Company Officer", 
+		"question": "On a scale of 1-5, how much do you miss your family or pets?",
 		"options": [
 			{"label": "1", "value": "Keep on keeping on."},
 			{"label": "2", "value": "Keep busy with all the Chase Hall activities here in ROM. That\'ll help."},
