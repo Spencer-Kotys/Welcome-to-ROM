@@ -13,12 +13,12 @@ func _on_MainCharacter_init_cadet1_dialogue():
 			'name': 'Friend', 'text': 'Hello shipmate.'
 		},
 		{
-			'name': 'Friend', 'input': 'What is going on?',
+			'name': 'Friend', 'input': 'What\'s going on?',
 			'window_title': 'Response:',
 			'variable': 'currentstate'
 		},
 		{
-			'name': 'Friend', 'text': 'Hmm well you should know I am hungry.'
+			'name': 'Friend', 'text': 'Hmm well you should know I\'m hungry.'
 		},
 			{
 			'dialogue_end': 0
