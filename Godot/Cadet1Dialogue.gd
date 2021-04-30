@@ -27,11 +27,11 @@ func _on_MainCharacter_init_cadet1_dialogue():
 		dialog.dialog_script = global.read_JSON("res://assets/Dialogue Files/Cadet 1 3.json")
 	elif global.day == '1' || global.day == '10' || global.day == '8':
 		dialog.dialog_script = global.read_JSON("res://assets/Dialogue Files/Cadet 1 5.json")
-	elif global.day == '2' || global.day == '6' || global.day == '7':
+	elif global.day == '2' || global.day == '6' || global.day == '4' || global.day == '11':
 		dialog.dialog_script = global.read_JSON("res://assets/Dialogue Files/Cadet 1 6.json")
-	elif global.day == '4' || global.day == '13':
+	elif global.day == '3' || global.day == '13':
 		dialog.dialog_script = global.read_JSON("res://assets/Dialogue Files/Cadet 1 9.json")
-	elif global.day == '3':
+	elif global.day == '7':
 		dialog.dialog_script = global.read_JSON("res://assets/Dialogue Files/Cadet 1 11.json")
 	
 	add_child(dialog)

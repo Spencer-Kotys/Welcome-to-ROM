@@ -4,7 +4,7 @@ func _on_MainCharacter_init_companyofficer_dialogue():
 	popup()
 	var dialog = load("res://addons/dialogs/Dialog.tscn").instance()
 	
-	if global.day == '2' || global.day == '8':
+	if global.day == '2' || global.day == '8' || global.day == '5':
 		dialog.dialog_script = [
 		{
 			'dialogue_start': 0
