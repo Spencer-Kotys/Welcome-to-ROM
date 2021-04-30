@@ -63,6 +63,7 @@ pause_mode = 2
 position = Vector2( 19.2806, 7.52802 )
 frames = SubResource( 1 )
 animation = "South_Idle"
+frame = 1
 playing = true
 
 [node name="Collision" type="CollisionShape2D" parent="."]
