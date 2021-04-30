@@ -4,7 +4,9 @@ extends Node
 var custom_variables = {}
 
 # Global Variables
-var day = "1" # stores day value
+var playerName = null # stores player's name
+var playerGender = null # stores player's gender
+var day = "13" # stores day value
 var morale = 50 # stores morale value
 var has_covid = false # true or false for if the player has covid
 var bagged = null
@@ -26,7 +28,7 @@ func covidChance(percent_chance):
 	if num <= percent_chance:
 		global.has_covid = true
 		print("You got covid!")
-	
+
 func bagChance(percent_chance):
 	# Generate a random int between 1 and 100
 	var rng = RandomNumberGenerator.new()
@@ -67,7 +69,7 @@ func taskAssign(newTask, addedTime):
 		time = "0" + str(tTime) + ":00"
 	else:
 		time = str(tTime) + ":00"
-	
+
 # Just increases time without adding a new task
 func timeAdd(addedTime):
 	var tTime = (int(time)/100) + int(addedTime)
@@ -78,5 +80,3 @@ func timeAdd(addedTime):
 		time = "0" + str(tTime) + ":00"
 	else:
 		time = str(tTime) + ":00"
-
-

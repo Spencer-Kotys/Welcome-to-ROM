@@ -2,7 +2,7 @@
 	{"dialogue_start": 0},
 	{
 		"name": "Company Officer", 
-		"question": "How is the social distancing going?"
+		"question": "How is the social distancing going?",
 		"options": [
 			{"label": "Yes, without fail Sir.", "value": "Are you sure? This far into ROM and you haven\'t broken COVID protocols yet? Good for you."},
 			{"label": "Most of the time Sir.", "value": "Honest answer, I appreciate that. Stay strong and do great things."},

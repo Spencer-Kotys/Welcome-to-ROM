@@ -18,20 +18,21 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 345.0
-margin_top = 186.0
-margin_right = 674.0
-margin_bottom = 411.0
+margin_left = 252.0
+margin_top = 177.0
+margin_right = 768.0
+margin_bottom = 419.0
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
-margin_right = 329.0
-margin_bottom = 201.0
+margin_right = 516.0
+margin_bottom = 218.0
 text = "How to Play
 
 Your goal in this game is make it to the end of ROM
 ROM is 14 days long.
 
-'Spacebar' is used to initiate dialogue in the game
+'Spacebar' is used to initiate dialogue in the game. 
+The user must touch an object before pressing the 'Spacebar' to activate dialogur
 'WASD' is used for movement.
 'ESC' to pause the game.
 
@@ -41,8 +42,8 @@ Sleep in your bed to go to the next day.
 align = 1
 
 [node name="Back" type="Button" parent="CenterContainer/VBoxContainer"]
-margin_top = 205.0
-margin_right = 329.0
-margin_bottom = 225.0
+margin_top = 222.0
+margin_right = 516.0
+margin_bottom = 242.0
 text = "Back"
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Back" to="." method="_on_Back_pressed"]
