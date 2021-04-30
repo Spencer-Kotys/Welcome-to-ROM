@@ -26,6 +26,7 @@ var speed = 75
 var move_direction = Vector2(0,0)
 var anim_direction = "Not Set"
 var anim_mode = "Idle"
+var step = false
 
 func _ready():
 	# this is to prevent the main character immediately detecting being in the area of everything in the new scene
@@ -37,6 +38,15 @@ func _physics_process(delta):
 
 func _process(delta):
 	AnimationLoop()
+
+func steps(): # play footstep sound
+	if step: # check if already playing
+		pass
+	else:
+		$Footsteps.play() # play sound
+		step = true # set playing sound to true
+		yield(get_tree().create_timer(0.5), "timeout") # wait for 0.5 seconds
+		step = false # set playing sound to false
 
 func MovementLoop():
 	# Saves player direction so it can be used for the idle animations
@@ -121,6 +131,7 @@ func AnimationLoop():
 			sprite.set_flip_h(false)
 	if move_direction != Vector2(0,0):
 		anim_mode = "Walk"
+		steps()
 	else:
 		anim_mode = "Idle"
 
