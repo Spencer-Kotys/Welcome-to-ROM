@@ -9,9 +9,11 @@ var morale = 50 # stores morale value
 var has_covid = false # true or false for if the player has covid
 var bagged = null
 var in_dialogue = null
+var co_interact = false
 var screening_form_complete = false # is screeing from complete
-var task = "-None" # stores task
+var task = "Fill out Medical \nScreening form \non Desk." # stores task
 var time = "06:00" # stores time value
+
 
 # percent_chance would be an integer between 1 and 100
 # so if you wanted a 5% chance of getting covid enter '5' into the function
@@ -53,4 +55,16 @@ func taskAssign(newTask, addedTime):
 		time = "0" + str(tTime) + ":00"
 	else:
 		time = str(tTime) + ":00"
-	print(time)
+	
+# Just increases time without adding a new task
+func timeAdd(addedTime):
+	var tTime = (int(time)/100) + int(addedTime)
+	if (23 < tTime):
+		time = "0" + str(tTime-24) + ":00"
+		day = str(int(day) + 1) # Increase day when reaching midnight
+	elif (10 > tTime):
+		time = "0" + str(tTime) + ":00"
+	else:
+		time = str(tTime) + ":00"
+
+

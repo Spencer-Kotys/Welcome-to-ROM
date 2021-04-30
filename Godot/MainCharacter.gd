@@ -9,7 +9,6 @@ onready var new_scene_timer = get_node("new_scene_timer")
 signal add_morale
 signal subtract_morale
 signal task_changed
-signal init_greenboy_dialogue
 signal init_companyofficer_dialogue
 signal init_hs_dialogue
 signal init_cadet1_dialogue
@@ -53,27 +52,25 @@ func MovementLoop():
 			if collision.collider.name == "Player Bed":
 				start_dialogue()
 				emit_signal("init_bed_dialogue")
-			elif collision.collider.name == "Window":
+			elif collision.collider.name == "Window" and globalTasks.window_wait_on == true:
 				print("This is a window")
-				global.taskAssign("-demo",1) # THIS IS FOR DEV PURPOSES ONLY
-			elif collision.collider.name == "Green Boy":
+				global.timeAdd(1) # THIS IS FOR DEV PURPOSES ONLY
+			elif collision.collider.name == "Company Officer" and globalTasks.CO_dialogue_on == true:
 				start_dialogue() # <- Call this before every dialogue event
-				emit_signal("init_greenboy_dialogue")
-			elif collision.collider.name == "Company Officer":
-				start_dialogue() # <- Call this before every dialogue event
+				global.co_interact = true
 				emit_signal("init_companyofficer_dialogue")
 				emit_signal("subtract_morale", 20) # lose 20 morale on interaction with company officer
-			elif collision.collider.name == "HS":
+			elif collision.collider.name == "HS" and globalTasks.HS_dialogue_on == true:
 				start_dialogue() # <- Call this before every dialogue event
 				emit_signal("init_hs_dialogue")
-			elif collision.collider.name == "Cadet1":
+			elif collision.collider.name == "Cadet1" and globalTasks.friend_dialogue_on == true:
 				start_dialogue() # <- Call this before every dialogue event
 				emit_signal("init_cadet1_dialogue")
 				emit_signal("add_morale", 20) # gain 20 morale talking to shipmate
 			elif collision.collider.name == "Roommate":
 				start_dialogue() # <- Call this before every dialogue event
 				emit_signal("init_roommate_dialogue")
-			elif collision.collider.name == "Right Desk":
+			elif collision.collider.name == "Right Desk" and globalTasks.desk_on == true:
 				print("This is your desk")
 				start_dialogue() # <- Call this before every dialogue event
 				emit_signal("init_desk_dialogue")
@@ -160,7 +157,6 @@ func start_dialogue():
 	dialogue_cooldown = true
 	dialogue_timer.start()
 	sprite.play(anim_direction + "_Idle")
-
 
 func _on_new_scene_timer_timeout():
 	new_scene_cooldown = false

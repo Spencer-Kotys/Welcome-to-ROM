@@ -118,4 +118,5 @@ margin_top = 264.0
 margin_right = 266.0
 margin_bottom = 278.0
 text = "You must fill out your name and company"
+
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Complete" to="." method="_on_Complete_pressed"]

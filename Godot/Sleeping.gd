@@ -11,8 +11,9 @@ func _ready():
 	elif (global.has_covid == true):
 		get_tree().change_scene("res://lose_covid.tscn")
 	elif (global.bagged == true):
-		get_tree().change_scene("res://lose_covid.tscn")
+		get_tree().change_scene("res://bagged.tscn")
 	else:
+		globalTasks.morning_routine_over == false
 		global.day = str(day)
 		global.time = "06:00" # reset time
 		yield(get_tree().create_timer(1.0), "timeout")

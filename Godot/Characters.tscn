@@ -14,11 +14,6 @@ extents = Vector2( 8.28864, 10.6539 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "front_idle",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 4 ), ExtResource( 1 ) ],
 "loop": true,
 "name": "south_idle",
@@ -27,6 +22,11 @@ animations = [ {
 "frames": [ ExtResource( 7 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "left_idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "front_idle",
 "speed": 5.0
 } ]
 
@@ -47,7 +47,6 @@ position = Vector2( 806.792, 270.999 )
 scale = Vector2( 0.989446, 1.05111 )
 frames = SubResource( 2 )
 animation = "front_idle"
-frame = 1
 playing = true
 flip_h = true
 
