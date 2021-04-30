@@ -36,8 +36,6 @@ func _process(delta):
 		day_12()
 	if global.day == "13":
 		day_13()
-	if global.day == "14":
-		day_14()
 
 func morning_routine():
 	friend_dialogue_on = false
@@ -77,55 +75,295 @@ func day_1():
 		friend_dialogue_on = true
 	elif global.time == "22:00":
 		global.taskAssign("It's bedtime!", 0)
+		is_workday = true
 
 func day_2():
 	if morning_routine_over == false:
 		morning_routine()
+	elif global.time == "09:00":
+		global.taskAssign("Go to the pool.", 0)
+	elif global.time == "10:00":
+		global.timeAdd(2)
+	elif global.time == "12:00" and formation_over == false:
+		global.taskAssign("Go to Formation.", 0)
+	elif global.time == "13:00":
+		global.taskAssign("Speak with Company Officer.", 0)
+		CO_dialogue_on = true
+		if global.co_interact == true:
+			global.timeAdd(3)
+			CO_dialogue_on = false
+			global.co_interact = false
+	elif global.time == "16:00":
+		global.taskAssign("Do as you wish.", 0)
+		is_workday = false
+		friend_dialogue_on = true
+	elif global.time == "22:00":
+		global.taskAssign("It's bedtime!", 0)
+		is_workday = true
 
 func day_3():
 	if morning_routine_over == false:
 		morning_routine()
+	elif global.time == "09:00":
+		global.taskAssign("Go to Crown Park.", 0)
+	elif global.time == "10:00":
+		global.timeAdd(2)
+	elif global.time == "12:00" and formation_over == false:
+		global.taskAssign("Go to Formation.", 0)
+	elif global.time == "13:00":
+		global.taskAssign("Speak with Company Officer.", 0)
+		CO_dialogue_on = true
+		if global.co_interact == true:
+			global.timeAdd(3)
+			CO_dialogue_on = false
+			global.co_interact = false
+	elif global.time == "16:00":
+		global.taskAssign("Do as you wish.", 0)
+		is_workday = false
+		friend_dialogue_on = true
+	elif global.time == "22:00":
+		global.taskAssign("It's bedtime!", 0)
+		is_workday = true
 
 func day_4():
 	if morning_routine_over == false:
 		morning_routine()
+	elif global.time == "09:00":
+		global.taskAssign("Go to the Chapel.", 0)
+	elif global.time == "10:00":
+		global.timeAdd(2)
+	elif global.time == "12:00" and formation_over == false:
+		global.taskAssign("Go to Formation.", 0)
+	elif global.time == "13:00":
+		global.taskAssign("Speak with Company Officer.", 0)
+		CO_dialogue_on = true
+		if global.co_interact == true:
+			global.timeAdd(3)
+			CO_dialogue_on = false
+			global.co_interact = false
+	elif global.time == "16:00":
+		global.taskAssign("Do as you wish.", 0)
+		is_workday = false
+		friend_dialogue_on = true
+	elif global.time == "22:00":
+		global.taskAssign("It's bedtime!", 0)
+		is_workday = true
 
 func day_5():
+	colors = true
 	if morning_routine_over == false:
 		morning_routine()
+	elif global.time == "09:00":
+		global.taskAssign("Go to Dry Dock.", 0)
+	elif global.time == "10:00":
+		global.timeAdd(2)
+	elif global.time == "12:00" and formation_over == false:
+		global.taskAssign("Go to Formation.", 0)
+	elif global.time == "13:00":
+		global.taskAssign("Speak with Company Officer.", 0)
+		CO_dialogue_on = true
+		if global.co_interact == true:
+			global.timeAdd(3)
+			CO_dialogue_on = false
+			global.co_interact = false
+	elif global.time == "16:00":
+		global.taskAssign("Do as you wish.", 0)
+		is_workday = false
+		friend_dialogue_on = true
+	elif global.time == "22:00":
+		global.taskAssign("It's bedtime!", 0)
+		is_workday = true
 
 func day_6():
 	if morning_routine_over == false:
 		morning_routine()
+	elif global.time == "09:00":
+		global.taskAssign("Go to the Gym.", 0)
+	elif global.time == "10:00":
+		global.timeAdd(2)
+	elif global.time == "12:00" and formation_over == false:
+		global.taskAssign("Go to Formation.", 0)
+	elif global.time == "13:00":
+		global.taskAssign("Speak with Company Officer.", 0)
+		CO_dialogue_on = true
+		if global.co_interact == true:
+			global.timeAdd(3)
+			CO_dialogue_on = false
+			global.co_interact = false
+	elif global.time == "16:00":
+		global.taskAssign("Do as you wish.", 0)
+		is_workday = false
+		friend_dialogue_on = true
+	elif global.time == "22:00":
+		global.taskAssign("It's bedtime!", 0)
+		is_workday = true
 
 func day_7():
 	if morning_routine_over == false:
 		morning_routine()
+	elif global.time == "09:00":
+		global.taskAssign("Go to the Gym.", 0)
+	elif global.time == "10:00":
+		global.timeAdd(2)
+	elif global.time == "12:00" and formation_over == false:
+		global.taskAssign("Go to Formation.", 0)
+	elif global.time == "13:00":
+		global.taskAssign("Speak with Company Officer.", 0)
+		CO_dialogue_on = true
+		if global.co_interact == true:
+			global.timeAdd(3)
+			CO_dialogue_on = false
+			global.co_interact = false
+	elif global.time == "16:00":
+		global.taskAssign("Do as you wish.", 0)
+		is_workday = false
+		friend_dialogue_on = true
+	elif global.time == "22:00":
+		global.taskAssign("It's bedtime!", 0)
+		is_workday = true
 
 func day_8():
+	colors = true
 	if morning_routine_over == false:
 		morning_routine()
+	elif global.time == "09:00":
+		global.taskAssign("Go for a walk.", 0)
+	elif global.time == "10:00":
+		global.timeAdd(2)
+	elif global.time == "12:00" and formation_over == false:
+		global.taskAssign("Go to Formation.", 0)
+	elif global.time == "13:00":
+		global.taskAssign("Speak with Company Officer.", 0)
+		CO_dialogue_on = true
+		if global.co_interact == true:
+			global.timeAdd(3)
+			CO_dialogue_on = false
+			global.co_interact = false
+	elif global.time == "16:00":
+		global.taskAssign("Do as you wish.", 0)
+		is_workday = false
+		friend_dialogue_on = true
+	elif global.time == "22:00":
+		global.taskAssign("It's bedtime!", 0)
+		is_workday = true
 
 func day_9():
 	if morning_routine_over == false:
 		morning_routine()
+	elif global.time == "09:00":
+		global.taskAssign("Go to the pool.", 0)
+	elif global.time == "10:00":
+		global.timeAdd(2)
+	elif global.time == "12:00" and formation_over == false:
+		global.taskAssign("Go to Formation.", 0)
+	elif global.time == "13:00":
+		global.taskAssign("Speak with Company Officer.", 0)
+		CO_dialogue_on = true
+		if global.co_interact == true:
+			global.timeAdd(3)
+			CO_dialogue_on = false
+			global.co_interact = false
+	elif global.time == "16:00":
+		global.taskAssign("Do as you wish.", 0)
+		is_workday = false
+		friend_dialogue_on = true
+	elif global.time == "22:00":
+		global.taskAssign("It's bedtime!", 0)
+		is_workday = true
 
 func day_10():
 	if morning_routine_over == false:
 		morning_routine()
+	elif global.time == "09:00":
+		global.taskAssign("Go to Crown Park.", 0)
+	elif global.time == "10:00":
+		global.timeAdd(2)
+	elif global.time == "12:00" and formation_over == false:
+		global.taskAssign("Go to Formation.", 0)
+	elif global.time == "13:00":
+		global.taskAssign("Speak with Company Officer.", 0)
+		CO_dialogue_on = true
+		if global.co_interact == true:
+			global.timeAdd(3)
+			CO_dialogue_on = false
+			global.co_interact = false
+	elif global.time == "16:00":
+		global.taskAssign("Do as you wish.", 0)
+		is_workday = false
+		friend_dialogue_on = true
+	elif global.time == "22:00":
+		global.taskAssign("It's bedtime!", 0)
+		is_workday = true
 
 func day_11():
 	if morning_routine_over == false:
 		morning_routine()
+	elif global.time == "09:00":
+		global.taskAssign("Go to the Chapel.", 0)
+	elif global.time == "10:00":
+		global.timeAdd(2)
+	elif global.time == "12:00" and formation_over == false:
+		global.taskAssign("Go to Formation.", 0)
+	elif global.time == "13:00":
+		global.taskAssign("Speak with Company Officer.", 0)
+		CO_dialogue_on = true
+		if global.co_interact == true:
+			global.timeAdd(3)
+			CO_dialogue_on = false
+			global.co_interact = false
+	elif global.time == "16:00":
+		global.taskAssign("Do as you wish.", 0)
+		is_workday = false
+		friend_dialogue_on = true
+	elif global.time == "22:00":
+		global.taskAssign("It's bedtime!", 0)
+		is_workday = true
 
 func day_12():
+	colors = true
 	if morning_routine_over == false:
 		morning_routine()
+	elif global.time == "09:00":
+		global.taskAssign("Go to Dry Dock.", 0)
+	elif global.time == "10:00":
+		global.timeAdd(2)
+	elif global.time == "12:00" and formation_over == false:
+		global.taskAssign("Go to Formation.", 0)
+	elif global.time == "13:00":
+		global.taskAssign("Speak with Company Officer.", 0)
+		CO_dialogue_on = true
+		if global.co_interact == true:
+			global.timeAdd(3)
+			CO_dialogue_on = false
+			global.co_interact = false
+	elif global.time == "16:00":
+		global.taskAssign("Do as you wish.", 0)
+		is_workday = false
+		friend_dialogue_on = true
+	elif global.time == "22:00":
+		global.taskAssign("It's bedtime!", 0)
+		is_workday = true
 	
 func day_13():
 	if morning_routine_over == false:
 		morning_routine()
-
-func day_14():
-	if morning_routine_over == false:
-		morning_routine()
+	elif global.time == "09:00":
+		global.taskAssign("Go to the Gym.", 0)
+	elif global.time == "10:00":
+		global.timeAdd(2)
+	elif global.time == "12:00" and formation_over == false:
+		global.taskAssign("Go to Formation.", 0)
+	elif global.time == "13:00":
+		global.taskAssign("Speak with Company Officer.", 0)
+		CO_dialogue_on = true
+		if global.co_interact == true:
+			global.timeAdd(3)
+			CO_dialogue_on = false
+			global.co_interact = false
+	elif global.time == "16:00":
+		global.taskAssign("Do as you wish.", 0)
+		is_workday = false
+		friend_dialogue_on = true
+	elif global.time == "22:00":
+		global.taskAssign("It's bedtime!", 0)
+		is_workday = true
