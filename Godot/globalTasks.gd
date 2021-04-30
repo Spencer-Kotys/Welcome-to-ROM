@@ -7,6 +7,7 @@ var desk_on = true
 var morning_routine_over = false
 var colors = true
 var formation_over = false
+var is_workday = true
 
 func _process(delta):
 	if global.day == "1":
@@ -40,6 +41,7 @@ func _process(delta):
 
 func morning_routine():
 	friend_dialogue_on = false
+	is_workday = true
 	if global.time == "06:00":
 		global.taskAssign("Fill out Medical \nScreening form \non Desk.",0)
 	if global.screening_form_complete == true:
@@ -71,6 +73,7 @@ func day_1():
 			global.co_interact = false
 	elif global.time == "16:00":
 		global.taskAssign("Do as you wish.", 0)
+		is_workday = false
 		friend_dialogue_on = true
 	elif global.time == "22:00":
 		global.taskAssign("It's bedtime!", 0)
