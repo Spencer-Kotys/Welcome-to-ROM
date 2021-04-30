@@ -2,6 +2,7 @@ extends Node
 
 func _ready():
 	globalAudio.play("res://music/Mournful-Departure-Asher-Fulero.ogg")
+	$DoorSound.play()
 	
 func _on_Room_body_entered(body):
 	# 50% chance of your roommate being in the room when you go in
