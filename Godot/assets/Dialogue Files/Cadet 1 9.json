@@ -1,0 +1,29 @@
+[
+	{"dialogue_start": 0},
+	{
+		"name": "Friend", "text": "Have you heard?! Summer assignments are out tomorrow!"
+	},
+	{
+		"name": "Friend", "text": "Where do you want to go?"
+	},
+	{
+		"name": "Friend", "question": "Hmm?",
+		"options": [
+			{"label": "A station in Maine", "value": "3/c Meisner and 3/c Murphy agree with that for sure!"},
+			{"label": "ANY AIR STATION", "value": "Rotor-head ay?"},
+			{"label": "Alameda, California", "value": "West coast best coast."},
+			{"label": "Icebreaker on the West Coast", "value": "Yeah, you and everyone else."},
+			{"label": "Great Lakes baby", "value": "Interesting, I want a buoy tender personally."},
+			{"label": "Small cutter in Florida", "value": "Nice!"},
+			{"label": "Sector anything", "value": "Not a fan of boats ay?"},
+			{"label": "Washington DC", "value": "Have fun in SDBs all summer."},
+			{"label": "11 week Eagle", "value": "Interesting choice..."}
+		],
+		"variable": "preference"
+	},
+	{ 
+		"name": "Friend", "text": "preference.value"
+	},
+	
+	{"dialogue_end": 0}  
+]

@@ -5,7 +5,7 @@ func _ready():
 	var day = int(global.day)
 	if (6 < int(global.time)/100):
 		day = day + 1
-	elif (14 == day):
+	if (14 == day):
 		print("You Win")
 		get_tree().change_scene("res://Win.tscn")
 	elif (global.has_covid == true):
