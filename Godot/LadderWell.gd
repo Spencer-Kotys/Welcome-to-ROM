@@ -45,7 +45,7 @@ func _process(delta):
 	else:
 		gym_button.hide()
 	# Can only go to the chapel if it's assigned as a task or between the hours of 1600-1800
-	if global.task == "Go to Chapel." or global.time == "16:00" or global.time == "17:00" or global.time == "18:00":
+	if global.task == "Go to the Chapel." or global.time == "16:00" or global.time == "17:00" or global.time == "18:00":
 		chapel_button.show()
 	else:
 		chapel_button.hide()
