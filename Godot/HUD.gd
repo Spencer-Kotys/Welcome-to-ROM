@@ -11,6 +11,11 @@ func _ready():
 
 func _process(delta):
 	morale_meter.value = global.morale
+	
+	# Ensures the player loses immediately when they reach 0 morale
+	if global.morale == 0:
+		get_tree().change_scene("res://lose_morale.tscn")
+	
 	$Control/DayCounter/Background/Day.text = global.day
 	$Control/Task/NinePatchRect/Task_Label.text = global.task
 	$Control/Time/NinePatchRect/Time.text = global.time
