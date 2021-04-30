@@ -84,7 +84,7 @@ z_index = 1
 
 [node name="Sprite" parent="MainCharacter" index="0"]
 position = Vector2( 22.5842, 5.16833 )
-frame = 1
+frame = 2
 
 [node name="Collision" parent="MainCharacter" index="1"]
 position = Vector2( 23.1113, 5.08007 )
@@ -95,11 +95,9 @@ position = Vector2( 23.1113, -1.04904e-05 )
 [node name="Characters" parent="." instance=ExtResource( 5 )]
 
 [connection signal="body_entered" from="ChaseHall/Room" to="." method="_on_Room_body_entered"]
-[connection signal="add_morale" from="MainCharacter" to="CanvasLayer/Control/HUD" method="_on_MainCharacter_add_morale"]
 [connection signal="init_cadet1_dialogue" from="MainCharacter" to="CanvasLayer/Control/Cadet1Dialogue" method="_on_MainCharacter_init_cadet1_dialogue"]
 [connection signal="init_companyofficer_dialogue" from="MainCharacter" to="CanvasLayer/Control/CompanyOfficerDialogue" method="_on_MainCharacter_init_companyofficer_dialogue"]
 [connection signal="init_hs_dialogue" from="MainCharacter" to="CanvasLayer/Control/HSDialogue" method="_on_MainCharacter_init_hs_dialogue"]
-[connection signal="subtract_morale" from="MainCharacter" to="CanvasLayer/Control/HUD" method="_on_MainCharacter_subtract_morale"]
 [connection signal="task_changed" from="MainCharacter" to="CanvasLayer/Control/HUD" method="_on_MainCharacter_task_changed"]
 [connection signal="timeout" from="MainCharacter/new_scene_timer" to="MainCharacter" method="_on_new_scene_timer_timeout"]
 [connection signal="body_entered" from="Characters/Cadet1/Cadet1area" to="MainCharacter" method="_on_Cadet1area_body_entered"]

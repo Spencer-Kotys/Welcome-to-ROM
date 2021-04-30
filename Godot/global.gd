@@ -37,6 +37,18 @@ func bagChance(percent_chance):
 		global.bagged = true
 		print("You have been bagged!")
 
+func add_morale(add_amount):
+	morale = global.morale + add_amount
+	morale = clamp(morale, 0, 100)
+	global.morale = morale
+
+
+func subtract_morale(subtract_amount):
+	morale = global.morale
+	morale = morale - subtract_amount
+	morale = clamp(morale, 0, 100)
+	global.morale = morale
+
 # Returns inputted JSON file as text that can be loaded into dialog_script
 func read_JSON(path):
 	var file = File.new()
