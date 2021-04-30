@@ -2,10 +2,8 @@ extends Control
 
 # Variables
 onready var _player = $AudioStreamPlayer # Load music player
-onready var _effectplayer = $AudioStreamPlayer # Load music player
 var is_playing # Is music playing
 var playing # What song is playing
-var effect # What sound effect is playing
 
 # Function to play music
 func play(track_url : String):
