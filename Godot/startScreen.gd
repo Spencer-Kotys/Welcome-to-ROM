@@ -8,6 +8,11 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	# Reset variables back to original states
+	global.morale = 50
+	global.has_covid = false
+	global.bagged = false
+	global.time = "06:00"
 	if (globalAudio.is_playing != true): # checkes if music is already playing
 		globalAudio.play("res://music/Naoya-Sakamata-Dissociation.ogg") #plays audio
 	else:
@@ -36,7 +41,7 @@ func _on_Quit_pressed():
 
 
 func _on_Test_Scene_pressed():
-	get_tree().change_scene("res://Spawn 1.tscn")
+	get_tree().change_scene("res://Room_With_Roommate.tscn")
 
 
 func _on_Wardroom_pressed():

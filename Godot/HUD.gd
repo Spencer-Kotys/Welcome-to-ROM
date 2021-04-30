@@ -15,18 +15,5 @@ func _process(delta):
 	$Control/Task/NinePatchRect/Task_Label.text = global.task
 	$Control/Time/NinePatchRect/Time.text = global.time
 
-func _on_MainCharacter_add_morale(add_amount):
-	morale = global.morale + add_amount
-	morale = clamp(morale, 0, 100)
-	global.morale = morale
-
-
-func _on_MainCharacter_subtract_morale(subtract_amount):
-	morale = global.morale
-	morale = morale - subtract_amount
-	morale = clamp(morale, 0, 100)
-	global.morale = morale
-
-
 func _on_MainCharacter_task_changed():
 	pass # Replace with function body.

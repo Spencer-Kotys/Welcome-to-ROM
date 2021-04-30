@@ -20,7 +20,12 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 13 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "East_Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 17 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "South_Idle",
 "speed": 5.0
@@ -37,7 +42,7 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 5 ), ExtResource( 14 ) ],
 "loop": true,
-"name": "East_Idle",
+"name": "South_Idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ), ExtResource( 16 ), ExtResource( 10 ) ],
@@ -62,7 +67,7 @@ script = ExtResource( 9 )
 pause_mode = 2
 position = Vector2( 19.2806, 7.52802 )
 frames = SubResource( 1 )
-animation = "South_Idle"
+animation = "East_Walk"
 frame = 1
 playing = true
 

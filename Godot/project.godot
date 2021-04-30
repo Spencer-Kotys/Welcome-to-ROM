@@ -10,7 +10,6 @@ config_version=4
 
 _global_script_classes=[  ]
 _global_script_class_icons={
-
 }
 
 [application]
@@ -27,6 +26,7 @@ config/icon="res://assets/Player_Models/SE_Sprites/right_w_4.png"
 
 global="*res://global.tscn"
 globalAudio="*res://globalAudio.tscn"
+globalTasks="*res://globalTasks.tscn"
 
 [display]
 

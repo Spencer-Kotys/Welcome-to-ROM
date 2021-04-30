@@ -18,7 +18,6 @@ func _on_MainCharacter_init_hs_dialogue():
 			'dialogue_end': 0
 		}]
 		global.screening_form_complete = false # set completion to false
-		global.taskAssign("-Go to Breakfast",1)
 	else:
 		dialog.dialog_script = [
 		{

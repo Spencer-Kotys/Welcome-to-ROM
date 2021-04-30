@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://MainCharacter.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/roomtile_roomate.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Sleep.gd" type="Script" id=5]
 [ext_resource path="res://Roommate.gd" type="Script" id=6]
 [ext_resource path="res://Desk.gd" type="Script" id=7]
+[ext_resource path="res://Wait.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8.22084, 4.11847 )
@@ -30,7 +31,7 @@ extents = Vector2( 11.8906, 18.9731 )
 extents = Vector2( 16.1128, 5.18435 )
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 12.1842, 9.00792 )
+extents = Vector2( 12.1842, 12.1497 )
 
 [sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 10, 8.40345 )
@@ -103,7 +104,7 @@ shape = SubResource( 7 )
 [node name="Right Desk" type="StaticBody2D" parent="Room/Room Objects"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Room/Room Objects/Right Desk"]
-position = Vector2( 28.9542, -26.0588 )
+position = Vector2( 27.4858, -27.4125 )
 shape = SubResource( 8 )
 
 [node name="Right Stereo" type="StaticBody2D" parent="Room/Room Objects"]
@@ -179,12 +180,18 @@ script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Wait" parent="CanvasLayer" instance=ExtResource( 8 )]
+margin_right = 1024.0
+margin_bottom = 600.0
+
 [connection signal="body_entered" from="Room/ExitRoom" to="." method="_on_ExitRoom_body_entered"]
 [connection signal="body_entered" from="Room/Room Objects/Player Bed/Player Bed" to="CanvasLayer/Sleep" method="_on_Player_Bed_body_entered"]
 [connection signal="body_exited" from="Room/Room Objects/Player Bed/Player Bed" to="CanvasLayer/Sleep" method="_on_Player_Bed_body_exited"]
 [connection signal="init_bed_dialogue" from="MainCharacter" to="CanvasLayer/Sleep" method="_on_MainCharacter_init_bed_dialogue"]
 [connection signal="init_desk_dialogue" from="MainCharacter" to="CanvasLayer/Desk" method="_on_MainCharacter_init_desk_dialogue"]
 [connection signal="init_roommate_dialogue" from="MainCharacter" to="CanvasLayer/Roommate" method="_on_MainCharacter_init_roommate_dialogue"]
+[connection signal="init_wait_dialogue" from="MainCharacter" to="CanvasLayer/Wait" method="_on_MainCharacter_init_wait_dialogue"]
 [connection signal="timeout" from="MainCharacter/new_scene_timer" to="MainCharacter" method="_on_new_scene_timer_timeout"]
 
 [editable path="MainCharacter"]

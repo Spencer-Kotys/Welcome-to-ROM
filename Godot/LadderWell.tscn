@@ -1,0 +1,97 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://LadderWell.gd" type="Script" id=1]
+
+[node name="LadderWell" type="Popup"]
+margin_right = 1024.0
+margin_bottom = 600.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_top = 2.0
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 429.0
+margin_top = 184.0
+margin_right = 594.0
+margin_bottom = 414.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 165.0
+margin_bottom = 14.0
+text = "Where do you want to go?"
+
+[node name="Wardroom" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 18.0
+margin_right = 165.0
+margin_bottom = 38.0
+text = "Wardroom"
+
+[node name="Formation" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 42.0
+margin_right = 165.0
+margin_bottom = 62.0
+text = "Formation"
+
+[node name="Chapel" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 66.0
+margin_right = 165.0
+margin_bottom = 86.0
+text = "Chapel"
+
+[node name="Colors" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 90.0
+margin_right = 165.0
+margin_bottom = 110.0
+text = "Colors"
+
+[node name="CrownPark" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 114.0
+margin_right = 165.0
+margin_bottom = 134.0
+text = "Crown Park"
+
+[node name="DryDock" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 138.0
+margin_right = 165.0
+margin_bottom = 158.0
+text = "Dry Dock"
+
+[node name="Gym" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 162.0
+margin_right = 165.0
+margin_bottom = 182.0
+text = "Gym"
+
+[node name="Pool" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 186.0
+margin_right = 165.0
+margin_bottom = 206.0
+text = "Pool"
+
+[node name="Walk" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 210.0
+margin_right = 165.0
+margin_bottom = 230.0
+text = "Walk"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Wardroom" to="." method="_on_Wardroom_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Formation" to="." method="_on_Formation_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Chapel" to="." method="_on_Chapel_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Colors" to="." method="_on_Colors_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CrownPark" to="." method="_on_CrownPark_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/DryDock" to="." method="_on_DryDock_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Gym" to="." method="_on_Gym_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Pool" to="." method="_on_Pool_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Walk" to="." method="_on_Walk_pressed"]

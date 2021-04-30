@@ -6,10 +6,7 @@ onready var dialogue_timer = get_node("dialogue_timer")
 onready var new_scene_timer = get_node("new_scene_timer")
 
 # Signals
-signal add_morale
-signal subtract_morale
 signal task_changed
-signal init_greenboy_dialogue
 signal init_companyofficer_dialogue
 signal init_hs_dialogue
 signal init_cadet1_dialogue
@@ -17,6 +14,7 @@ signal window_popup
 signal init_bed_dialogue
 signal init_roommate_dialogue
 signal init_desk_dialogue
+signal init_wait_dialogue
 
 var dialogue_cooldown = false
 var new_scene_cooldown = true
@@ -63,27 +61,29 @@ func MovementLoop():
 			if collision.collider.name == "Player Bed":
 				start_dialogue()
 				emit_signal("init_bed_dialogue")
-			elif collision.collider.name == "Window":
-				print("This is a window")
-				global.taskAssign("-demo",1) # THIS IS FOR DEV PURPOSES ONLY
-			elif collision.collider.name == "Green Boy":
+			elif collision.collider.name == "Window" and globalTasks.window_wait_on == true:
+				if globalTasks.is_workday == false:
+					start_dialogue()
+					emit_signal("init_wait_dialogue")
+			elif collision.collider.name == "Company Officer" and globalTasks.CO_dialogue_on == true:
 				start_dialogue() # <- Call this before every dialogue event
-				emit_signal("init_greenboy_dialogue")
-			elif collision.collider.name == "Company Officer":
-				start_dialogue() # <- Call this before every dialogue event
+				global.co_interact = true
 				emit_signal("init_companyofficer_dialogue")
-				emit_signal("subtract_morale", 20) # lose 20 morale on interaction with company officer
-			elif collision.collider.name == "HS":
+				global.bagChance(5)
+				global.subtract_morale(20) # lose 20 morale on interaction with company officer
+			elif collision.collider.name == "HS" and globalTasks.HS_dialogue_on == true:
 				start_dialogue() # <- Call this before every dialogue event
 				emit_signal("init_hs_dialogue")
-			elif collision.collider.name == "Cadet1":
+			elif collision.collider.name == "Cadet1" and globalTasks.friend_dialogue_on == true:
 				start_dialogue() # <- Call this before every dialogue event
 				emit_signal("init_cadet1_dialogue")
-				emit_signal("add_morale", 20) # gain 20 morale talking to shipmate
+				global.timeAdd(1)
+				global.add_morale(20) # gain 20 morale talking to shipmate
+				global.covidChance(1)
 			elif collision.collider.name == "Roommate":
 				start_dialogue() # <- Call this before every dialogue event
 				emit_signal("init_roommate_dialogue")
-			elif collision.collider.name == "Right Desk":
+			elif collision.collider.name == "Right Desk" and globalTasks.desk_on == true:
 				print("This is your desk")
 				start_dialogue() # <- Call this before every dialogue event
 				emit_signal("init_desk_dialogue")
@@ -142,26 +142,6 @@ func AnimationLoop():
 	animation = anim_direction + "_" + anim_mode
 	sprite.play(animation)
 
-func _on_Area2D_body_entered(body):
-	if new_scene_cooldown == false:
-		print("Green boy area entered")
-		global.covidChance(1)
-
-func _on_COarea_body_entered(body):
-	if new_scene_cooldown == false:
-		print("CO area entered")
-		global.bagChance(5)
-
-func _on_HSarea_body_entered(body):
-	if new_scene_cooldown == false:
-		print("HS area entered")
-		global.covidChance(1)
-
-func _on_Cadet1area_body_entered(body):
-	if new_scene_cooldown == false:
-		print("Cadet 1 area entered")
-		global.covidChance(2)
-
 func _on_dialogue_timer_timeout():
 	dialogue_cooldown = false
 
@@ -171,7 +151,6 @@ func start_dialogue():
 	dialogue_cooldown = true
 	dialogue_timer.start()
 	sprite.play(anim_direction + "_Idle")
-
 
 func _on_new_scene_timer_timeout():
 	new_scene_cooldown = false

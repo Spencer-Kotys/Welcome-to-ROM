@@ -5,14 +5,18 @@ func _ready():
 	var day = int(global.day)
 	if (6 < int(global.time)/100):
 		day = day + 1
-	if (14 == day):
+	if (global.has_covid == true):
+		get_tree().change_scene("res://lose_covid.tscn")
+	elif global.morale == 0:
+		get_tree().change_scene("res://lose_morale.tscn")
+	elif (14 == day):
 		print("You Win")
 		get_tree().change_scene("res://Win.tscn")
-	elif (global.has_covid == true):
-		get_tree().change_scene("res://lose_covid.tscn")
 	elif (global.bagged == true):
-		get_tree().change_scene("res://lose_covid.tscn")
+		global.subtract_morale(40)
+		get_tree().change_scene("res://bagged.tscn")
 	else:
+		globalTasks.morning_routine_over = false
 		global.day = str(day)
 		global.time = "06:00" # reset time
 		yield(get_tree().create_timer(1.0), "timeout")
