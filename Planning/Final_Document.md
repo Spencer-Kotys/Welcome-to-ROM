@@ -256,43 +256,151 @@ met the following:
 ## Assessment of complexity velocity
 
 ### Week 1
+This week was used to set the foundation for the project. We agreed on what the game 
+would generally consist of, the game engine we would use, and then drafted a project
+description.
 
-Project Description
+Accomplished:
+- Project Description
+- Making Godot Project
 
-Making Godot Project
+Complexity Score Total: 4
 
 ### Week 2
+This week expanded on the foundation layed in week 1. It was significantly harder,
+though, because we started writing code in godot. We got the movement system down
+as well as a rough draft of the artwork and HUD that would display in game.
+Getting these components done made visualizing where the game was headed much easier
+and writing the first bits of Godot code served as a tutorial for the group members
+who hadn't used the engine before.
 
-Project Requirements
+Accomplished:
+- Project Requirements
+- Use Case Diagram
+- Architecture Diagram
+- Artwork prototype
+- Movement system
+- HUD draft
+- Collision detection
 
-Use Case Diagram
-
-Architecture Diagram
-
-Artwork prototype
+Complexity Score Total: 56
 
 ### Week 3
+This the most code intensive week of the project, by far. Most of the final
+systems were finished (or mostly finished) and it was technically possible
+to win or lose in a very rough early release of the game. While most of the 
+systems were present, they still needed to be brought together and play-tested.
 
-Version 0.1 Alpha
+Accomplished:
+- Dialog System
+- Final Map 
+- Day Tracking System
+- Win and Lose scenes
+- Covid and bagging system
+- Version 0.1 Alpha
 
 Complexity Score Total: 63
 
 ### Week 4
+This week things were a bit lighter. We created the last few new
+systems and then added more content to older systems, such as
+writing more character dialogue and adding more cut scenes for the player
+to go through. It was a bit of a catch-up week to iron out some of the bugs 
+of previous weeks' code as well.
 
-Version 0.2 Alpha
+Accomplished:
+- Final Sprites
+- Dialogue Tree
+- Task Assignment System
+- Final Task Cut Scenes
+- Version 0.2 Alpha
 
 Complexity Score Total: 39
 
 ### Week 5
+The big workload this week came with implementing the full task tree,
+which meant tying together all the systems from previous weeks, such as 
+time, day, task assignment, and task cut scenes into a final coherent 
+storyline that could be played all the way through. The final product was
+quite buggy and needed refinement, but was much more playable than previous
+weeks' versions.
 
-Version 0.3 Alpha
+Accomplished:
+- Task Tree
+- Delete old or unused code
+- More dialogue implemented
+- Sound effects
 
-Complexity Score Total: 28
+Complexity Score Total: 33
 
 ### Final Push
+The goal with the final push was to fully iron out all the kinks and bugs
+with the full-implemented task system. This took the form of playtesting 
+the game as much as we could. It was a tedious process because the game was
+in its close to final state, meaning in order to test certain parts of the game,
+you would need to play fully through other sections.
 
 Version 1.0
 
 ## Summary of results, reflection
+Overall, this project was a success. We accomplished all the the requirements we
+set in the first week. The game can be played all the way through from day 1 to
+day 14 (assuming you don't catch covid), with mininal bugs and glitches. The player
+starts the game in their room at 0600 with the next task being to fill out the medical
+screening form on their desk. After filling out the form, the player is directed to turn 
+it in, which can be done by interacting with the HS stationed outside their room. Then 
+they go to morning colors, then go on a walk, then to formation and lunch, then have a 
+meeting with their company officer. While these tasks are being completed, the time will
+go up a specific amount, generally one hour. After finishing their talk with the company 
+officer, the time will be 1600, the end of the work day. At this time, the next task will
+read "Do as you wish," and the map opens up for the player to do whatever they want 
+until the time reads 22:00. Most days are the same, with some tasks during the workday 
+changing slightly; for example, some morning you are directed to go to breakfast instead
+of colors, or go to the pool instead of go on a walk.
+
+The dialogue systems works independent of the tasks. So when you talk to the company 
+officer, your roommate, or the random friend cadet, the interactions change depending
+on what day it is, not the current task or time. At 22:00, the map closes down, which
+forces the player to sleep if they want to advance time and go the next day. Interactions
+with the friend cadet and doing certain tasks gives you a chance of catching covid. That
+chance is set to 1% for most activities, and interactions that give you a chance of 
+catching covid also raise your morale. For instance, speaking to the friend cadet raises
+your morale 10 points, but gives you a chance of catching covid. Interactions with the
+company officer do not give you a chance of catching covid, but they lower your morale
+by 20 points. There is also a 5% chance of getting bagged everytime you interact
+with your company officer, which results in a loss of 40 points. The player starts
+the game with 50 morale points out of a possible maximum of 100. 
+
+There are two ways to lose the game and only one way to win. If the player's morale
+reaches 0, then a lose screen immediately pops up and you must restart the game
+to continue playing. If the player catches covid, they won't find out until they
+go to sleep, which then brings up a lose screen rather than the sleeping cut scene. 
+The player wins if they go to sleep on the 13th day and don't trigger the covid lose 
+scene, meaning they reached the 14th day without catching covid. Generally, the player
+has about a 60-70% chance of losing due to covid before reaching the final day. They
+have exactly a 65% chance of being bagged by their company officer and losing
+40 morale points. An exact chance for a morale loss case is hard to calculate, but
+that was intended to be an unlikely scenario. It would be hard for a player to lose
+due to morale since it is so easy to go complete morale boosting tasks. The morale 
+bar is meant more to force the player to go expose themselves to covid chances,
+so they can't just sit in their room all day. 
+
+The project went really well overall, and I believe all members of the group
+are happy with the final outcome. We were able to make it fairly complex,
+with multiple systems interacting with each other and quite a bit of random
+chance thrown in. Testing and modifying the code became very difficult towards
+the end of the final push. Because there were so many systems and variables,
+there was always a chance that editing one small line would set off a chain
+reaction that affected all the other systems. The hardest part, however, for
+most people, were the second and third weeks. Knowledge and experience with Godot
+was very low for all members of the group not named Spencer. As a result, we
+were pretty inefficient at writing those first few systems. For me personally,
+(this is Hannah writing this part), the HUD system took over five hours of 
+work, most of which was spent struggling with Godot and looking up tutorials 
+online. Looking back, it seems ridiculous it took so long, but it's because
+it was a learning experience. I reckon if we were to create the game over again
+from scratch, it would take about half the amount of time because we know how
+Godot works so much better. It really shows the importance of team experience
+when it comes to projects like this. 
 
 ## Demo
