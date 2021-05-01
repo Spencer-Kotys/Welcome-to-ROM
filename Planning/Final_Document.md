@@ -403,4 +403,21 @@ from scratch, it would take about half the amount of time because we know how
 Godot works so much better. It really shows the importance of team experience
 when it comes to projects like this. 
 
+The way we split up individual assignments worked well. No one person understands
+every line of code in the entire final project, but we worked more efficiently as a
+group because of it. The systems are all independent enough that everyone could
+be coding at the same time, push to main, and generally it would merge without
+any conflicts. We were able to specialize a bit more and do what were good 
+at. Alexander didn't feel as comfortable coding in Godot, so he worked on things
+like the music, task cut scenes, sound effects, and the pause menu. Alexandra 
+wrote the dialogue, made the diagrams, play tested, and assigned issues in GitHub. 
+JC did all of the art by herself. Hannah did a lot of the heavy coding with the 
+movement and collision system, dialogue system, covid and bagging system, and the 
+final task tree. Spencer a lot of coding as well, with the task assignent system, 
+time and day system, and various other functions. He was also the permanent scrum 
+master/GitHub wizard of the team. He kept main upto date with other peoples' branches 
+and ensured we were completing our issues and staying on track with our sprints. 
+The project was definitely a team effort, and the group's cohesion, dedication, and
+passion made it fun to complete, and a great learning experience.
+
 ## Demo
