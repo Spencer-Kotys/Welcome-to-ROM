@@ -28,4 +28,5 @@ func _on_Female_pressed():
 
 func _on_Continue_pressed():
 	global.playerName = $CenterContainer/VBoxContainer/Name_HBox/Character_Name.text
+	global.playerGender = $CenterContainer/VBoxContainer/Gender.text
 	get_tree().change_scene("res://Room_With_Roommate.tscn")
