@@ -1,14 +1,10 @@
 extends Control
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# Reset variables back to original states
+	globalTasks.morning_routine_over = false
 	global.morale = 50
 	global.has_covid = false
 	global.bagged = false
@@ -18,11 +14,6 @@ func _ready():
 		globalAudio.play("res://music/Naoya-Sakamata-Dissociation.ogg") #plays audio
 	else:
 		pass
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 
 func _on_Play_Game_pressed():
@@ -40,10 +31,3 @@ func _on_Credits_pressed():
 func _on_Quit_pressed():
 	get_tree().quit()
 
-
-func _on_Test_Scene_pressed():
-	get_tree().change_scene("res://Room_With_Roommate.tscn")
-
-
-func _on_Wardroom_pressed():
-	get_tree().change_scene("res://Wardroom.tscn")
