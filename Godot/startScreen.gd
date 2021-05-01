@@ -4,6 +4,7 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# Reset variables back to original states
+	globalTasks.morning_routine_over = false
 	global.morale = 50
 	global.has_covid = false
 	global.bagged = false
