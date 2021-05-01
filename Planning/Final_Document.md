@@ -227,6 +227,11 @@ with the group, assign deadlines, and have a better idea of where the project
 was going. It also became easier to assign non-coding based tasks to group
 members who didn’t feel as comfortable working in Godot.
 
+During our development process we realized that an open world game would be a
+little too ambitious so we decided to represent the world through video scenes
+instead. So while the player can do a multitude of different activities, most
+of them are through the use of videos.
+
 ### Successes
 
 We were able to successfully complete our project and create a video game the
@@ -235,28 +240,30 @@ met the following:
 
 1. Player will use keyboard and mouse to interact with the system.
 
-2. There will be a chance the player will lose the game.
+2. Player can customize their character.
 
-3. There will be a morale meter.
+3. There will be a chance the player will lose the game.
 
-4. There is an end goal for the player.
+4. There will be a morale meter.
 
-5. The game will be 2D.
+5. There is an end goal for the player.
 
-6. The game will have a top down view.
+6. The game will be 2D.
 
-7. Time will be internally calculated and tracked.
+7. The game will have a top down view.
 
-8. Players will have daily tasks.
+8. Time will be internally calculated and tracked.
 
-9. A game engine will be used to create the game.
+9. Players will have daily tasks.
 
-10. Game is available on PC.
+10. A game engine will be used to create the game.
+
+11. Game is available on PC.
 
 ## Assessment of complexity velocity
 
 ### Week 1
-This week was used to set the foundation for the project. We agreed on what the game 
+This week was used to set the foundation for the project. We agreed on what the game
 would generally consist of, the game engine we would use, and then drafted a project
 description.
 
@@ -267,8 +274,8 @@ Accomplished:
 Complexity Score Total: 4
 
 ### Week 2
-This week expanded on the foundation layed in week 1. It was significantly harder,
-though, because we started writing code in godot. We got the movement system down
+This week expanded on the foundation laid in week 1. It was significantly harder,
+though, because we started writing code in Godot. We got the movement system down
 as well as a rough draft of the artwork and HUD that would display in game.
 Getting these components done made visualizing where the game was headed much easier
 and writing the first bits of Godot code served as a tutorial for the group members
@@ -288,12 +295,12 @@ Complexity Score Total: 56
 ### Week 3
 This the most code intensive week of the project, by far. Most of the final
 systems were finished (or mostly finished) and it was technically possible
-to win or lose in a very rough early release of the game. While most of the 
+to win or lose in a very rough early release of the game. While most of the
 systems were present, they still needed to be brought together and play-tested.
 
 Accomplished:
 - Dialog System
-- Final Map 
+- Final Map
 - Day Tracking System
 - Win and Lose scenes
 - Covid and bagging system
@@ -305,7 +312,7 @@ Complexity Score Total: 63
 This week things were a bit lighter. We created the last few new
 systems and then added more content to older systems, such as
 writing more character dialogue and adding more cut scenes for the player
-to go through. It was a bit of a catch-up week to iron out some of the bugs 
+to go through. It was a bit of a catch-up week to iron out some of the bugs
 of previous weeks' code as well.
 
 Accomplished:
@@ -319,8 +326,8 @@ Complexity Score Total: 39
 
 ### Week 5
 The big workload this week came with implementing the full task tree,
-which meant tying together all the systems from previous weeks, such as 
-time, day, task assignment, and task cut scenes into a final coherent 
+which meant tying together all the systems from previous weeks, such as
+time, day, task assignment, and task cut scenes into a final coherent
 storyline that could be played all the way through. The final product was
 quite buggy and needed refinement, but was much more playable than previous
 weeks' versions.
@@ -335,7 +342,7 @@ Complexity Score Total: 33
 
 ### Final Push
 The goal with the final push was to fully iron out all the kinks and bugs
-with the full-implemented task system. This took the form of playtesting 
+with the full-implemented task system. This took the form of playtesting
 the game as much as we could. It was a tedious process because the game was
 in its close to final state, meaning in order to test certain parts of the game,
 you would need to play fully through other sections.
@@ -343,47 +350,47 @@ you would need to play fully through other sections.
 Version 1.0
 
 ## Summary of results, reflection
-Overall, this project was a success. We accomplished all the the requirements we
+Overall, this project was a success. We accomplished all the requirements we
 set in the first week. The game can be played all the way through from day 1 to
-day 14 (assuming you don't catch covid), with mininal bugs and glitches. The player
+day 14 (assuming you don't catch covid), with minimal bugs and glitches. The player
 starts the game in their room at 0600 with the next task being to fill out the medical
-screening form on their desk. After filling out the form, the player is directed to turn 
-it in, which can be done by interacting with the HS stationed outside their room. Then 
-they go to morning colors, then go on a walk, then to formation and lunch, then have a 
+screening form on their desk. After filling out the form, the player is directed to turn
+it in, which can be done by interacting with the HS stationed outside their room. Then
+they go to morning colors, then go on a walk, then to formation and lunch, then have a
 meeting with their company officer. While these tasks are being completed, the time will
-go up a specific amount, generally one hour. After finishing their talk with the company 
+go up a specific amount, generally one hour. After finishing their talk with the company
 officer, the time will be 1600, the end of the work day. At this time, the next task will
-read "Do as you wish," and the map opens up for the player to do whatever they want 
-until the time reads 22:00. Most days are the same, with some tasks during the workday 
+read "Do as you wish," and the map opens up for the player to do whatever they want
+until the time reads 22:00. Most days are the same, with some tasks during the workday
 changing slightly; for example, some morning you are directed to go to breakfast instead
 of colors, or go to the pool instead of go on a walk.
 
-The dialogue systems works independent of the tasks. So when you talk to the company 
+The dialogue systems works independent of the tasks. So when you talk to the company
 officer, your roommate, or the random friend cadet, the interactions change depending
 on what day it is, not the current task or time. At 22:00, the map closes down, which
 forces the player to sleep if they want to advance time and go the next day. Interactions
 with the friend cadet and doing certain tasks gives you a chance of catching covid. That
-chance is set to 1% for most activities, and interactions that give you a chance of 
+chance is set to 1% for most activities, and interactions that give you a chance of
 catching covid also raise your morale. For instance, speaking to the friend cadet raises
 your morale 10 points, but gives you a chance of catching covid. Interactions with the
 company officer do not give you a chance of catching covid, but they lower your morale
-by 20 points. There is also a 5% chance of getting bagged everytime you interact
+by 20 points. There is also a 5% chance of getting bagged every time you interact
 with your company officer, which results in a loss of 40 points. The player starts
-the game with 50 morale points out of a possible maximum of 100. 
+the game with 50 morale points out of a possible maximum of 100.
 
 There are two ways to lose the game and only one way to win. If the player's morale
 reaches 0, then a lose screen immediately pops up and you must restart the game
 to continue playing. If the player catches covid, they won't find out until they
-go to sleep, which then brings up a lose screen rather than the sleeping cut scene. 
-The player wins if they go to sleep on the 13th day and don't trigger the covid lose 
+go to sleep, which then brings up a lose screen rather than the sleeping cut scene.
+The player wins if they go to sleep on the 13th day and don't trigger the covid lose
 scene, meaning they reached the 14th day without catching covid. Generally, the player
 has about a 60-70% chance of losing due to covid before reaching the final day. They
 have exactly a 65% chance of being bagged by their company officer and losing
 40 morale points. An exact chance for a morale loss case is hard to calculate, but
 that was intended to be an unlikely scenario. It would be hard for a player to lose
-due to morale since it is so easy to go complete morale boosting tasks. The morale 
+due to morale since it is so easy to go complete morale boosting tasks. The morale
 bar is meant more to force the player to go expose themselves to covid chances,
-so they can't just sit in their room all day. 
+so they can't just sit in their room all day.
 
 The project went really well overall, and I believe all members of the group
 are happy with the final outcome. We were able to make it fairly complex,
@@ -395,28 +402,28 @@ reaction that affected all the other systems. The hardest part, however, for
 most people, were the second and third weeks. Knowledge and experience with Godot
 was very low for all members of the group not named Spencer. As a result, we
 were pretty inefficient at writing those first few systems. For me personally,
-(this is Hannah writing this part), the HUD system took over five hours of 
-work, most of which was spent struggling with Godot and looking up tutorials 
+(this is Hannah writing this part), the HUD system took over five hours of
+work, most of which was spent struggling with Godot and looking up tutorials
 online. Looking back, it seems ridiculous it took so long, but it's because
 it was a learning experience. I reckon if we were to create the game over again
 from scratch, it would take about half the amount of time because we know how
 Godot works so much better. It really shows the importance of team experience
-when it comes to projects like this. 
+when it comes to projects like this.
 
 The way we split up individual assignments worked well. No one person understands
 every line of code in the entire final project, but we worked more efficiently as a
 group because of it. The systems are all independent enough that everyone could
 be coding at the same time, push to main, and generally it would merge without
-any conflicts. We were able to specialize a bit more and do what were good 
+any conflicts. We were able to specialize a bit more and do what were good
 at. Alexander didn't feel as comfortable coding in Godot, so he worked on things
-like the music, task cut scenes, sound effects, and the pause menu. Alexandra 
-wrote the dialogue, made the diagrams, play tested, and assigned issues in GitHub. 
-JC did all of the art by herself. Hannah did a lot of the heavy coding with the 
-movement and collision system, dialogue system, covid and bagging system, and the 
-final task tree. Spencer a lot of coding as well, with the task assignent system, 
-time and day system, and various other functions. He was also the permanent scrum 
-master/GitHub wizard of the team. He kept main up to date with other peoples' branches 
-and ensured we were completing our issues and staying on track with our sprints. 
+like the music, task cut scenes, sound effects, and the pause menu. Alexandra
+wrote the dialogue, made the diagrams, play tested, and assigned issues in GitHub.
+JC did all of the art by herself. Hannah did a lot of the heavy coding with the
+movement and collision system, dialogue system, covid and bagging system, and the
+final task tree. Spencer a lot of coding as well, with the task assignment system,
+time and day system, and various other functions. He was also the permanent scrum
+master/GitHub wizard of the team. He kept main up to date with other peoples' branches
+and ensured we were completing our issues and staying on track with our sprints.
 The project was definitely a team effort, and the group's cohesion, dedication, and
 passion made it fun to complete, and a great learning experience.
 
