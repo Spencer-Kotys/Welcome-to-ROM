@@ -147,7 +147,6 @@ current = false
 pause_mode = 2
 
 [node name="HUD" parent="CanvasLayer" instance=ExtResource( 4 )]
-visible = false
 margin_left = 0.297668
 margin_right = 40.2976
 margin_bottom = 40.0
