@@ -415,7 +415,7 @@ JC did all of the art by herself. Hannah did a lot of the heavy coding with the
 movement and collision system, dialogue system, covid and bagging system, and the 
 final task tree. Spencer a lot of coding as well, with the task assignent system, 
 time and day system, and various other functions. He was also the permanent scrum 
-master/GitHub wizard of the team. He kept main upto date with other peoples' branches 
+master/GitHub wizard of the team. He kept main up to date with other peoples' branches 
 and ensured we were completing our issues and staying on track with our sprints. 
 The project was definitely a team effort, and the group's cohesion, dedication, and
 passion made it fun to complete, and a great learning experience.
