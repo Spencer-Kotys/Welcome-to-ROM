@@ -25,9 +25,9 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 margin_left = 467.0
-margin_top = 242.0
+margin_top = 254.0
 margin_right = 556.0
-margin_bottom = 358.0
+margin_bottom = 346.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -58,12 +58,6 @@ margin_right = 89.0
 margin_bottom = 92.0
 text = "Quit"
 
-[node name="Test Scene" type="Button" parent="CenterContainer/VBoxContainer"]
-margin_top = 96.0
-margin_right = 89.0
-margin_bottom = 116.0
-text = "Test Scene"
-
 [node name="titlename" type="Sprite" parent="."]
 position = Vector2( 522.932, 115.193 )
 texture = ExtResource( 3 )
@@ -72,4 +66,3 @@ texture = ExtResource( 3 )
 [connection signal="pressed" from="CenterContainer/VBoxContainer/How To Play" to="." method="_on_How_To_Play_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Credits" to="." method="_on_Credits_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Test Scene" to="." method="_on_Test_Scene_pressed"]

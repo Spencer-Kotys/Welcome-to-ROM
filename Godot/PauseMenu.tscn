@@ -82,6 +82,7 @@ text = "Quit"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="Control/PauseMenu/CenterContainer/VBoxContainer/Resume" to="Control/PauseMenu" method="_on_Resume_pressed"]
 [connection signal="toggled" from="Control/PauseMenu/CenterContainer/VBoxContainer/Resume" to="Control/PauseMenu" method="_on_Resume_toggled"]
 [connection signal="pressed" from="Control/PauseMenu/CenterContainer/VBoxContainer/MainMenu" to="Control/PauseMenu" method="_on_MainMenu_pressed"]
