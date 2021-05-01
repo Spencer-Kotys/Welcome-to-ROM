@@ -125,14 +125,20 @@ shape = SubResource( 11 )
 [node name="MainCharacter" parent="." instance=ExtResource( 1 )]
 pause_mode = 1
 
-[node name="Sprite" parent="MainCharacter" index="0"]
+[node name="Name" parent="MainCharacter" index="0"]
+margin_left = -421.061
+margin_top = -212.479
+margin_right = -333.061
+margin_bottom = -198.479
+
+[node name="Sprite" parent="MainCharacter" index="1"]
 position = Vector2( -408, -196.11 )
 animation = "North_Idle"
 
-[node name="Collision" parent="MainCharacter" index="1"]
+[node name="Collision" parent="MainCharacter" index="2"]
 position = Vector2( -407.702, -197.4 )
 
-[node name="Camera2D" parent="MainCharacter" index="2"]
+[node name="Camera2D" parent="MainCharacter" index="3"]
 visible = false
 position = Vector2( -9.53674e-06, -50.7065 )
 current = false
@@ -141,6 +147,7 @@ current = false
 pause_mode = 2
 
 [node name="HUD" parent="CanvasLayer" instance=ExtResource( 4 )]
+visible = false
 margin_left = 0.297668
 margin_right = 40.2976
 margin_bottom = 40.0
