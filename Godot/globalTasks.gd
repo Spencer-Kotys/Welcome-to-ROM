@@ -267,7 +267,7 @@ func day_9():
 	if morning_routine_over == false:
 		morning_routine()
 	elif global.time == "09:00":
-		global.taskAssign("Go to the pool.", 0)
+		global.taskAssign("Go to the Pool.", 0)
 	elif global.time == "10:00":
 		global.timeAdd(2)
 	elif global.time == "12:00" and formation_over == false:
