@@ -48,7 +48,7 @@ alignment = 1
 margin_right = 58.0
 margin_bottom = 24.0
 size_flags_horizontal = 3
-text = "test"
+text = "Kaydet"
 
 [node name="Name_Generator" type="Button" parent="CenterContainer/VBoxContainer/Name_HBox"]
 margin_left = 62.0
