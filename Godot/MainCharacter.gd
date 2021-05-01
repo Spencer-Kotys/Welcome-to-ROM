@@ -30,6 +30,13 @@ func _ready():
 	# this is to prevent the main character immediately detecting being in the area of everything in the new scene
 	var new_scene_cooldown = true
 	new_scene_timer.start() # timer runs for 1 second upon loading into a new scene
+	$Name.text = global.playerName
+	if 'Male' == global.playerGender:
+		get_node("Name").set("custom_colors/font_color", Color(0,1,1,1))
+	elif 'Female' == global.playerGender:
+		get_node("Name").set("custom_colors/font_color", Color(1,0,1,1))
+	else:
+		pass
 
 func _physics_process(delta):
 	MovementLoop()
