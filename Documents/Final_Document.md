@@ -39,7 +39,7 @@ interacts with. When the player attends social events and interacts with other
 characters to improve their morale meter, there is an increased random chance
 that they can be sent down to Munro Hall or test positive for Covid. The player's
 goal is to balance maintaining the morale meter with limiting the chances of
-getting COVID-19. the player makes it to the end of day 14, then they win!
+getting COVID-19. The player makes it to the end of day 14, then they win!
 
 ## Requirements
 
