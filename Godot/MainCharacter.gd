@@ -76,7 +76,7 @@ func MovementLoop():
 				start_dialogue() # <- Call this before every dialogue event
 				global.co_interact = true
 				emit_signal("init_companyofficer_dialogue")
-				global.bagChance(100)
+				global.bagChance(5)
 				global.subtract_morale(20) # lose 20 morale on interaction with company officer
 			elif collision.collider.name == "HS" and globalTasks.HS_dialogue_on == true:
 				start_dialogue() # <- Call this before every dialogue event
