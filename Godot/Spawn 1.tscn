@@ -83,19 +83,17 @@ pause_mode = 1
 position = Vector2( 476.249, 292.182 )
 z_index = 1
 
-[node name="Sprite" parent="MainCharacter" index="0"]
+[node name="Sprite" parent="MainCharacter" index="1"]
 position = Vector2( 22.5842, 5.16833 )
+frame = 1
 
-[node name="Collision" parent="MainCharacter" index="1"]
+[node name="Collision" parent="MainCharacter" index="2"]
 position = Vector2( 23.1113, 5.08007 )
 
-[node name="Camera2D" parent="MainCharacter" index="2"]
+[node name="Camera2D" parent="MainCharacter" index="3"]
 position = Vector2( 23.1113, -1.04904e-05 )
 
 [node name="Characters" parent="." instance=ExtResource( 5 )]
-
-[node name="Sprite" parent="Characters/Cadet1" index="1"]
-frame = 0
 
 [node name="DoorSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
