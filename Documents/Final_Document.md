@@ -429,6 +429,6 @@ passion made it fun to complete, and a great learning experience.
 
 ## Demo
 
-[Download Demo](https://drive.google.com/file/d/1JGpJDzrxAjwq8sTipacm-O3V4ewuXqNJ/view?usp=sharing)
+[Download Game](https://github.com/macee/final-project-i-m-also-not-in-a-group/releases/tag/v1.1)
 
 [Wiki](https://github.com/macee/final-project-i-m-also-not-in-a-group/wiki)
